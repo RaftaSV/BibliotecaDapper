@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using AdminLabrary.formularios.insert_update;
 namespace AdminLabrary.formularios.principales
 {
     public partial class frmAdministradores : Form
@@ -20,9 +20,17 @@ namespace AdminLabrary.formularios.principales
 
         private void Carreras_Load(object sender, EventArgs e)
         {
+            CargarDatos();
+        }
+        public void CargarDatos()
+        {
             CAdministradores C = new CAdministradores();
             administradoresBindingSource.DataSource = C.Listado();
-
+        }
+        public static frmInsertarAdministrador admi = new frmInsertarAdministrador();
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            admi.Show();
         }
     }
 }

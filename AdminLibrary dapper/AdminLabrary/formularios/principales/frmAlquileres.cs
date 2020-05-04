@@ -21,6 +21,15 @@ namespace AdminLabrary.formularios
 
         private void frmAlquileres_Load(object sender, EventArgs e)
         {
+            CargarDatos();         
+        }
+
+        private void alquileresDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        public void CargarDatos() 
+        {
             CAlquileres f = new CAlquileres();
             alquileresDataGridView.DataSource = f.Listado();
             CLectores l = new CLectores();
@@ -30,13 +39,6 @@ namespace AdminLabrary.formularios
             CAdministradores a = new CAdministradores();
             administradoresBindingSource.DataSource = a.Listado();
             administradoresBindingSource1.DataSource = a.Listado();
-
-        
-        }
-
-        private void alquileresDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

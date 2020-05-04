@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AdminLabrary.formularios.insert_update;
 
 namespace AdminLabrary.formularios.principales
 {
@@ -20,19 +21,21 @@ namespace AdminLabrary.formularios.principales
 
         private void FpEditoriales_Load(object sender, EventArgs e)
         {
-            //// TODO: esta línea de código carga datos en la tabla 'bibliotecaDataSet.Editoriales' Puede moverla o quitarla según sea necesario.
-            //this.editorialesTableAdapter.Fill(this.bibliotecaDataSet.Editoriales);
+            CargarDatos();        
+        }
+
+       public void CargarDatos()
+        {
 
             CEditoriales c = new CEditoriales();
             editorialesBindingSource.DataSource = c.Listado();
-                
-                
-                
+
         }
 
-        private void editorialesBindingSource_CurrentChanged(object sender, EventArgs e)
+        private void btnNuevo_Click(object sender, EventArgs e)
         {
-
+            frmInsertarEditorial f = new frmInsertarEditorial();
+            f.ShowDialog();
         }
     }
 }

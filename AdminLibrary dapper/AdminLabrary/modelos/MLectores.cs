@@ -29,11 +29,12 @@ namespace AdminLabrary.modelos
             DynamicParameters parametros = new DynamicParameters();
             parametros.Add("@Nombres", c.Nombres, DbType.String);
             parametros.Add("@Apellidos", c.Apellidos, DbType.String);
-            parametros.Add("@Carnet", c.Carnet, DbType.String);
-            
-
             con.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             con.Close();
         }
+        
+        
+        
+
     }
 }

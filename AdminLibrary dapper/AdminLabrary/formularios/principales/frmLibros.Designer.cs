@@ -44,6 +44,7 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.librosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnNuevo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.librosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.autoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editorialesBindingSource)).BeginInit();
@@ -183,12 +184,23 @@
             // 
             this.librosBindingSource.DataSource = typeof(AdminLabrary.entidades.Libros);
             // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Location = new System.Drawing.Point(47, 89);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(107, 31);
+            this.btnNuevo.TabIndex = 3;
+            this.btnNuevo.Text = "Nuevo libro";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
             // frmLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(952, 551);
+            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.librosDataGridView);
             this.Name = "frmLibros";
             this.Text = "fpLibros";
@@ -217,5 +229,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.BindingSource categoriasBindingSource;
+        private System.Windows.Forms.Button btnNuevo;
     }
 }

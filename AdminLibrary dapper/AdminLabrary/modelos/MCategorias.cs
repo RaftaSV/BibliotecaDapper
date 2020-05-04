@@ -28,10 +28,7 @@ namespace AdminLabrary.modelos
             IDbConnection con = Conexion.Conectar();
             String consulta = "sp_InsertarCategoria";
             DynamicParameters parametros = new DynamicParameters();
-            parametros.Add("@Id_categoria", c.Id_categoria, DbType.Int32);
             parametros.Add("@Categoria", c.Categoria, DbType.String);
-         
-
             con.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             con.Close();
         }

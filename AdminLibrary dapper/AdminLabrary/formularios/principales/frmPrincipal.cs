@@ -22,42 +22,44 @@ namespace AdminLabrary.formularios.principales
         public frmPrincipal()
         {
             InitializeComponent();
-          
-           
+
+
         }
 
-       
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
         private Form activeForm = null;
-   
+
 
         public void MostrarPanel(Form Panel)
         {
-            if (activeForm != null) activeForm.Close();
-            activeForm = Panel;
-            Panel.TopLevel = false;
-            Panel.FormBorderStyle = FormBorderStyle.None;
-            Panel.Dock = DockStyle.Fill;
-            pPrincipal.Controls.Add(Panel);
-            pPrincipal.Tag = Panel;
-            Panel.BringToFront();
-            mostrarmenu();
-            Panel.Show();
+            if (activeForm != null)
+            
+                activeForm = Panel;
+                Panel.TopLevel = false;
+                Panel.FormBorderStyle = FormBorderStyle.None;
+                Panel.Dock = DockStyle.Fill;
+                pPrincipal.Controls.Add(Panel);
+                pPrincipal.Tag = Panel;
+                Panel.BringToFront();
+                mostrarmenu();
+                Panel.Show();
+            
         }
 
-      
-       
 
+
+        public static frmEditoriales editoriales = new frmEditoriales();
         private void btnProductos_Click(object sender, EventArgs e)
         {
-            MostrarPanel(new frmEditoriales());
+            MostrarPanel(editoriales);
         }
 
-        
+
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -68,12 +70,12 @@ namespace AdminLabrary.formularios.principales
             }
         }
 
-        
-         int estado = 0;
+
+        int estado = 0;
 
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
-           
+
             if (estado == 0)
             {
 
@@ -110,56 +112,45 @@ namespace AdminLabrary.formularios.principales
 
         }
 
-        
 
-       
-        
-  
+
+
+
+        public static frmLectores lector = new frmLectores();
         private void btnLectores_Click(object sender, EventArgs e)
         {
             
 
-            MostrarPanel(new frmLectores());
+            MostrarPanel(lector);
             
         }
 
+        public static frmCategoria Categoria = new frmCategoria();
         private void btnCategoria_Click(object sender, EventArgs e)
         {
-            
-
-            MostrarPanel(new frmCategoria());
-            
+              MostrarPanel(Categoria);
         }
-
+        public static frmLibros libros = new frmLibros();
         private void btnLibros_Click(object sender, EventArgs e)
         {
-        
-
-            MostrarPanel(new frmLibros());
-         
+            MostrarPanel(libros);
         }
 
-        private void pPrincipal_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+    
+        public static frmAutor autor = new frmAutor();
         private void btnAutor_Click(object sender, EventArgs e)
         {
-            MostrarPanel(new frmAutor());
+            MostrarPanel(autor);
         }
-
+        public static frmAdministradores admi = new frmAdministradores();
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            
-
-                MostrarPanel(new frmAdministradores());
-            
+            MostrarPanel(admi);           
         }
-
+        public static frmAlquileres alquileres = new frmAlquileres();
         private void btnPrestamos_Click(object sender, EventArgs e)
         {
-            MostrarPanel(new frmAlquileres());
+            MostrarPanel(alquileres);
         }
 
         int botonO = 0;
@@ -188,6 +179,11 @@ namespace AdminLabrary.formularios.principales
 
     
         private void PanelBarraTitulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void LogoGrande_Click(object sender, EventArgs e)
         {
 
         }

@@ -12,7 +12,6 @@ namespace AdminLabrary.entidades
         public string Nombres { get; set; }
 
         public string Apellidos { get; set; }
-        public string Carnet { get; set; }
        
     }
 }

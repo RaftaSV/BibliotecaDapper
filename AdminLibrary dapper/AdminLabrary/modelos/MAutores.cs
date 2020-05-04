@@ -23,23 +23,19 @@ namespace AdminLabrary.modelos
             return listado;
         }
 
+       
+
         internal void guardar(Autores c)
         {
-            throw new NotImplementedException();
-        }
-
-        internal void Guardar(Autores c)
-        {
             IDbConnection con = Conexion.Conectar();
-            String consulta = "sp_MostrarAutores";
+            String consulta = "sp_insertarAutores";
             DynamicParameters parametros = new DynamicParameters();
-            parametros.Add("@Id_autor", c.Id_autor, DbType.Int32);
             parametros.Add("@Nombre", c.Nombre, DbType.String);
             parametros.Add("@fecha_nacimiento", c.fecha_nacimiento, DbType.Date);
             parametros.Add("@Nacionalidad", c.Nacionalidad, DbType.String);
-
             con.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             con.Close();
+
         }
     }
 }

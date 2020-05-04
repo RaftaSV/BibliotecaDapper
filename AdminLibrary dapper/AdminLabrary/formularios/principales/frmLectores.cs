@@ -1,4 +1,5 @@
 ﻿using AdminLabrary.controladores;
+using AdminLabrary.formularios.insert_update;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,10 +21,18 @@ namespace AdminLabrary.formularios.principales
 
         private void fLectores_Load(object sender, EventArgs e)
         {
+            CargarDatos();
+        }
+        public void CargarDatos()
+        {
             CLectores c = new CLectores();
             lectoresBindingSource.DataSource = c.Listado();
+        }
 
-
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            frmInsertarLector f = new frmInsertarLector();
+            f.ShowDialog();
         }
     }
 }

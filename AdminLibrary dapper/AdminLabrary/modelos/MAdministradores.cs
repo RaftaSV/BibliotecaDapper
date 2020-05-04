@@ -11,6 +11,8 @@ namespace AdminLabrary.modelos
 {
     class MAdministradores
     {
+        private const string Name = "@Usuario";
+
         public List<Administradores> Listado()
         {
             IDbConnection con = Conexion.Conectar();
@@ -26,12 +28,9 @@ namespace AdminLabrary.modelos
             IDbConnection con = Conexion.Conectar();
             String consulta = "sp_InsertarAdministradores";
             DynamicParameters parametros = new DynamicParameters();
-            
             parametros.Add("@Usuario", c.Usuario, DbType.String);
             parametros.Add("@Contraseña", c.Contraseña, DbType.String);
-            parametros.Add("@Lector", c.lector, DbType.Int32);
-
-
+            parametros.Add("@id_lector", c.lector, DbType.Int32);
             con.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             con.Close();
         }

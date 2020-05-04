@@ -120,6 +120,42 @@
     <Compile Include="entidades\Editoriales.cs" />
     <Compile Include="entidades\Lectores.cs" />
     <Compile Include="entidades\Libros.cs" />
+    <Compile Include="formularios\insert-update\frmInsertarAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\insert-update\frmInsertarAdministrador.Designer.cs">
+      <DependentUpon>frmInsertarAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\insert-update\frmInsertarAutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\insert-update\frmInsertarAutores.Designer.cs">
+      <DependentUpon>frmInsertarAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\insert-update\frmInsertarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\insert-update\frmInsertarCategoria.Designer.cs">
+      <DependentUpon>frmInsertarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\insert-update\frmInsertarEditorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\insert-update\frmInsertarEditorial.Designer.cs">
+      <DependentUpon>frmInsertarEditorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\insert-update\frmInsertarLector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\insert-update\frmInsertarLector.Designer.cs">
+      <DependentUpon>frmInsertarLector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\insert-update\frmInsertarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\insert-update\frmInsertarLibro.Designer.cs">
+      <DependentUpon>frmInsertarLibro.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\principales\frmAlquileres.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +213,24 @@
     <Compile Include="modelos\MLibros.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formularios\insert-update\frmInsertarAdministrador.resx">
+      <DependentUpon>frmInsertarAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\insert-update\frmInsertarAutores.resx">
+      <DependentUpon>frmInsertarAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\insert-update\frmInsertarCategoria.resx">
+      <DependentUpon>frmInsertarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\insert-update\frmInsertarEditorial.resx">
+      <DependentUpon>frmInsertarEditorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\insert-update\frmInsertarLector.resx">
+      <DependentUpon>frmInsertarLector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\insert-update\frmInsertarLibro.resx">
+      <DependentUpon>frmInsertarLibro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\principales\frmAlquileres.resx">
       <DependentUpon>frmAlquileres.cs</DependentUpon>
     </EmbeddedResource>

@@ -27,9 +27,8 @@ namespace AdminLabrary.modelos
             String consulta = "sp_InsertarEditoriales";
             DynamicParameters parametros = new DynamicParameters();
             parametros.Add("@Editorial", c.Editorial, DbType.String);
-            parametros.Add("@Fundada", c.Fundada, DbType.Int32);
+            parametros.Add("@Fundada", c.Fundada, DbType.Date);
             parametros.Add("@Direccion", c.Direccion, DbType.String);
-
             con.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             con.Close();
         }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AdminLabrary.controladores;
+using AdminLabrary.formularios.insert_update;
 
 namespace AdminLabrary.formularios.principales
 {
@@ -20,15 +21,18 @@ namespace AdminLabrary.formularios.principales
 
         private void FpAutor_Load(object sender, EventArgs e)
         {
-
-            //// TODO: esta línea de código carga datos en la tabla 'bibliotecaDataSet.Autores' Puede moverla o quitarla según sea necesario.
-            //this.autoresTableAdapter.Fill(this.bibliotecaDataSet.Autores);
-
+            CargarDatos();
+        }
+        public void CargarDatos()
+        {
             CAutores c = new CAutores();
             autoresBindingSource.DataSource = c.Listado();
-
         }
 
-       
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            frmInsertarAutores f = new frmInsertarAutores();
+            f.ShowDialog();
+        }
     }
 }

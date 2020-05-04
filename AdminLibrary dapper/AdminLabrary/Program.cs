@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AdminLabrary.formularios.principales;
 
 namespace AdminLabrary
 {
@@ -16,7 +17,7 @@ namespace AdminLabrary
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formularios.principales.frmPrincipal());
+            Application.Run(new frmPrincipal());
         }
     }
 }

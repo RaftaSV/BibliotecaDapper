@@ -38,5 +38,6 @@ namespace AdminLabrary.modelos
             con.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             con.Close();
         }
+
     }
 }
