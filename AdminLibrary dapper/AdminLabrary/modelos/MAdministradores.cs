@@ -13,17 +13,17 @@ namespace AdminLabrary.modelos
     {
         private const string Name = "@Usuario";
 
-        public List<Administradores> Listado()
+        public List<entidades.Administradores> Listado()
         {
             IDbConnection con = Conexion.Conectar();
             String consulta = "Select * from Administradores";
-            List<Administradores> listado = new List<Administradores>();
+            List<entidades.Administradores> listado = new List<entidades.Administradores>();
             con.Open();
-            listado = con.Query<Administradores>(consulta).ToList();
+            listado = con.Query<entidades.Administradores>(consulta).ToList();
             con.Close();
             return listado;
         }
-        internal void guardar(Administradores c)
+        internal void guardar(entidades.Administradores c)
         {
             IDbConnection con = Conexion.Conectar();
             String consulta = "sp_InsertarAdministradores";

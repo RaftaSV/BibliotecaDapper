@@ -31,14 +31,19 @@ namespace AdminLabrary.formularios
         public void CargarDatos() 
         {
             CAlquileres f = new CAlquileres();
-            alquileresDataGridView.DataSource = f.Listado();
-            CLectores l = new CLectores();
-            lectoresBindingSource.DataSource = l.Listado();
-            CLibros li = new CLibros();
-            librosBindingSource.DataSource = li.Listado();
-            CAdministradores a = new CAdministradores();
-            administradoresBindingSource.DataSource = a.Listado();
-            administradoresBindingSource1.DataSource = a.Listado();
+            alquileresPendientesBindingSource.DataSource = f.Listadop();
+            CLectores lec = new CLectores();
+            CLibros libros = new CLibros();
+            CAdministradores admin = new CAdministradores();
+            librosBindingSource.DataSource = libros.Listado();
+            lectoresBindingSource.DataSource = lec.Listado();
+            administradoresBindingSource.DataSource = admin.Listado();  
+           
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            frmPrincipal.alquiler.ShowDialog();
         }
     }
 }

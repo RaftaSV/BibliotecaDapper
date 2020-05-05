@@ -11,17 +11,17 @@ namespace AdminLabrary.modelos
 {
     class MEditoriales
     {
-        public List<Editoriales> Listado()
+        public List<entidades.Editoriales> Listado()
         {
             IDbConnection con = Conexion.Conectar();
             String consulta = "Select * from Editoriales";
-            List<Editoriales> listado = new List<Editoriales>();
+            List<entidades.Editoriales> listado = new List<entidades.Editoriales>();
             con.Open();
-            listado = con.Query<Editoriales>(consulta).ToList();
+            listado = con.Query<entidades.Editoriales>(consulta).ToList();
             con.Close();
             return listado;
         }
-        internal void guardar(Editoriales c)
+        internal void guardar(entidades.Editoriales c)
         {
             IDbConnection con = Conexion.Conectar();
             String consulta = "sp_InsertarEditoriales";

@@ -12,17 +12,17 @@ namespace AdminLabrary.modelos
 {
     class MLibros
     {
-        public List<Libros> Listado()
+        public List<entidades.Libros> Listado()
         {
             IDbConnection con = Conexion.Conectar();
             String consulta = "Select * from Libros";
-            List<Libros> listado = new List<Libros>();
+            List<entidades.Libros> listado = new List<entidades.Libros>();
             con.Open();
-            listado = con.Query<Libros>(consulta).ToList();
+            listado = con.Query<entidades.Libros>(consulta).ToList();
             con.Close();
             return listado;
         }
-        internal void guardar(Libros c)
+        internal void guardar(entidades.Libros c)
         {
             IDbConnection con = Conexion.Conectar();
             String consulta = "sp_InsertarLibros";

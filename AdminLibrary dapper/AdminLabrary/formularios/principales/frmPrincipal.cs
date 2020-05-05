@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using AdminLabrary.formularios.insert_update;
 
 
 namespace AdminLabrary.formularios.principales
@@ -176,6 +177,7 @@ namespace AdminLabrary.formularios.principales
             }
 
         }
+       public static frmInsertarAlquiler alquiler = new frmInsertarAlquiler();
 
     
         private void PanelBarraTitulo_Paint(object sender, PaintEventArgs e)

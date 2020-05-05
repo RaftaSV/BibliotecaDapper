@@ -54,6 +54,7 @@
             this.pbtnMenu = new System.Windows.Forms.Panel();
             this.pPrincipal = new System.Windows.Forms.Panel();
             this.LogoGrande = new System.Windows.Forms.PictureBox();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.PanelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
@@ -389,6 +390,7 @@
             // pbtnMenu
             // 
             this.pbtnMenu.BackColor = System.Drawing.Color.Silver;
+            this.pbtnMenu.Controls.Add(this.lblUsuario);
             this.pbtnMenu.Controls.Add(this.btnMenu2);
             this.pbtnMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pbtnMenu.Location = new System.Drawing.Point(226, 40);
@@ -419,6 +421,15 @@
             this.LogoGrande.TabStop = false;
             this.LogoGrande.Click += new System.EventHandler(this.LogoGrande_Click);
             // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(413, 6);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(0, 20);
+            this.lblUsuario.TabIndex = 28;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -442,6 +453,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu2)).EndInit();
             this.pbtnMenu.ResumeLayout(false);
+            this.pbtnMenu.PerformLayout();
             this.pPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LogoGrande)).EndInit();
             this.ResumeLayout(false);
@@ -474,5 +486,6 @@
         private System.Windows.Forms.Panel pbtnMenu;
         private System.Windows.Forms.Panel pPrincipal;
         internal System.Windows.Forms.PictureBox LogoGrande;
+        public System.Windows.Forms.Label lblUsuario;
     }
 }

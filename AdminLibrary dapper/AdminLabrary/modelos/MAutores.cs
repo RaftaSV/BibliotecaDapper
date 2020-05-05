@@ -12,20 +12,20 @@ namespace AdminLabrary.modelos
 {
     class MAutores
     {
-        public List<Autores> Listado()
+        public List<entidades.Autores> Listado()
         {
             IDbConnection con = Conexion.Conectar();
             String consulta = "Select * from Autores";
-            List<Autores> listado = new List<Autores>();
+            List<entidades.Autores> listado = new List<entidades.Autores>();
             con.Open();
-            listado = con.Query<Autores>(consulta).ToList();
+            listado = con.Query<entidades.Autores>(consulta).ToList();
             con.Close();
             return listado;
         }
 
        
 
-        internal void guardar(Autores c)
+        internal void guardar(entidades.Autores c)
         {
             IDbConnection con = Conexion.Conectar();
             String consulta = "sp_insertarAutores";

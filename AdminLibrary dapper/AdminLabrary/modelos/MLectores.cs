@@ -12,17 +12,17 @@ namespace AdminLabrary.modelos
     class MLectores
     {
 
-        public List<Lectores> Listado()
+        public List<entidades.Lectores> Listado()
         {
             IDbConnection con = Conexion.Conectar();
             String consulta = "Select * from Lectores";
-            List<Lectores> listado = new List<Lectores>();
+            List<entidades.Lectores> listado = new List<entidades.Lectores>();
             con.Open();
-            listado = con.Query<Lectores>(consulta).ToList();
+            listado = con.Query<entidades.Lectores>(consulta).ToList();
             con.Close();
             return listado;
         }
-        internal void guardar(Lectores c)
+        internal void guardar(entidades.Lectores c)
         {
             IDbConnection con = Conexion.Conectar();
             String consulta = "sp_InsertarLectores";

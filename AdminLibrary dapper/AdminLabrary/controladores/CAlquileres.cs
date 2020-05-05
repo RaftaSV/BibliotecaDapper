@@ -16,5 +16,13 @@ namespace AdminLabrary.controladores
         {
             return a.Listado();
         }
+        public void Guardar(entidades.Alquileres c)
+        {
+            a.Guardar(c);
+        }
+        public List<entidades.AlquileresPendientes> Listadop()
+        {
+            return a.ListadoP();
+        }
     }
 }
