@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AdminLabrary.formularios.frmBuscar;
 using AdminLabrary.formularios.principales;
 
 namespace AdminLabrary

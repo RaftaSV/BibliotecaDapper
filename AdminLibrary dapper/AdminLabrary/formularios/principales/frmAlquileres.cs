@@ -43,6 +43,7 @@ namespace AdminLabrary.formularios
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            frmPrincipal.alquiler.CargarID();
             frmPrincipal.alquiler.ShowDialog();
         }
     }

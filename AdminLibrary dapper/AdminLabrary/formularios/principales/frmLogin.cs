@@ -32,17 +32,15 @@ namespace AdminLabrary.formularios.principales
                             where admin.Usuario == txtUsuario.Text
                             && admin.Contraseña == txtContraseña.Text
                             select admin;
-                foreach (var i in lista)
-                {
-                    frmPrincipal.alquiler.txtUsuario.Text = txtUsuario.Text;
-                    frmPrincipal.alquiler.entregadoTextBox.Text = i.Id_Admin.ToString();
-                    frmPrincipal.alquiler.id = i.Id_Admin.ToString();
-                }
+              
+                   
+                
                 if (lista.Count() > 0)
                 {
                     frmPrincipal f = new frmPrincipal();
                     string usu = txtUsuario.Text;
                     f.lblUsuario.Text = usu;
+                    frmPrincipal.alquiler.txtUsuario.Text = txtUsuario.Text;
                     f.ShowDialog();
 
                     this.Hide();

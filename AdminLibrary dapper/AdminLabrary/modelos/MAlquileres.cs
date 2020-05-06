@@ -31,7 +31,7 @@ namespace AdminLabrary.modelos
             String consulta = "sp_insertaralquiler1";
             DynamicParameters parametros = new DynamicParameters();
             parametros.Add("@id_lector", c.Id_Lector, DbType.Int32);
-            parametros.Add("@id_libro", c.Id_Lector, DbType.Int32);
+            parametros.Add("@id_libro", c.Id_libro, DbType.Int32);
             parametros.Add("@entregado", c.Entregado, DbType.Int32);
             con.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             con.Close();

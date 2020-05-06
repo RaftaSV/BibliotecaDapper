@@ -109,11 +109,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BibliotecaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BibliotecaDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="conexion\Administradores.cs">
       <DependentUpon>bliblioteca.tt</DependentUpon>
     </Compile>
@@ -166,6 +161,18 @@
     <Compile Include="entidades\Editoriales.cs" />
     <Compile Include="entidades\Lectores.cs" />
     <Compile Include="entidades\Libros.cs" />
+    <Compile Include="formularios\frmBuscar\frmBuscarLector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frmBuscar\frmBuscarLector.Designer.cs">
+      <DependentUpon>frmBuscarLector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\frmBuscar\frmBuscarlibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frmBuscar\frmBuscarlibro.Designer.cs">
+      <DependentUpon>frmBuscarlibro.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\insert-update\frmInsertarAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +278,12 @@
     <Compile Include="modelos\MLibros.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="formularios\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formularios\frmBuscar\frmBuscarLector.resx">
+      <DependentUpon>frmBuscarLector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\frmBuscar\frmBuscarlibro.resx">
+      <DependentUpon>frmBuscarlibro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\insert-update\frmInsertarAdministrador.resx">
       <DependentUpon>frmInsertarAdministrador.cs</DependentUpon>
     </EmbeddedResource>
@@ -323,17 +336,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <None Include="BibliotecaDataSet.xsc">
-      <DependentUpon>BibliotecaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="BibliotecaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BibliotecaDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BibliotecaDataSet.xss">
-      <DependentUpon>BibliotecaDataSet.xsd</DependentUpon>
-    </None>
     <EntityDeploy Include="conexion\bliblioteca.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>bliblioteca.Designer.cs</LastGenOutput>
@@ -342,25 +344,6 @@
       <DependentUpon>bliblioteca.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\AdminLabrary.BibliotecaDataSetTableAdapters.AlquileresTableAdapter.datasource" />
-    <None Include="Properties\DataSources\AdminLabrary.BibliotecaDataSetTableAdapters.AutoresTableAdapter.datasource" />
-    <None Include="Properties\DataSources\AdminLabrary.BibliotecaDataSetTableAdapters.CarrerasTableAdapter.datasource" />
-    <None Include="Properties\DataSources\AdminLabrary.BibliotecaDataSetTableAdapters.CategoriasTableAdapter.datasource" />
-    <None Include="Properties\DataSources\AdminLabrary.BibliotecaDataSetTableAdapters.EditorialesTableAdapter.datasource" />
-    <None Include="Properties\DataSources\AdminLabrary.BibliotecaDataSetTableAdapters.LectoresTableAdapter.datasource" />
-    <None Include="Properties\DataSources\AdminLabrary.BibliotecaDataSetTableAdapters.LibrosTableAdapter.datasource" />
-    <None Include="Properties\DataSources\AdminLabrary.BibliotecaDataSetTableAdapters.QueriesTableAdapter.datasource" />
-    <None Include="Properties\DataSources\AdminLabrary.BibliotecaDataSetTableAdapters.sp_MostrarAutoresTableAdapter.datasource" />
-    <None Include="Properties\DataSources\AdminLabrary.BibliotecaDataSetTableAdapters.sp_MostrarCarrerasTableAdapter.datasource" />
-    <None Include="Properties\DataSources\AdminLabrary.BibliotecaDataSetTableAdapters.sp_MostrarCategoriasTableAdapter.datasource" />
-    <None Include="Properties\DataSources\AdminLabrary.BibliotecaDataSetTableAdapters.sp_MostrarEditorialesTableAdapter.datasource" />
-    <None Include="Properties\DataSources\AdminLabrary.BibliotecaDataSetTableAdapters.sp_MostrarEntregadosATiempoTableAdapter.datasource" />
-    <None Include="Properties\DataSources\AdminLabrary.BibliotecaDataSetTableAdapters.sp_MostrarEntregaRetrasadaTableAdapter.datasource" />
-    <None Include="Properties\DataSources\AdminLabrary.BibliotecaDataSetTableAdapters.sp_MostrarLectoresTableAdapter.datasource" />
-    <None Include="Properties\DataSources\AdminLabrary.BibliotecaDataSetTableAdapters.sp_MostrarLibrosconentregaproximaTableAdapter.datasource" />
-    <None Include="Properties\DataSources\AdminLabrary.BibliotecaDataSetTableAdapters.sp_MostrarLibrosTableAdapter.datasource" />
-    <None Include="Properties\DataSources\AdminLabrary.BibliotecaDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
-    <None Include="Properties\DataSources\AdminLabrary.BibliotecaDataSetTableAdapters.TableAdapterManager.datasource" />
     <None Include="Properties\DataSources\AdminLabrary.entidades.Administradores.datasource" />
     <None Include="Properties\DataSources\AdminLabrary.entidades.Alquileres.datasource" />
     <None Include="Properties\DataSources\AdminLabrary.entidades.AlquileresPendientes.datasource" />
@@ -439,8 +422,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="formularios\frmBuscar\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

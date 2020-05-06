@@ -18,11 +18,14 @@ using AdminLabrary.formularios.insert_update;
 
 namespace AdminLabrary.formularios.principales
 {
+   
     public partial class frmPrincipal : Form
     {
+        public static string Id;
         public frmPrincipal()
         {
             InitializeComponent();
+            
 
 
         }
@@ -178,6 +181,7 @@ namespace AdminLabrary.formularios.principales
 
         }
        public static frmInsertarAlquiler alquiler = new frmInsertarAlquiler();
+        
 
     
         private void PanelBarraTitulo_Paint(object sender, PaintEventArgs e)

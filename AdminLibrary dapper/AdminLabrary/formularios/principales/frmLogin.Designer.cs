@@ -121,6 +121,7 @@
             // 
             // frmLogin
             // 
+            this.AcceptButton = this.btnIniciarsesion;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(645, 300);
@@ -132,6 +133,7 @@
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -34,14 +34,14 @@
             System.Windows.Forms.Label id_libroLabel;
             this.entregadoTextBox = new System.Windows.Forms.TextBox();
             this.id_LectorTextBox = new System.Windows.Forms.TextBox();
-            this.id_libroTextBox = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.alquileresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtLector = new System.Windows.Forms.TextBox();
             this.btnSelecLec = new System.Windows.Forms.Button();
             this.btnSelecLIbro = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.id_libroTextBox = new System.Windows.Forms.TextBox();
+            this.txtLibro = new System.Windows.Forms.TextBox();
+            this.alquileresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             entregadoLabel = new System.Windows.Forms.Label();
             id_LectorLabel = new System.Windows.Forms.Label();
             id_libroLabel = new System.Windows.Forms.Label();
@@ -91,20 +91,12 @@
             // id_LectorTextBox
             // 
             this.id_LectorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alquileresBindingSource, "Id_Lector", true));
+            this.id_LectorTextBox.Enabled = false;
             this.id_LectorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.id_LectorTextBox.Location = new System.Drawing.Point(338, 24);
             this.id_LectorTextBox.Name = "id_LectorTextBox";
             this.id_LectorTextBox.Size = new System.Drawing.Size(67, 24);
             this.id_LectorTextBox.TabIndex = 6;
-            // 
-            // id_libroTextBox
-            // 
-            this.id_libroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alquileresBindingSource, "Id_libro", true));
-            this.id_libroTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id_libroTextBox.Location = new System.Drawing.Point(338, 67);
-            this.id_libroTextBox.Name = "id_libroTextBox";
-            this.id_libroTextBox.Size = new System.Drawing.Size(67, 24);
-            this.id_libroTextBox.TabIndex = 8;
             // 
             // txtUsuario
             // 
@@ -115,25 +107,13 @@
             this.txtUsuario.Size = new System.Drawing.Size(191, 24);
             this.txtUsuario.TabIndex = 9;
             // 
-            // textBox2
+            // txtLector
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(127, 24);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(191, 24);
-            this.textBox2.TabIndex = 10;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(127, 67);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(191, 24);
-            this.textBox3.TabIndex = 11;
-            // 
-            // alquileresBindingSource
-            // 
-            this.alquileresBindingSource.DataSource = typeof(AdminLabrary.entidades.Alquileres);
+            this.txtLector.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLector.Location = new System.Drawing.Point(127, 24);
+            this.txtLector.Name = "txtLector";
+            this.txtLector.Size = new System.Drawing.Size(191, 24);
+            this.txtLector.TabIndex = 10;
             // 
             // btnSelecLec
             // 
@@ -143,6 +123,7 @@
             this.btnSelecLec.TabIndex = 12;
             this.btnSelecLec.Text = "Seleccionar";
             this.btnSelecLec.UseVisualStyleBackColor = true;
+            this.btnSelecLec.Click += new System.EventHandler(this.btnSelecLec_Click);
             // 
             // btnSelecLIbro
             // 
@@ -152,6 +133,7 @@
             this.btnSelecLIbro.TabIndex = 13;
             this.btnSelecLIbro.Text = "Seleccionar";
             this.btnSelecLIbro.UseVisualStyleBackColor = true;
+            this.btnSelecLIbro.Click += new System.EventHandler(this.btnSelecLIbro_Click);
             // 
             // btnGuardar
             // 
@@ -163,23 +145,46 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // id_libroTextBox
+            // 
+            this.id_libroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alquileresBindingSource, "Id_libro", true));
+            this.id_libroTextBox.Enabled = false;
+            this.id_libroTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id_libroTextBox.Location = new System.Drawing.Point(338, 67);
+            this.id_libroTextBox.Name = "id_libroTextBox";
+            this.id_libroTextBox.Size = new System.Drawing.Size(67, 24);
+            this.id_libroTextBox.TabIndex = 15;
+            // 
+            // txtLibro
+            // 
+            this.txtLibro.Enabled = false;
+            this.txtLibro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLibro.Location = new System.Drawing.Point(127, 67);
+            this.txtLibro.Name = "txtLibro";
+            this.txtLibro.Size = new System.Drawing.Size(191, 24);
+            this.txtLibro.TabIndex = 16;
+            // 
+            // alquileresBindingSource
+            // 
+            this.alquileresBindingSource.DataSource = typeof(AdminLabrary.entidades.Alquileres);
+            // 
             // frmInsertarAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(543, 238);
+            this.ClientSize = new System.Drawing.Size(543, 246);
+            this.Controls.Add(this.txtLibro);
+            this.Controls.Add(this.id_libroTextBox);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnSelecLIbro);
             this.Controls.Add(this.btnSelecLec);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtLector);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(entregadoLabel);
             this.Controls.Add(this.entregadoTextBox);
             this.Controls.Add(id_LectorLabel);
             this.Controls.Add(this.id_LectorTextBox);
             this.Controls.Add(id_libroLabel);
-            this.Controls.Add(this.id_libroTextBox);
             this.Name = "frmInsertarAlquiler";
             this.Text = "frmInsertarAlquiler";
             this.Load += new System.EventHandler(this.frmInsertarAlquiler_Load);
@@ -194,12 +199,12 @@
         private System.Windows.Forms.BindingSource alquileresBindingSource;
         public System.Windows.Forms.TextBox entregadoTextBox;
         public System.Windows.Forms.TextBox id_LectorTextBox;
-        public System.Windows.Forms.TextBox id_libroTextBox;
         public System.Windows.Forms.TextBox txtUsuario;
-        public System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox txtLector;
         private System.Windows.Forms.Button btnSelecLec;
         private System.Windows.Forms.Button btnSelecLIbro;
         private System.Windows.Forms.Button btnGuardar;
+        public System.Windows.Forms.TextBox id_libroTextBox;
+        public System.Windows.Forms.TextBox txtLibro;
     }
 }
