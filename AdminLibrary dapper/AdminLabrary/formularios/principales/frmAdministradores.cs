@@ -30,7 +30,7 @@ namespace AdminLabrary.formularios.principales
         public static frmInsertarAdministrador admi = new frmInsertarAdministrador();
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            admi.Show();
+            admi.ShowDialog();
         }
     }
 }
