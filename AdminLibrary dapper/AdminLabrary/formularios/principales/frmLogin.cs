@@ -26,7 +26,7 @@ namespace AdminLabrary.formularios.principales
 
             string u = txtUsuario.Text;
 
-            using (BibliotecaEntities db = new BibliotecaEntities())
+            using (BibliotecaEntities1 db = new BibliotecaEntities1())
             {
                 var lista = from admin in db.Administradores
                             where admin.Usuario == txtUsuario.Text

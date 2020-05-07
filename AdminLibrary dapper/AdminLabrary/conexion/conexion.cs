@@ -14,7 +14,7 @@ namespace AdminLabrary.conexion
         public static IDbConnection Conectar()
         {
             //cambiar los datos según su sqlserver
-            String cadena = "Data Source=.\\sqlexpress;" +
+            String cadena = "Data Source=.\\;" +
                 "Initial Catalog=Biblioteca;" +
                 "Integrated Security=True";
             SqlConnection cn = new SqlConnection(cadena);

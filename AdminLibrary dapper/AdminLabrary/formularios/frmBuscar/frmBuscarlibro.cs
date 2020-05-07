@@ -25,7 +25,7 @@ namespace AdminLabrary.formularios.frmBuscar
         }
         public void filtro()
         {
-            using (BibliotecaEntities db = new BibliotecaEntities())
+            using (BibliotecaEntities1 db = new BibliotecaEntities1())
             {
                 string nombre = txtBuscar.Text;
                 var lista = from libros in db.Libros
