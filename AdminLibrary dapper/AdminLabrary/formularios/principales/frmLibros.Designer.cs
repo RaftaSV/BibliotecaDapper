@@ -66,7 +66,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.librosDataGridView.AutoGenerateColumns = false;
             this.librosDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.librosDataGridView.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.librosDataGridView.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.librosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.librosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -198,7 +198,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(952, 551);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.librosDataGridView);

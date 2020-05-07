@@ -62,7 +62,7 @@
             // 
             // btnIniciarsesion
             // 
-            this.btnIniciarsesion.BackColor = System.Drawing.Color.Teal;
+            this.btnIniciarsesion.BackColor = System.Drawing.Color.Black;
             this.btnIniciarsesion.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnIniciarsesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnIniciarsesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
