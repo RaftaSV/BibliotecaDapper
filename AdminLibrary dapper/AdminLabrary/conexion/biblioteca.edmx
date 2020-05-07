@@ -395,7 +395,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="BibliotecaEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BibliotecaEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Administradores" EntityType="Self.Administradores" />
           <EntitySet Name="Alquileres" EntityType="Self.Alquileres" />
           <EntitySet Name="Autores" EntityType="Self.Autores" />
@@ -441,7 +441,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BibliotecaModelStoreContainer" CdmEntityContainer="BibliotecaEntities">
+        <EntityContainerMapping StorageEntityContainer="BibliotecaModelStoreContainer" CdmEntityContainer="BibliotecaEntities1">
           <EntitySetMapping Name="Administradores">
             <EntityTypeMapping TypeName="BibliotecaModel.Administradores">
               <MappingFragment StoreEntitySet="Administradores">

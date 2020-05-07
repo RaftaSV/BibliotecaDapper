@@ -42,7 +42,7 @@ namespace AdminLabrary.formularios.frmBuscar
        
         void filtro()
         {
-            using (BibliotecaEntities db = new BibliotecaEntities())
+            using (BibliotecaEntities1 db = new BibliotecaEntities1())
             {
                 string buscar = txtBuscar.Text;
                 var lista = from lec in db.Lectores

@@ -110,41 +110,41 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="conexion\Administradores.cs">
-      <DependentUpon>bliblioteca.tt</DependentUpon>
+      <DependentUpon>biblioteca.tt</DependentUpon>
     </Compile>
     <Compile Include="conexion\Alquileres.cs">
-      <DependentUpon>bliblioteca.tt</DependentUpon>
+      <DependentUpon>biblioteca.tt</DependentUpon>
     </Compile>
     <Compile Include="conexion\Autores.cs">
-      <DependentUpon>bliblioteca.tt</DependentUpon>
+      <DependentUpon>biblioteca.tt</DependentUpon>
     </Compile>
-    <Compile Include="conexion\bliblioteca.Context.cs">
+    <Compile Include="conexion\biblioteca.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>bliblioteca.Context.tt</DependentUpon>
+      <DependentUpon>biblioteca.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="conexion\bliblioteca.cs">
+    <Compile Include="conexion\biblioteca.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>bliblioteca.tt</DependentUpon>
+      <DependentUpon>biblioteca.tt</DependentUpon>
     </Compile>
-    <Compile Include="conexion\bliblioteca.Designer.cs">
+    <Compile Include="conexion\biblioteca.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>bliblioteca.edmx</DependentUpon>
+      <DependentUpon>biblioteca.edmx</DependentUpon>
     </Compile>
     <Compile Include="conexion\Categorias.cs">
-      <DependentUpon>bliblioteca.tt</DependentUpon>
+      <DependentUpon>biblioteca.tt</DependentUpon>
     </Compile>
     <Compile Include="conexion\conexion.cs" />
     <Compile Include="conexion\Editoriales.cs">
-      <DependentUpon>bliblioteca.tt</DependentUpon>
+      <DependentUpon>biblioteca.tt</DependentUpon>
     </Compile>
     <Compile Include="conexion\Lectores.cs">
-      <DependentUpon>bliblioteca.tt</DependentUpon>
+      <DependentUpon>biblioteca.tt</DependentUpon>
     </Compile>
     <Compile Include="conexion\Libros.cs">
-      <DependentUpon>bliblioteca.tt</DependentUpon>
+      <DependentUpon>biblioteca.tt</DependentUpon>
     </Compile>
     <Compile Include="controladores\CAlquileres.cs" />
     <Compile Include="controladores\CAutores.cs" />
@@ -336,12 +336,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EntityDeploy Include="conexion\bliblioteca.edmx">
+    <EntityDeploy Include="conexion\biblioteca.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>bliblioteca.Designer.cs</LastGenOutput>
+      <LastGenOutput>biblioteca.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="conexion\bliblioteca.edmx.diagram">
-      <DependentUpon>bliblioteca.edmx</DependentUpon>
+    <None Include="conexion\biblioteca.edmx.diagram">
+      <DependentUpon>biblioteca.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\AdminLabrary.entidades.Administradores.datasource" />
@@ -364,18 +364,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="conexion\bliblioteca.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>bliblioteca.Context.cs</LastGenOutput>
-      <DependentUpon>bliblioteca.edmx</DependentUpon>
-    </Content>
-    <Content Include="conexion\bliblioteca.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>bliblioteca.edmx</DependentUpon>
-      <LastGenOutput>bliblioteca.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\minimizar.png" />
@@ -422,6 +410,17 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="conexion\biblioteca.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>biblioteca.edmx</DependentUpon>
+      <LastGenOutput>biblioteca.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="conexion\biblioteca.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>biblioteca.edmx</DependentUpon>
+      <LastGenOutput>biblioteca.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -60,16 +60,13 @@ namespace AdminLabrary.formularios.principales
         public void CargarID()
         {
             
-            using (BibliotecaEntities db = new BibliotecaEntities())
+            using (BibliotecaEntities1 db = new BibliotecaEntities1())
             {
-                var lista = from admi in db.Administradores
-                            where admi.Usuario == (txtUsuario.Text)
-                            select new { Id = admi.Id_Admin};
+                Administradores admi = new Administradores();
+                admi = db.Administradores.Where(busca => busca.Usuario == txtUsuario.Text).First();
 
-                foreach(var i in lista)
-                {
-                    entregadoTextBox.Text = i.Id.ToString();
-                }
+                entregadoTextBox.Text = admi.Id_Admin.ToString();
+                
             }
         }
 
