@@ -27,10 +27,10 @@ namespace AdminLabrary.formularios.principales
             CAdministradores C = new CAdministradores();
             administradoresBindingSource.DataSource = C.Listado();
         }
-        public static frmInsertarAdministrador admi = new frmInsertarAdministrador();
+        public static frmInsertarAdministrador admin = new frmInsertarAdministrador();
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            admi.ShowDialog();
+            admin.ShowDialog();
         }
     }
 }
