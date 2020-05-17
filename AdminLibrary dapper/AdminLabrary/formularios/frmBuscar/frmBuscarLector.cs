@@ -1,5 +1,7 @@
 ﻿using AdminLabrary.conexion;
+using AdminLabrary.controladores;
 using AdminLabrary.formularios.principales;
+using RazorEngine.Compilation.ImpromptuInterface;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +15,8 @@ namespace AdminLabrary.formularios.frmBuscar
 {
     public partial class frmBuscarLector : Form
     {
+        List<entidades.Lectores> lector = new List<entidades.Lectores>();
+        public int enviar;
         public frmBuscarLector()
         {
             InitializeComponent();
@@ -20,43 +24,65 @@ namespace AdminLabrary.formularios.frmBuscar
 
         private void frmBuscarLector_Load(object sender, EventArgs e)
         {
+            CargarLista();
             filtro();
         }
        
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            
+           
+            filtro();
         }
 
         
         private void seleccionar()
         {
-            string Lector = dgvLectores.CurrentRow.Cells[1].Value.ToString();
-            string id = dgvLectores.CurrentRow.Cells[0].Value.ToString();
-            frmPrincipal.alquiler.txtLector.Text = Lector;
-            frmPrincipal.alquiler.id_LectorTextBox.Text = id;
-            this.Close();
+            if(enviar == 1)
+            {
+                string Lector = dgvLectores.CurrentRow.Cells[1].Value.ToString();
+                string id = dgvLectores.CurrentRow.Cells[0].Value.ToString();
+                frmPrincipal.alquiler.txtLector.Text = Lector;
+                frmPrincipal.alquiler.id_LectorTextBox.Text = id;
+                this.Close();
+            }
+            else
+            {
+                string Lector = dgvLectores.CurrentRow.Cells[1].Value.ToString();
+                string id = dgvLectores.CurrentRow.Cells[0].Value.ToString();
+                frmAdministradores.admin.txtLecID.Text = id;
+                frmAdministradores.admin.txtLecNombre.Text = Lector;
+                this.Close();
+
+            }
+           
+        }
+        void CargarLista()
+        {
+            CLectores lec = new CLectores();
+            lectoresBindingSource.DataSource = lec.Listado();
+            int Id;
+            foreach (DataGridViewRow i in dgvLectores.Rows)
+            {
+                Id = int.Parse(i.Cells[0].Value.ToString());
+                lector.Add(new entidades.Lectores { Id_Lector = Id, Nombres = i.Cells[1].Value.ToString(), Apellidos = i.Cells[2].Value.ToString() });
+            }
         }
 
-       
+
         void filtro()
         {
-            using (BibliotecaEntities1 db = new BibliotecaEntities1())
-            {
-                string buscar = txtBuscar.Text;
-                var lista = from lec in db.Lectores
+            string buscar = txtBuscar.Text;
+                var lista = from lec in lector
                             where lec.Nombres.Contains(buscar)
                             select new
                             {
-                                ID = lec.Id_Lector,
+                                Id_Lector = lec.Id_Lector,
                                 NOMBRES = lec.Nombres,
                                 APELLIDOS = lec.Apellidos
                             };
 
                 dgvLectores.DataSource = lista.ToList();
-
-            }
 
         }
 

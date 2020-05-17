@@ -16,7 +16,7 @@ namespace AdminLabrary.formularios.principales
         public frmLogin()
         {
             InitializeComponent();
-            txtContraseña.PasswordChar = '#';
+            txtContraseña.PasswordChar = '*';
 
         }
 
@@ -57,6 +57,16 @@ namespace AdminLabrary.formularios.principales
 
             }
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

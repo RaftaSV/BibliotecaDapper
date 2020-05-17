@@ -25,30 +25,30 @@ namespace AdminLabrary.formularios.principales
         private void frmInsertarAlquiler_Load(object sender, EventArgs e)
         {
            
-            alquileresBindingSource.MoveLast();
-            alquileresBindingSource.AddNew();
+         
             CargarID();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            try
+            if (txtLector.Text != "" && txtLibro.Text != "" && txtUsuario.Text != "")
             {
-                alquileresBindingSource.EndEdit();
-                entidades.Alquileres alq = new entidades.Alquileres();
-                alq = (entidades.Alquileres)alquileresBindingSource.Current;
-                CAlquileres cAlq = new CAlquileres();
-                cAlq.Guardar(alq);
-                alquileresBindingSource.Clear();
-                txtLector.Text = "";
-                txtLibro.Text = "";
-                frmPrincipal.alquileres.CargarDatos();
-            }
-            catch
+                try {
+                    alquileresBindingSource.EndEdit();
+                    entidades.Alquileres alq = new entidades.Alquileres();
+                    alq = (entidades.Alquileres)alquileresBindingSource.Current;
+                    CAlquileres cAlq = new CAlquileres();
+                    cAlq.Guardar(alq);
+                    alquileresBindingSource.Clear();
+                    txtLector.Text = "";
+                    txtLibro.Text = "";
+                    frmPrincipal.alquileres.CargarDatos();
+                } catch
             {
                 MessageBox.Show("No se puede realizar el alquiler, verificar si no tiene prestamos pendientes");
             }
         }
+}
      
         public  frmBuscarlibro buscarlibro = new frmBuscarlibro();
 
@@ -69,11 +69,18 @@ namespace AdminLabrary.formularios.principales
                 
             }
         }
+        public void limpiarbinding()
+        {
+            alquileresBindingSource.MoveLast();
+            alquileresBindingSource.AddNew();
+        }
 
         public frmBuscarLector lector = new frmBuscarLector();
         private void btnSelecLec_Click(object sender, EventArgs e)
         {
+            limpiarbinding();
             CargarID();
+            lector.enviar = 1;
             lector.ShowDialog();
             
         }

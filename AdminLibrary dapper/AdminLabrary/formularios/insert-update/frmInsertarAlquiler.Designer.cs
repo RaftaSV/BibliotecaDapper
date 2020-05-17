@@ -33,6 +33,7 @@
             System.Windows.Forms.Label id_LectorLabel;
             System.Windows.Forms.Label id_libroLabel;
             this.entregadoTextBox = new System.Windows.Forms.TextBox();
+            this.alquileresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.id_LectorTextBox = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtLector = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.id_libroTextBox = new System.Windows.Forms.TextBox();
             this.txtLibro = new System.Windows.Forms.TextBox();
-            this.alquileresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             entregadoLabel = new System.Windows.Forms.Label();
             id_LectorLabel = new System.Windows.Forms.Label();
             id_libroLabel = new System.Windows.Forms.Label();
@@ -88,6 +88,10 @@
             this.entregadoTextBox.Size = new System.Drawing.Size(67, 24);
             this.entregadoTextBox.TabIndex = 2;
             // 
+            // alquileresBindingSource
+            // 
+            this.alquileresBindingSource.DataSource = typeof(AdminLabrary.entidades.Alquileres);
+            // 
             // id_LectorTextBox
             // 
             this.id_LectorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alquileresBindingSource, "Id_Lector", true));
@@ -109,6 +113,7 @@
             // 
             // txtLector
             // 
+            this.txtLector.Enabled = false;
             this.txtLector.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLector.Location = new System.Drawing.Point(127, 24);
             this.txtLector.Name = "txtLector";
@@ -163,10 +168,6 @@
             this.txtLibro.Name = "txtLibro";
             this.txtLibro.Size = new System.Drawing.Size(191, 24);
             this.txtLibro.TabIndex = 16;
-            // 
-            // alquileresBindingSource
-            // 
-            this.alquileresBindingSource.DataSource = typeof(AdminLabrary.entidades.Alquileres);
             // 
             // frmInsertarAlquiler
             // 

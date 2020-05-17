@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using AdminLabrary.entidades;
 using AdminLabrary.controladores;
 using AdminLabrary.formularios.principales;
+using AdminLabrary.formularios.frmBuscar;
 
 namespace AdminLabrary.formularios.insert_update
 {
@@ -20,8 +21,7 @@ namespace AdminLabrary.formularios.insert_update
             InitializeComponent();
             administradoresBindingSource.MoveLast();
             administradoresBindingSource.AddNew();
-            CLectores lectores = new CLectores();
-            lectoresBindingSource.DataSource = lectores.Listado();
+          
         }
 
        
@@ -43,6 +43,13 @@ namespace AdminLabrary.formularios.insert_update
         private void frmInsertarAdministrador_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            frmBuscarLector buscar = new frmBuscarLector();
+            buscar.enviar = 2;
+            buscar.ShowDialog();
         }
     }
 }

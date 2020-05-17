@@ -28,9 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dgvLibros = new System.Windows.Forms.DataGridView();
+            this.librosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idlibroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.añoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroedicionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idautorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idEditorialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idcategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.librosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBuscar
@@ -45,8 +56,19 @@
             // 
             this.dgvLibros.AllowUserToAddRows = false;
             this.dgvLibros.AllowUserToDeleteRows = false;
+            this.dgvLibros.AutoGenerateColumns = false;
             this.dgvLibros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idlibroDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.cantidadDataGridViewTextBoxColumn,
+            this.añoDataGridViewTextBoxColumn,
+            this.numeroedicionDataGridViewTextBoxColumn,
+            this.idautorDataGridViewTextBoxColumn,
+            this.idEditorialDataGridViewTextBoxColumn,
+            this.idcategoriaDataGridViewTextBoxColumn});
+            this.dgvLibros.DataSource = this.librosBindingSource;
             this.dgvLibros.Location = new System.Drawing.Point(1, 141);
             this.dgvLibros.Name = "dgvLibros";
             this.dgvLibros.ReadOnly = true;
@@ -54,6 +76,71 @@
             this.dgvLibros.TabIndex = 1;
             this.dgvLibros.DoubleClick += new System.EventHandler(this.dgvLibros_DoubleClick);
             this.dgvLibros.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvLibros_KeyDown);
+            // 
+            // librosBindingSource
+            // 
+            this.librosBindingSource.DataSource = typeof(AdminLabrary.entidades.Libros);
+            // 
+            // idlibroDataGridViewTextBoxColumn
+            // 
+            this.idlibroDataGridViewTextBoxColumn.DataPropertyName = "Id_libro";
+            this.idlibroDataGridViewTextBoxColumn.HeaderText = "Id_libro";
+            this.idlibroDataGridViewTextBoxColumn.Name = "idlibroDataGridViewTextBoxColumn";
+            this.idlibroDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "cantidad";
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            this.cantidadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // añoDataGridViewTextBoxColumn
+            // 
+            this.añoDataGridViewTextBoxColumn.DataPropertyName = "Año";
+            this.añoDataGridViewTextBoxColumn.HeaderText = "Año";
+            this.añoDataGridViewTextBoxColumn.Name = "añoDataGridViewTextBoxColumn";
+            this.añoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.añoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // numeroedicionDataGridViewTextBoxColumn
+            // 
+            this.numeroedicionDataGridViewTextBoxColumn.DataPropertyName = "Numero_edicion";
+            this.numeroedicionDataGridViewTextBoxColumn.HeaderText = "Numero_edicion";
+            this.numeroedicionDataGridViewTextBoxColumn.Name = "numeroedicionDataGridViewTextBoxColumn";
+            this.numeroedicionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.numeroedicionDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // idautorDataGridViewTextBoxColumn
+            // 
+            this.idautorDataGridViewTextBoxColumn.DataPropertyName = "Id_autor";
+            this.idautorDataGridViewTextBoxColumn.HeaderText = "Id_autor";
+            this.idautorDataGridViewTextBoxColumn.Name = "idautorDataGridViewTextBoxColumn";
+            this.idautorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idautorDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // idEditorialDataGridViewTextBoxColumn
+            // 
+            this.idEditorialDataGridViewTextBoxColumn.DataPropertyName = "Id_Editorial";
+            this.idEditorialDataGridViewTextBoxColumn.HeaderText = "Id_Editorial";
+            this.idEditorialDataGridViewTextBoxColumn.Name = "idEditorialDataGridViewTextBoxColumn";
+            this.idEditorialDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idEditorialDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // idcategoriaDataGridViewTextBoxColumn
+            // 
+            this.idcategoriaDataGridViewTextBoxColumn.DataPropertyName = "Id_categoria";
+            this.idcategoriaDataGridViewTextBoxColumn.HeaderText = "Id_categoria";
+            this.idcategoriaDataGridViewTextBoxColumn.Name = "idcategoriaDataGridViewTextBoxColumn";
+            this.idcategoriaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idcategoriaDataGridViewTextBoxColumn.Visible = false;
             // 
             // frmBuscarlibro
             // 
@@ -68,6 +155,7 @@
             this.Text = "frmBuscarlibro";
             this.Load += new System.EventHandler(this.frmBuscarlibro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.librosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -77,5 +165,14 @@
 
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridView dgvLibros;
+        private System.Windows.Forms.BindingSource librosBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idlibroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn añoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeroedicionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idautorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idEditorialDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcategoriaDataGridViewTextBoxColumn;
     }
 }

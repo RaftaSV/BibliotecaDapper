@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using AdminLabrary.formularios.insert_update;
-
+using AdminLabrary.formularios.frmBuscar;
 
 namespace AdminLabrary.formularios.principales
 {
@@ -113,12 +113,7 @@ namespace AdminLabrary.formularios.principales
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
 
-
         }
-
-
-
-
 
         public static frmLectores lector = new frmLectores();
         private void btnLectores_Click(object sender, EventArgs e)
@@ -152,6 +147,7 @@ namespace AdminLabrary.formularios.principales
             MostrarPanel(admi);           
         }
         public static frmAlquileres alquileres = new frmAlquileres();
+        
         private void btnPrestamos_Click(object sender, EventArgs e)
         {
             MostrarPanel(alquileres);

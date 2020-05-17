@@ -28,9 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dgvLectores = new System.Windows.Forms.DataGridView();
+            this.lectoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idLectorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLectores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBuscar
@@ -45,8 +51,14 @@
             // 
             this.dgvLectores.AllowUserToAddRows = false;
             this.dgvLectores.AllowUserToDeleteRows = false;
+            this.dgvLectores.AutoGenerateColumns = false;
             this.dgvLectores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLectores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLectores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idLectorDataGridViewTextBoxColumn,
+            this.nombresDataGridViewTextBoxColumn,
+            this.apellidosDataGridViewTextBoxColumn});
+            this.dgvLectores.DataSource = this.lectoresBindingSource;
             this.dgvLectores.Location = new System.Drawing.Point(3, 138);
             this.dgvLectores.Name = "dgvLectores";
             this.dgvLectores.ReadOnly = true;
@@ -54,6 +66,31 @@
             this.dgvLectores.TabIndex = 3;
             this.dgvLectores.DoubleClick += new System.EventHandler(this.dgvLectores_DoubleClick);
             this.dgvLectores.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvLectores_KeyDown);
+            // 
+            // lectoresBindingSource
+            // 
+            this.lectoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Lectores);
+            // 
+            // idLectorDataGridViewTextBoxColumn
+            // 
+            this.idLectorDataGridViewTextBoxColumn.DataPropertyName = "Id_Lector";
+            this.idLectorDataGridViewTextBoxColumn.HeaderText = "Id_Lector";
+            this.idLectorDataGridViewTextBoxColumn.Name = "idLectorDataGridViewTextBoxColumn";
+            this.idLectorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombresDataGridViewTextBoxColumn
+            // 
+            this.nombresDataGridViewTextBoxColumn.DataPropertyName = "Nombres";
+            this.nombresDataGridViewTextBoxColumn.HeaderText = "Nombres";
+            this.nombresDataGridViewTextBoxColumn.Name = "nombresDataGridViewTextBoxColumn";
+            this.nombresDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // apellidosDataGridViewTextBoxColumn
+            // 
+            this.apellidosDataGridViewTextBoxColumn.DataPropertyName = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn.Name = "apellidosDataGridViewTextBoxColumn";
+            this.apellidosDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // frmBuscarLector
             // 
@@ -67,6 +104,7 @@
             this.Load += new System.EventHandler(this.frmBuscarLector_Load);
             this.DoubleClick += new System.EventHandler(this.frmBuscarLector_DoubleClick);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLectores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -76,5 +114,9 @@
 
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridView dgvLectores;
+        private System.Windows.Forms.BindingSource lectoresBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idLectorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn;
     }
 }
