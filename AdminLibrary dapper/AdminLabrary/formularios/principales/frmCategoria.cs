@@ -34,5 +34,14 @@ namespace AdminLabrary.formularios.principales
             frmInsertarCategoria f = new frmInsertarCategoria();
             f.ShowDialog();
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            entidades.Categorias c = new entidades.Categorias();
+            c  = (entidades.Categorias)categoriasBindingSource.Current;
+            frmActualizarCategoria cat = new frmActualizarCategoria(c);
+            cat.ShowDialog();
+
+        }
     }
 }

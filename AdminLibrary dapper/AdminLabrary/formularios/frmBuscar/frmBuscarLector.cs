@@ -55,7 +55,7 @@ namespace AdminLabrary.formularios.frmBuscar
                 this.Close();
 
             }
-           
+            lector.Clear();
         }
         void CargarLista()
         {

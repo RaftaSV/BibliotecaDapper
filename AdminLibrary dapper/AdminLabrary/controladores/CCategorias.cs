@@ -19,6 +19,10 @@ namespace AdminLabrary.controladores
         {
             MCategorias.guardar(c);
         }
+        public void Actualizar(entidades.Categorias C)
+        {
+            MCategorias.Actualizar(C);
+        }
 
     }
 }

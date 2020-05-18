@@ -33,7 +33,7 @@ namespace AdminLabrary.formularios.principales
         {
             if (txtLector.Text != "" && txtLibro.Text != "" && txtUsuario.Text != "")
             {
-                try {
+                
                     alquileresBindingSource.EndEdit();
                     entidades.Alquileres alq = new entidades.Alquileres();
                     alq = (entidades.Alquileres)alquileresBindingSource.Current;
@@ -43,10 +43,10 @@ namespace AdminLabrary.formularios.principales
                     txtLector.Text = "";
                     txtLibro.Text = "";
                     frmPrincipal.alquileres.CargarDatos();
-                } catch
-            {
-                MessageBox.Show("No se puede realizar el alquiler, verificar si no tiene prestamos pendientes");
-            }
+                
+            
+              
+            
         }
 }
      

@@ -67,6 +67,7 @@ namespace AdminLabrary.formularios.frmBuscar
         }
         void seleccionar()
         {
+            Libros.Clear();
             string libro = dgvLibros.CurrentRow.Cells[1].Value.ToString();
             string id = dgvLibros.CurrentRow.Cells[0].Value.ToString();
             frmPrincipal.alquiler.txtLibro.Text = libro;
