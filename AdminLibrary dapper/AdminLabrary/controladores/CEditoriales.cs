@@ -20,7 +20,7 @@ namespace AdminLabrary.controladores
             M.guardar(c);
         }
 
-        internal void actualizar(entidades.Editoriales c)
+       public void actualizar(entidades.Editoriales c)
         {
             M.actualizar(c);
         }

@@ -37,5 +37,13 @@ namespace AdminLabrary.formularios.principales
             frmInsertarEditorial f = new frmInsertarEditorial();
             f.ShowDialog();
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            entidades.Editoriales c = new entidades.Editoriales();
+            c = (entidades.Editoriales)editorialesBindingSource.Current;
+            frmActualizarEditorial cat = new frmActualizarEditorial();
+        }
     }
 }
+ 

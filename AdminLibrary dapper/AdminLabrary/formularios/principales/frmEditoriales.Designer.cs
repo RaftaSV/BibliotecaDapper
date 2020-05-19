@@ -39,6 +39,7 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editorialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.editorialesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editorialesBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -131,12 +132,23 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(194, 78);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(173, 36);
+            this.btnEditar.TabIndex = 3;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // frmEditoriales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(952, 551);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.editorialesDataGridView);
             this.Name = "frmEditoriales";
@@ -157,5 +169,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnEditar;
     }
 }
