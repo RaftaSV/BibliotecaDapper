@@ -32,5 +32,20 @@ namespace AdminLabrary.modelos
             con.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             con.Close();
         }
+
+       public void actualizar(entidades.Editoriales c)
+        {
+            IDbConnection con = Conexion.Conectar();
+            String consulta = "sp_ActualizarEditoriales";
+            DynamicParameters parametros = new DynamicParameters();
+            parametros.Add("@id", c.Id_Editorial, DbType.Int32);
+            parametros.Add("@Editorial", c.Editorial, DbType.String);
+            parametros.Add("@Fundada", c.Fundada, DbType.Date);
+            parametros.Add("@Direccion", c.Direccion, DbType.String);
+            con.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
+            con.Close();
+        }
+
+
     }
 }
