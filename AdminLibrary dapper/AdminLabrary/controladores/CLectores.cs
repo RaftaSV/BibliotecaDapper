@@ -18,9 +18,13 @@ namespace AdminLabrary.controladores
         internal void guardar(Lectores c) { 
             MLectores.guardar(c);
         }
-       
 
-       
+        public List<Lectores> ListadoparaAdmi()
+        {
+            return MLectores.Listadoparaadmi();
+        }
+
+
 
     }
 

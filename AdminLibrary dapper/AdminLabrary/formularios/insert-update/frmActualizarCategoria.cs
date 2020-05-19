@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AdminLabrary.formularios;
+using AdminLabrary.formularios.principales;
 
 namespace AdminLabrary.formularios.insert_update
 {
@@ -33,6 +35,7 @@ namespace AdminLabrary.formularios.insert_update
             categoria = (entidades.Categorias)categoriasBindingSource.Current;
             CCategorias C = new CCategorias();
             C.Actualizar(categoria);
+            frmPrincipal.Categoria.CargarDatos();
             this.Close();
         }
     }

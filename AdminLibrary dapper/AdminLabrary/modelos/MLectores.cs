@@ -32,9 +32,19 @@ namespace AdminLabrary.modelos
             con.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             con.Close();
         }
-        
-        
-        
+        public List<entidades.Lectores> Listadoparaadmi()
+        {
+            IDbConnection con = Conexion.Conectar();
+            String consulta = "Select * from Lectores a where a.Id_Lector not in (select b.Id_Lector from Administradores b)";
+            List<entidades.Lectores> listado = new List<entidades.Lectores>();
+            con.Open();
+            listado = con.Query<entidades.Lectores>(consulta).ToList();
+            con.Close();
+            return listado;
+        }
+
+
+
 
     }
 }

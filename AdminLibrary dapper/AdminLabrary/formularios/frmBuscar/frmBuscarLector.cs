@@ -60,7 +60,7 @@ namespace AdminLabrary.formularios.frmBuscar
         void CargarLista()
         {
             CLectores lec = new CLectores();
-            lectoresBindingSource.DataSource = lec.Listado();
+            lectoresBindingSource.DataSource = lec.ListadoparaAdmi();
             int Id;
             foreach (DataGridViewRow i in dgvLectores.Rows)
             {
