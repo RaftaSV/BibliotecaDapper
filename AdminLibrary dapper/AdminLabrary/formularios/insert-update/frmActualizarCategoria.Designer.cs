@@ -37,30 +37,30 @@
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // categoriasBindingSource
-            // 
-            this.categoriasBindingSource.DataSource = typeof(AdminLabrary.entidades.Categorias);
-            // 
             // categoriaLabel
             // 
             categoriaLabel.AutoSize = true;
-            categoriaLabel.Location = new System.Drawing.Point(28, 71);
+            categoriaLabel.Location = new System.Drawing.Point(12, 60);
             categoriaLabel.Name = "categoriaLabel";
             categoriaLabel.Size = new System.Drawing.Size(82, 20);
             categoriaLabel.TabIndex = 1;
             categoriaLabel.Text = "Categoria:";
             // 
+            // categoriasBindingSource
+            // 
+            this.categoriasBindingSource.DataSource = typeof(AdminLabrary.entidades.Categorias);
+            // 
             // categoriaTextBox
             // 
             this.categoriaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriasBindingSource, "Categoria", true));
-            this.categoriaTextBox.Location = new System.Drawing.Point(116, 68);
+            this.categoriaTextBox.Location = new System.Drawing.Point(145, 60);
             this.categoriaTextBox.Name = "categoriaTextBox";
             this.categoriaTextBox.Size = new System.Drawing.Size(293, 26);
             this.categoriaTextBox.TabIndex = 2;
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(116, 216);
+            this.btnActualizar.Location = new System.Drawing.Point(52, 236);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(145, 43);
             this.btnActualizar.TabIndex = 3;
@@ -72,7 +72,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 355);
+            this.ClientSize = new System.Drawing.Size(547, 291);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(categoriaLabel);
             this.Controls.Add(this.categoriaTextBox);
