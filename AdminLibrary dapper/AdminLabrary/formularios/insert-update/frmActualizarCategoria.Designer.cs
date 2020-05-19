@@ -33,6 +33,7 @@
             this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoriaTextBox = new System.Windows.Forms.TextBox();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             categoriaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -68,11 +69,22 @@
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(333, 236);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(145, 43);
+            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // frmActualizarCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(547, 291);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(categoriaLabel);
             this.Controls.Add(this.categoriaTextBox);
@@ -91,6 +103,7 @@
 
         private System.Windows.Forms.BindingSource categoriasBindingSource;
         private System.Windows.Forms.TextBox categoriaTextBox;
-        private System.Windows.Forms.Button btnActualizar;
+        public System.Windows.Forms.Button btnEliminar;
+        public System.Windows.Forms.Button btnActualizar;
     }
 }
