@@ -31,6 +31,8 @@ namespace AdminLabrary.formularios.principales
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
             frmInsertarCategoria f = new frmInsertarCategoria();
             f.ShowDialog();
         }
@@ -40,8 +42,31 @@ namespace AdminLabrary.formularios.principales
             entidades.Categorias c = new entidades.Categorias();
             c  = (entidades.Categorias)categoriasBindingSource.Current;
             frmActualizarCategoria cat = new frmActualizarCategoria(c);
+            cat.btnActualizar.Enabled = true;
+            cat.btnEliminar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
             cat.ShowDialog();
 
+        }
+
+        private void categoriasDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnEliminar.Enabled = true;
+            btnEditar.Enabled = true;
+            
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            entidades.Categorias c = new entidades.Categorias();
+            c = (entidades.Categorias)categoriasBindingSource.Current;
+            frmActualizarCategoria cat = new frmActualizarCategoria(c);
+            cat.btnEliminar.Enabled = true;
+            cat.btnActualizar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
+            cat.ShowDialog();
         }
     }
 }

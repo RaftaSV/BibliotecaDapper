@@ -37,10 +37,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // categoriasBindingSource
-            // 
-            this.categoriasBindingSource.DataSource = typeof(AdminLabrary.entidades.Categorias);
-            // 
             // categoriaLabel
             // 
             categoriaLabel.AutoSize = true;
@@ -50,6 +46,10 @@
             categoriaLabel.Size = new System.Drawing.Size(82, 20);
             categoriaLabel.TabIndex = 1;
             categoriaLabel.Text = "Categoria:";
+            // 
+            // categoriasBindingSource
+            // 
+            this.categoriasBindingSource.DataSource = typeof(AdminLabrary.entidades.Categorias);
             // 
             // categoriaTextBox
             // 
@@ -62,7 +62,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(20, 196);
+            this.btnGuardar.Location = new System.Drawing.Point(21, 130);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 3;
@@ -74,7 +74,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 450);
+            this.ClientSize = new System.Drawing.Size(387, 175);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(categoriaLabel);
             this.Controls.Add(this.categoriaTextBox);

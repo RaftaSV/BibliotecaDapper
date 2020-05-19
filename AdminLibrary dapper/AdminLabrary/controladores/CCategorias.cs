@@ -23,6 +23,10 @@ namespace AdminLabrary.controladores
         {
             MCategorias.Actualizar(C);
         }
+        public void Eliminar(entidades.Categorias C)
+        {
+            MCategorias.elminar(C);
+        }
 
     }
 }
