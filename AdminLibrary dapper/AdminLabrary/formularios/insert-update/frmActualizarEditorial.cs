@@ -1,4 +1,5 @@
-﻿using AdminLabrary.entidades;
+﻿using AdminLabrary.conexion;
+using AdminLabrary.entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,17 +14,14 @@ namespace AdminLabrary.formularios.insert_update
 {
     public partial class frmActualizarEditorial : Form
     {
-        public Editoriales C = new Editoriales();
+
+        public entidades.Editoriales Edi = new entidades.Editoriales();
 
 
-        public frmActualizarEditorial(Editoriales C)
+        public frmActualizarEditorial(entidades.Editoriales Edi)
         {
             InitializeComponent();
-            this.C = C;
-
-           
-
-           
+            this.Edi = Edi;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,7 +38,7 @@ namespace AdminLabrary.formularios.insert_update
 
         private void FrmActualizarEditorial_Load(object sender, EventArgs e)
         {
-            editorialesBindingSource.DataSource = C;
+            editorialesBindingSource.DataSource = Edi;
         }
     }
 }

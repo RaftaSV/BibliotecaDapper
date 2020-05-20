@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdminLabrary.entidades
 {
-    class AlquileresPendientes
+    public class AlquileresPendientes
     {
         public int Id_alquiler { get; set; }
         public int Id_Lector { get; set; }

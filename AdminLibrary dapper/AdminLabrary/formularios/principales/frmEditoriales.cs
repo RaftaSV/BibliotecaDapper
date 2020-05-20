@@ -40,9 +40,10 @@ namespace AdminLabrary.formularios.principales
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            entidades.Editoriales c = new entidades.Editoriales();
-            c = (entidades.Editoriales)editorialesBindingSource.Current;
-            frmActualizarEditorial cat = new frmActualizarEditorial();
+            entidades.Editoriales editorial = new entidades.Editoriales();
+            editorial = (entidades.Editoriales)editorialesBindingSource.Current;
+            frmActualizarEditorial edi = new frmActualizarEditorial(editorial);
+            edi.ShowDialog();
         }
     }
 }
