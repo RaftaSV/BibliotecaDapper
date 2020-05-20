@@ -32,94 +32,114 @@
             System.Windows.Forms.Label direccionLabel;
             System.Windows.Forms.Label editorialLabel;
             System.Windows.Forms.Label fundadaLabel;
-            this.editorialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnActualizareditorial = new System.Windows.Forms.Button();
             this.direccionTextBox = new System.Windows.Forms.TextBox();
             this.editorialTextBox = new System.Windows.Forms.TextBox();
             this.fundadaDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.btnActualizareditorial = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.editorialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             direccionLabel = new System.Windows.Forms.Label();
             editorialLabel = new System.Windows.Forms.Label();
             fundadaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.editorialesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // editorialesBindingSource
-            // 
-            this.editorialesBindingSource.DataSource = typeof(AdminLabrary.entidades.Editoriales);
-            // 
             // direccionLabel
             // 
             direccionLabel.AutoSize = true;
-            direccionLabel.Location = new System.Drawing.Point(58, 52);
+            direccionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            direccionLabel.Location = new System.Drawing.Point(19, 79);
             direccionLabel.Name = "direccionLabel";
-            direccionLabel.Size = new System.Drawing.Size(55, 13);
-            direccionLabel.TabIndex = 1;
+            direccionLabel.Size = new System.Drawing.Size(79, 20);
+            direccionLabel.TabIndex = 8;
             direccionLabel.Text = "Direccion:";
-            // 
-            // direccionTextBox
-            // 
-            this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editorialesBindingSource, "Direccion", true));
-            this.direccionTextBox.Location = new System.Drawing.Point(119, 49);
-            this.direccionTextBox.Name = "direccionTextBox";
-            this.direccionTextBox.Size = new System.Drawing.Size(200, 20);
-            this.direccionTextBox.TabIndex = 2;
             // 
             // editorialLabel
             // 
             editorialLabel.AutoSize = true;
-            editorialLabel.Location = new System.Drawing.Point(58, 78);
+            editorialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            editorialLabel.Location = new System.Drawing.Point(19, 48);
             editorialLabel.Name = "editorialLabel";
-            editorialLabel.Size = new System.Drawing.Size(47, 13);
-            editorialLabel.TabIndex = 3;
+            editorialLabel.Size = new System.Drawing.Size(70, 20);
+            editorialLabel.TabIndex = 11;
             editorialLabel.Text = "Editorial:";
-            // 
-            // editorialTextBox
-            // 
-            this.editorialTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editorialesBindingSource, "Editorial", true));
-            this.editorialTextBox.Location = new System.Drawing.Point(119, 75);
-            this.editorialTextBox.Name = "editorialTextBox";
-            this.editorialTextBox.Size = new System.Drawing.Size(200, 20);
-            this.editorialTextBox.TabIndex = 4;
             // 
             // fundadaLabel
             // 
             fundadaLabel.AutoSize = true;
-            fundadaLabel.Location = new System.Drawing.Point(58, 105);
+            fundadaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            fundadaLabel.Location = new System.Drawing.Point(19, 109);
             fundadaLabel.Name = "fundadaLabel";
-            fundadaLabel.Size = new System.Drawing.Size(52, 13);
-            fundadaLabel.TabIndex = 5;
+            fundadaLabel.Size = new System.Drawing.Size(77, 20);
+            fundadaLabel.TabIndex = 13;
             fundadaLabel.Text = "Fundada:";
-            // 
-            // fundadaDateTimePicker
-            // 
-            this.fundadaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.editorialesBindingSource, "Fundada", true));
-            this.fundadaDateTimePicker.Location = new System.Drawing.Point(119, 101);
-            this.fundadaDateTimePicker.Name = "fundadaDateTimePicker";
-            this.fundadaDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.fundadaDateTimePicker.TabIndex = 6;
             // 
             // btnActualizareditorial
             // 
-            this.btnActualizareditorial.Location = new System.Drawing.Point(61, 152);
+            this.btnActualizareditorial.Location = new System.Drawing.Point(47, 201);
             this.btnActualizareditorial.Name = "btnActualizareditorial";
-            this.btnActualizareditorial.Size = new System.Drawing.Size(258, 23);
+            this.btnActualizareditorial.Size = new System.Drawing.Size(132, 30);
             this.btnActualizareditorial.TabIndex = 7;
             this.btnActualizareditorial.Text = "Actualizar";
             this.btnActualizareditorial.UseVisualStyleBackColor = true;
             this.btnActualizareditorial.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // direccionTextBox
+            // 
+            this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editorialesBindingSource, "Direccion", true));
+            this.direccionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.direccionTextBox.Location = new System.Drawing.Point(121, 76);
+            this.direccionTextBox.Name = "direccionTextBox";
+            this.direccionTextBox.Size = new System.Drawing.Size(200, 26);
+            this.direccionTextBox.TabIndex = 10;
+            // 
+            // editorialTextBox
+            // 
+            this.editorialTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editorialesBindingSource, "Editorial", true));
+            this.editorialTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editorialTextBox.Location = new System.Drawing.Point(121, 42);
+            this.editorialTextBox.Name = "editorialTextBox";
+            this.editorialTextBox.Size = new System.Drawing.Size(200, 26);
+            this.editorialTextBox.TabIndex = 9;
+            // 
+            // fundadaDateTimePicker
+            // 
+            this.fundadaDateTimePicker.CustomFormat = "yyyy - MM - dd";
+            this.fundadaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.editorialesBindingSource, "Fundada", true));
+            this.fundadaDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fundadaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.fundadaDateTimePicker.Location = new System.Drawing.Point(121, 109);
+            this.fundadaDateTimePicker.Name = "fundadaDateTimePicker";
+            this.fundadaDateTimePicker.Size = new System.Drawing.Size(200, 26);
+            this.fundadaDateTimePicker.TabIndex = 12;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(251, 201);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(132, 30);
+            this.btnEliminar.TabIndex = 14;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // editorialesBindingSource
+            // 
+            this.editorialesBindingSource.DataSource = typeof(AdminLabrary.entidades.Editoriales);
             // 
             // frmActualizarEditorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(437, 288);
-            this.Controls.Add(this.btnActualizareditorial);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(direccionLabel);
             this.Controls.Add(this.direccionTextBox);
             this.Controls.Add(editorialLabel);
             this.Controls.Add(this.editorialTextBox);
             this.Controls.Add(fundadaLabel);
             this.Controls.Add(this.fundadaDateTimePicker);
+            this.Controls.Add(this.btnActualizareditorial);
             this.Name = "frmActualizarEditorial";
             this.Text = "frmActualizarEditorial";
             this.Load += new System.EventHandler(this.FrmActualizarEditorial_Load);
@@ -135,6 +155,7 @@
         private System.Windows.Forms.TextBox direccionTextBox;
         private System.Windows.Forms.TextBox editorialTextBox;
         private System.Windows.Forms.DateTimePicker fundadaDateTimePicker;
-        private System.Windows.Forms.Button btnActualizareditorial;
+        public System.Windows.Forms.Button btnActualizareditorial;
+        public System.Windows.Forms.Button btnEliminar;
     }
 }

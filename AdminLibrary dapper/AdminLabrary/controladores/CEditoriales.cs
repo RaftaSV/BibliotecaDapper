@@ -24,6 +24,10 @@ namespace AdminLabrary.controladores
         {
             M.actualizar(c);
         }
+        public void Eliminar(entidades.Editoriales c)
+        {
+            M.Eliminar(c);
+        }
 
     }
 }
