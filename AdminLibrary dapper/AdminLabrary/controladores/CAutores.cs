@@ -23,5 +23,9 @@ namespace AdminLabrary.controladores
         {
             MAutores.actualizar(c);
         }
+        public void Eliminar(entidades.Autores C)
+        {
+            MAutores.Eliminar(C);
+        }
     }
 }
