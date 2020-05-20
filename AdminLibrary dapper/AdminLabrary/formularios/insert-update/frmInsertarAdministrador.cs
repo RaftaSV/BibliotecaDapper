@@ -16,6 +16,7 @@ namespace AdminLabrary.formularios.insert_update
 {
     public partial class frmInsertarAdministrador : Form
     {
+        public string Id;
         public frmInsertarAdministrador()
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace AdminLabrary.formularios.insert_update
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            lectorTextBox.Text = Id;
            
             administradoresBindingSource.EndEdit();
             
@@ -50,6 +52,11 @@ namespace AdminLabrary.formularios.insert_update
             frmBuscarLector buscar = new frmBuscarLector();
             buscar.enviar = 2;
             buscar.ShowDialog();
+        }
+
+        private void lectorTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

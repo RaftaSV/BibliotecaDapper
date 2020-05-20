@@ -33,12 +33,12 @@
             System.Windows.Forms.Label usuarioLabel;
             System.Windows.Forms.Label contraseñaLabel;
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.administradoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioTextBox = new System.Windows.Forms.TextBox();
             this.contraseñaTextBox = new System.Windows.Forms.TextBox();
             this.txtLecNombre = new System.Windows.Forms.TextBox();
-            this.txtLecID = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.lectorTextBox = new System.Windows.Forms.TextBox();
+            this.administradoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             lectorLabel = new System.Windows.Forms.Label();
             usuarioLabel = new System.Windows.Forms.Label();
             contraseñaLabel = new System.Windows.Forms.Label();
@@ -90,10 +90,6 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // administradoresBindingSource
-            // 
-            this.administradoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Administradores);
-            // 
             // usuarioTextBox
             // 
             this.usuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.administradoresBindingSource, "Usuario", true));
@@ -123,15 +119,6 @@
             this.txtLecNombre.Size = new System.Drawing.Size(219, 22);
             this.txtLecNombre.TabIndex = 19;
             // 
-            // txtLecID
-            // 
-            this.txtLecID.Enabled = false;
-            this.txtLecID.Location = new System.Drawing.Point(428, 28);
-            this.txtLecID.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLecID.Name = "txtLecID";
-            this.txtLecID.Size = new System.Drawing.Size(60, 22);
-            this.txtLecID.TabIndex = 20;
-            // 
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(516, 28);
@@ -142,13 +129,27 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // lectorTextBox
+            // 
+            this.lectorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.administradoresBindingSource, "lector", true));
+            this.lectorTextBox.Enabled = false;
+            this.lectorTextBox.Location = new System.Drawing.Point(427, 28);
+            this.lectorTextBox.Name = "lectorTextBox";
+            this.lectorTextBox.Size = new System.Drawing.Size(61, 22);
+            this.lectorTextBox.TabIndex = 22;
+            this.lectorTextBox.TextChanged += new System.EventHandler(this.lectorTextBox_TextChanged);
+            // 
+            // administradoresBindingSource
+            // 
+            this.administradoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Administradores);
+            // 
             // frmInsertarAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(693, 352);
+            this.Controls.Add(this.lectorTextBox);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.txtLecID);
             this.Controls.Add(this.txtLecNombre);
             this.Controls.Add(contraseñaLabel);
             this.Controls.Add(this.contraseñaTextBox);
@@ -172,7 +173,7 @@
         private System.Windows.Forms.TextBox usuarioTextBox;
         private System.Windows.Forms.TextBox contraseñaTextBox;
         public System.Windows.Forms.TextBox txtLecNombre;
-        public System.Windows.Forms.TextBox txtLecID;
         private System.Windows.Forms.Button btnBuscar;
+        public System.Windows.Forms.TextBox lectorTextBox;
     }
 }
