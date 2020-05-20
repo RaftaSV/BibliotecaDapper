@@ -23,6 +23,10 @@ namespace AdminLabrary.controladores
         {
             return MLectores.Listadoparaadmi();
         }
+        public void actualizar(entidades.Lectores c)
+        {
+            MLectores.actualizar(c);
+        }
 
 
 
