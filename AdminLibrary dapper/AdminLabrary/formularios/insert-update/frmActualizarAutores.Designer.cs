@@ -32,20 +32,16 @@
             System.Windows.Forms.Label fecha_nacimientoLabel;
             System.Windows.Forms.Label nacionalidadLabel;
             System.Windows.Forms.Label nombreLabel;
-            this.autoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fecha_nacimientoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.nacionalidadTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.autoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             fecha_nacimientoLabel = new System.Windows.Forms.Label();
             nacionalidadLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.autoresBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // autoresBindingSource
-            // 
-            this.autoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Autores);
             // 
             // fecha_nacimientoLabel
             // 
@@ -104,9 +100,13 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(223, 23);
             this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
+            this.button1.Text = "actualizar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // autoresBindingSource
+            // 
+            this.autoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Autores);
             // 
             // frmActualizarAutores
             // 
