@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdminLabrary.formularios.principales;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,14 +25,27 @@ namespace AdminLabrary.formularios.insert_update
             lectoresBindingSource.DataSource = lec;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnEditar_Click(object sender, EventArgs e)
         {
             entidades.Lectores lectores = new entidades.Lectores();
             lectoresBindingSource.EndEdit();
             lectores = (entidades.Lectores)lectoresBindingSource.Current;
             controladores.CLectores c = new controladores.CLectores();
             c.actualizar(lectores);
+            frmPrincipal.lector.CargarDatos();
             this.Close();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            entidades.Lectores lectores = new entidades.Lectores();
+            lectoresBindingSource.EndEdit();
+            lectores = (entidades.Lectores)lectoresBindingSource.Current;
+            controladores.CLectores c = new controladores.CLectores();
+            c.Eliminar(lectores);
+            frmPrincipal.lector.CargarDatos();
+            this.Close();
+
         }
     }
 }

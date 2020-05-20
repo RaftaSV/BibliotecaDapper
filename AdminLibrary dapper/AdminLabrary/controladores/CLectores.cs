@@ -27,6 +27,10 @@ namespace AdminLabrary.controladores
         {
             MLectores.actualizar(c);
         }
+        public void Eliminar(entidades.Lectores c)
+        {
+            MLectores.Eliminar(c);
+        }
 
 
 
