@@ -15,9 +15,13 @@ namespace AdminLabrary.controladores
         {
             return MAdministrador.Listado();
         }
-        internal void guardar(Administradores c)
+        public void guardar(Administradores c)
         {
             MAdministrador.guardar(c);
+        }
+        public void Actualizar(Administradores c)
+        {
+            MAdministrador.Actualizar(c);
         }
     }
 }

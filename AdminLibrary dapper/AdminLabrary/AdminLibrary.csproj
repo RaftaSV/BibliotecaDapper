@@ -173,6 +173,12 @@
     <Compile Include="formularios\frmBuscar\frmBuscarlibro.Designer.cs">
       <DependentUpon>frmBuscarlibro.cs</DependentUpon>
     </Compile>
+    <Compile Include="formularios\insert-update\frmActualizarAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\insert-update\frmActualizarAdmin.Designer.cs">
+      <DependentUpon>frmActualizarAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\insert-update\frmActualizarAutores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -307,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\frmBuscar\frmBuscarlibro.resx">
       <DependentUpon>frmBuscarlibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\insert-update\frmActualizarAdmin.resx">
+      <DependentUpon>frmActualizarAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\insert-update\frmActualizarAutores.resx">
       <DependentUpon>frmActualizarAutores.cs</DependentUpon>
