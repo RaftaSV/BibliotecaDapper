@@ -19,5 +19,9 @@ namespace AdminLabrary.controladores
         {
             MAutores.guardar(c);
         }
+        public void actualizar(entidades.Autores c)
+        {
+            MAutores.actualizar(c);
+        }
     }
 }

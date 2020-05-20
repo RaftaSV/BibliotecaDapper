@@ -34,5 +34,13 @@ namespace AdminLabrary.formularios.principales
             frmInsertarAutores f = new frmInsertarAutores();
             f.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            entidades.Autores autor = new entidades.Autores();
+            autor = (entidades.Autores)autoresBindingSource.Current;
+            frmActualizarAutores aautor = new frmActualizarAutores(autor);
+            aautor.ShowDialog();
+        }
     }
 }
