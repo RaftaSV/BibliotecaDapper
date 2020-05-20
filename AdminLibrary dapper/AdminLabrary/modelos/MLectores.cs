@@ -42,6 +42,17 @@ namespace AdminLabrary.modelos
             con.Close();
             return listado;
         }
+        public void actualizar(entidades.Lectores c)
+        {
+            IDbConnection con = Conexion.Conectar();
+            String consulta = "sp_ActualizarLectores";
+            DynamicParameters parametros = new DynamicParameters();
+            parametros.Add("@id", c.Id_Lector, DbType.Int32);
+            parametros.Add("@Nombre", c.Nombres, DbType.String);
+            parametros.Add("@Apellido", c.Apellidos, DbType.String);
+            con.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
+            con.Close();
+        }
 
 
 

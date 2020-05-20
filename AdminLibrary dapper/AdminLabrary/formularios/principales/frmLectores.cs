@@ -34,5 +34,13 @@ namespace AdminLabrary.formularios.principales
             frmInsertarLector f = new frmInsertarLector();
             f.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            entidades.Lectores lectores = new entidades.Lectores();
+            lectores = (entidades.Lectores)lectoresBindingSource.Current;
+            frmActualizarLectores llector = new frmActualizarLectores(lectores);
+            llector.ShowDialog();
+        }
     }
 }

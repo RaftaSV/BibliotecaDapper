@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -191,6 +191,12 @@
     <Compile Include="formularios\insert-update\frmActualizarEditorial.Designer.cs">
       <DependentUpon>frmActualizarEditorial.cs</DependentUpon>
     </Compile>
+    <Compile Include="formularios\insert-update\frmActualizarLectores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\insert-update\frmActualizarLectores.Designer.cs">
+      <DependentUpon>frmActualizarLectores.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\insert-update\frmInsertarAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\insert-update\frmActualizarEditorial.resx">
       <DependentUpon>frmActualizarEditorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\insert-update\frmActualizarLectores.resx">
+      <DependentUpon>frmActualizarLectores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\insert-update\frmInsertarAdministrador.resx">
       <DependentUpon>frmInsertarAdministrador.cs</DependentUpon>
