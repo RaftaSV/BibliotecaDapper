@@ -34,8 +34,12 @@ namespace AdminLabrary.formularios.principales
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
             frmInsertarEditorial f = new frmInsertarEditorial();
             f.ShowDialog();
+            
+
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -43,6 +47,29 @@ namespace AdminLabrary.formularios.principales
             entidades.Editoriales editorial = new entidades.Editoriales();
             editorial = (entidades.Editoriales)editorialesBindingSource.Current;
             frmActualizarEditorial edi = new frmActualizarEditorial(editorial);
+            edi.btnActualizareditorial.Enabled = true;
+            edi.btnEliminar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
+            edi.ShowDialog();
+        }
+
+        private void editorialesDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnEliminar.Enabled = true;
+            btnEditar.Enabled = true;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+            entidades.Editoriales editorial = new entidades.Editoriales();
+            editorial = (entidades.Editoriales)editorialesBindingSource.Current;
+            frmActualizarEditorial edi = new frmActualizarEditorial(editorial);
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
+            edi.btnActualizareditorial.Enabled = false;
+            edi.btnEliminar.Enabled = true;
             edi.ShowDialog();
         }
     }

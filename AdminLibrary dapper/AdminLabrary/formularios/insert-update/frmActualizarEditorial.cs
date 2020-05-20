@@ -1,5 +1,6 @@
 ﻿using AdminLabrary.conexion;
 using AdminLabrary.entidades;
+using AdminLabrary.formularios.principales;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,6 +32,7 @@ namespace AdminLabrary.formularios.insert_update
             editorial = (entidades.Editoriales)editorialesBindingSource.Current;
             controladores.CEditoriales c = new controladores.CEditoriales();
             c.actualizar(editorial);
+            frmPrincipal.editoriales.CargarDatos();
             this.Close();
 
 
@@ -39,6 +41,17 @@ namespace AdminLabrary.formularios.insert_update
         private void FrmActualizarEditorial_Load(object sender, EventArgs e)
         {
             editorialesBindingSource.DataSource = Edi;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            entidades.Editoriales editorial = new entidades.Editoriales();
+            editorialesBindingSource.EndEdit();
+            editorial = (entidades.Editoriales)editorialesBindingSource.Current;
+            controladores.CEditoriales c = new controladores.CEditoriales();
+            c.Eliminar(editorial);
+            frmPrincipal.editoriales.CargarDatos();
+            this.Close();
         }
     }
 }

@@ -45,6 +45,15 @@ namespace AdminLabrary.modelos
             con.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             con.Close();
         }
+        public void Eliminar(entidades.Editoriales c)
+        {
+            IDbConnection con = Conexion.Conectar();
+            String consulta = "sp_EliminarEditorial";
+            DynamicParameters parametros = new DynamicParameters();
+            parametros.Add("@id", c.Id_Editorial, DbType.Int32);
+            con.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
+            con.Close();
+        }
 
 
     }
