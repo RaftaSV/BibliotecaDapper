@@ -11,8 +11,7 @@ namespace AdminLabrary.modelos
 {
     class MAdministradores
     {
-        private const string Name = "@Usuario";
-
+       
         public List<entidades.Administradores> Listado()
         {
             IDbConnection con = Conexion.Conectar();
@@ -30,7 +29,7 @@ namespace AdminLabrary.modelos
             DynamicParameters parametros = new DynamicParameters();
             parametros.Add("@Usuario", c.Usuario, DbType.String);
             parametros.Add("@Contraseña", c.Contraseña, DbType.String);
-            parametros.Add("@id_lector", c.lector, DbType.Int32);
+            parametros.Add("@id_lector", c.Id_Lector, DbType.Int32);
             con.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             con.Close();
         }
@@ -39,13 +38,21 @@ namespace AdminLabrary.modelos
             IDbConnection con = Conexion.Conectar();
             String consulta = "sp_ActualizarAdministradores";
             DynamicParameters parametros = new DynamicParameters();
-            parametros.Add(" @id", c.Id_Admin, DbType.Int32);
+            parametros.Add("@id", c.Id_Admin, DbType.Int32);
             parametros.Add("@Usuario", c.Usuario, DbType.String);
             parametros.Add("@Contraseña", c.Contraseña, DbType.String);
-            parametros.Add("@Idlector", c.lector, DbType.Int32);
+            parametros.Add("@Idlector", c.Id_Lector, DbType.Int32);
             con.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             con.Close();
         }
-        
+        public void Eliminar(entidades.Administradores c)
+        {
+            IDbConnection con = Conexion.Conectar();
+            String consulta = "sp_EliminarAdmin";
+            DynamicParameters parametros = new DynamicParameters();
+            parametros.Add("@id", c.Id_Admin, DbType.Int32);
+            con.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
+            con.Close();
+        }
     }
 }

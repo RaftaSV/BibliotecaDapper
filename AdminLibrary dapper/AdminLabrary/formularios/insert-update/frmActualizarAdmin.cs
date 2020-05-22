@@ -16,19 +16,22 @@ namespace AdminLabrary.formularios.insert_update
     public partial class frmActualizarAdmin : Form
     {
         public entidades.Administradores A = new entidades.Administradores();
-        public frmActualizarAdmin(entidades.Administradores A)
+       
+        public frmActualizarAdmin()
         {
             InitializeComponent();
-            this.A = A;
+          
         }
 
         private void frmActualizarAdmin_Load(object sender, EventArgs e)
         {
             administradoresBindingSource.DataSource = A;
+           
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+           
             administradoresBindingSource.EndEdit();
             entidades.Administradores ad = new entidades.Administradores();
             ad = (entidades.Administradores)administradoresBindingSource.Current;
@@ -43,6 +46,18 @@ namespace AdminLabrary.formularios.insert_update
             frmBuscarLector lector = new frmBuscarLector();
             lector.enviar = 3;
             lector.ShowDialog();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            administradoresBindingSource.EndEdit();
+            entidades.Administradores ad = new entidades.Administradores();
+            ad = (entidades.Administradores)administradoresBindingSource.Current;
+            CAdministradores AD = new CAdministradores();
+            AD.Eliminar(ad);
+            frmPrincipal.admi.CargarDatos();
+            this.Close();
+
         }
     }
 }

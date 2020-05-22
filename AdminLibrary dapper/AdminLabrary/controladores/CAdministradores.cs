@@ -23,5 +23,10 @@ namespace AdminLabrary.controladores
         {
             MAdministrador.Actualizar(c);
         }
+        public void Eliminar(Administradores c)
+        {
+            MAdministrador.Eliminar(c);
+        }
+
     }
 }

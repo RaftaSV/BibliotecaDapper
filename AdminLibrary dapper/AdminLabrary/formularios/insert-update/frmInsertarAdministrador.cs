@@ -29,7 +29,7 @@ namespace AdminLabrary.formularios.insert_update
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            lectorTextBox.Text = Id;
+            id_LectorTextBox.Text = Id;
            
             administradoresBindingSource.EndEdit();
             
@@ -55,6 +55,11 @@ namespace AdminLabrary.formularios.insert_update
         }
 
         private void lectorTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void id_LectorTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }

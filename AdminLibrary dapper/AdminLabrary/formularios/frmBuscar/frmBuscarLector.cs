@@ -50,7 +50,7 @@ namespace AdminLabrary.formularios.frmBuscar
             {
                 string Lector = dgvLectores.CurrentRow.Cells[1].Value.ToString();
                 string id = dgvLectores.CurrentRow.Cells[0].Value.ToString();
-                frmAdministradores.admin.lectorTextBox.Text = id;
+                frmAdministradores.admin.id_LectorTextBox.Text = id;
                 frmAdministradores.admin.txtLecNombre.Text = Lector;
                 frmAdministradores.admin.Id = id;
                 this.Close();

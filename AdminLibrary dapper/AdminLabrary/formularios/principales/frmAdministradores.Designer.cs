@@ -34,16 +34,16 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.administradoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lectoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.administradoresDataGridView = new System.Windows.Forms.DataGridView();
             this.idAdminDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contraseñaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lectorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.administradoresBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).BeginInit();
+            this.idLectorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.lectoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.administradoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.administradoresDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.administradoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNuevo
@@ -78,14 +78,6 @@
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // administradoresBindingSource
-            // 
-            this.administradoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Administradores);
-            // 
-            // lectoresBindingSource
-            // 
-            this.lectoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Lectores);
-            // 
             // administradoresDataGridView
             // 
             this.administradoresDataGridView.AllowUserToAddRows = false;
@@ -106,7 +98,7 @@
             this.idAdminDataGridViewTextBoxColumn,
             this.usuarioDataGridViewTextBoxColumn,
             this.contraseñaDataGridViewTextBoxColumn,
-            this.lectorDataGridViewTextBoxColumn});
+            this.idLectorDataGridViewTextBoxColumn});
             this.administradoresDataGridView.DataSource = this.administradoresBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
@@ -123,6 +115,7 @@
             this.administradoresDataGridView.Size = new System.Drawing.Size(912, 409);
             this.administradoresDataGridView.TabIndex = 0;
             this.administradoresDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.administradoresDataGridView_CellClick);
+            this.administradoresDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.administradoresDataGridView_CellContentClick);
             // 
             // idAdminDataGridViewTextBoxColumn
             // 
@@ -145,13 +138,26 @@
             this.contraseñaDataGridViewTextBoxColumn.Name = "contraseñaDataGridViewTextBoxColumn";
             this.contraseñaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // lectorDataGridViewTextBoxColumn
+            // idLectorDataGridViewTextBoxColumn
             // 
-            this.lectorDataGridViewTextBoxColumn.DataPropertyName = "lector";
-            this.lectorDataGridViewTextBoxColumn.HeaderText = "lector";
-            this.lectorDataGridViewTextBoxColumn.Name = "lectorDataGridViewTextBoxColumn";
-            this.lectorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lectorDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idLectorDataGridViewTextBoxColumn.DataPropertyName = "Id_Lector";
+            this.idLectorDataGridViewTextBoxColumn.DataSource = this.lectoresBindingSource;
+            this.idLectorDataGridViewTextBoxColumn.DisplayMember = "Nombres";
+            this.idLectorDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.idLectorDataGridViewTextBoxColumn.HeaderText = "Id_Lector";
+            this.idLectorDataGridViewTextBoxColumn.Name = "idLectorDataGridViewTextBoxColumn";
+            this.idLectorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idLectorDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idLectorDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idLectorDataGridViewTextBoxColumn.ValueMember = "Id_Lector";
+            // 
+            // lectoresBindingSource
+            // 
+            this.lectoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Lectores);
+            // 
+            // administradoresBindingSource
+            // 
+            this.administradoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Administradores);
             // 
             // frmAdministradores
             // 
@@ -166,23 +172,23 @@
             this.Name = "frmAdministradores";
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.Carreras_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.administradoresBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.administradoresDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.administradoresBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource administradoresBindingSource;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.BindingSource lectoresBindingSource;
         private System.Windows.Forms.DataGridView administradoresDataGridView;
+        private System.Windows.Forms.BindingSource administradoresBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idAdminDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn contraseñaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lectorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idLectorDataGridViewTextBoxColumn;
     }
 }
