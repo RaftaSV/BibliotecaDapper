@@ -10,7 +10,7 @@ namespace AdminLabrary.entidades
     {
         public int Id_autor { get; set; }
         public string Nombre { get; set; }
-        public string fecha_nacimiento { get; set; }
+        public DateTime fecha_nacimiento { get; set; }
 
         public string Nacionalidad { get; set; }
 

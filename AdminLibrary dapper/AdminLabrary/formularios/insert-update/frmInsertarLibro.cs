@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using AdminLabrary.entidades;
 using AdminLabrary.controladores;
 using AdminLabrary.formularios.principales;
+using AdminLabrary.formularios.frmBuscar;
 
 namespace AdminLabrary.formularios.insert_update
 {
@@ -19,35 +20,61 @@ namespace AdminLabrary.formularios.insert_update
         {
             InitializeComponent();
         }
-
+        public string id_A;
+        public string id_Ed;
         private void frmInsertarLibro_Load(object sender, EventArgs e)
         {
             librosBindingSource.MoveLast();
             librosBindingSource.AddNew();
-            CAutores autores = new CAutores();
-            CCategorias categorias = new CCategorias();
-            CEditoriales editoriales = new CEditoriales();
-            editorialesBindingSource.DataSource = editoriales.Listado();
+            CCategorias categorias = new CCategorias();            
             categoriasBindingSource.DataSource = categorias.Listado();
-            autoresBindingSource.DataSource = autores.Listado();
+          
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e )
         {
-            if (int.Parse(cantidadTextBox.Text)>0)
+            if (int.Parse(cantidadTextBox.Text)>0 && añoDateTimePicker != null)
             {
+                id_autorTextBox.Text = id_A;
+                id_EditorialTextBox.Text = id_Ed;
                 CLibros li = new CLibros();
                 Libros libro = new Libros();
+                librosBindingSource.EndEdit();
                 libro = (Libros)librosBindingSource.Current;
                 li.guardar(libro);
-                librosBindingSource.Clear();
+                librosBindingSource.MoveLast();
+                librosBindingSource.AddNew();
+                txtAutor.Text = "";
+                txtEditorial.Text = "";
+                id_A = "";
+                id_Ed = "";
                 frmPrincipal.libros.CargarDatos();
-            }else
+            
+            }
+            else
             {
                 MessageBox.Show("Todos los Campos son obligatorios");
             }
            
    
         }
+
+        private void btnAutor_Click(object sender, EventArgs e)
+        {
+            frmBuscarAutor f = new frmBuscarAutor();
+            f.Enviar = 1;
+            id_EditorialTextBox.Text = id_Ed;
+            f.ShowDialog();
+        }
+
+        private void btnEditorial_Click(object sender, EventArgs e)
+        {
+            frmBuscarEditorial f = new frmBuscarEditorial();
+            id_autorTextBox.Text = id_A;
+            f.enviar = 1;
+            f.ShowDialog();
+        }
+
+
     }
 }

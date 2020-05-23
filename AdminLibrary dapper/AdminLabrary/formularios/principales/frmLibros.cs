@@ -42,10 +42,11 @@ namespace AdminLabrary.formularios.principales
 
         }
 
+        public frmInsertarLibro nuevoL = new frmInsertarLibro();
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            frmInsertarLibro f = new frmInsertarLibro();
-            f.ShowDialog();
+
+            nuevoL.ShowDialog();
         }
     }
 }
