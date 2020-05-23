@@ -42,12 +42,19 @@ namespace AdminLabrary.formularios.insert_update
                 li.guardar(libro);
                 librosBindingSource.Clear();
                 frmPrincipal.libros.CargarDatos();
-            }else
+                MessageBox.Show("libro guardado exitosamentes");
+
+
+
+
+            }
+            else
             {
                 MessageBox.Show("Todos los Campos son obligatorios");
             }
-           
-   
+            
+            
+
         }
     }
 }
