@@ -215,7 +215,6 @@
             this.id_categoriaComboBox.Size = new System.Drawing.Size(236, 24);
             this.id_categoriaComboBox.TabIndex = 5;
             this.id_categoriaComboBox.ValueMember = "Id_categoria";
-        
             // 
             // categoriasBindingSource
             // 

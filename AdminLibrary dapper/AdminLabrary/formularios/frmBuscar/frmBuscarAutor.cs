@@ -70,6 +70,14 @@ namespace AdminLabrary.formularios.frmBuscar
 
 
             }
+            else
+            {
+                string id = dtgAutores.CurrentRow.Cells[0].Value.ToString();
+                string Nombre = dtgAutores.CurrentRow.Cells[1].Value.ToString();
+                frmPrincipal.libros.nuevoLi.id_autorTextBox.Text = id;
+                frmPrincipal.libros.nuevoLi.txtAutor.Text = Nombre;
+                frmPrincipal.libros.nuevoLi.id_A = id;
+            }
             this.Close();
         }
 

@@ -1,5 +1,6 @@
 ﻿using AdminLabrary.entidades;
 using AdminLabrary.modelos;
+using RazorEngine.Compilation.ImpromptuInterface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +16,17 @@ namespace AdminLabrary.controladores
         {
             return MLibros.Listado();
         }
-        internal void guardar(Libros c)
+        public void guardar(entidades.Libros c)
         {
             MLibros.guardar(c);
+        }
+        public void Actualizar(entidades.Libros c)
+        {
+            MLibros.Actualizar(c);
+        }
+        public void Eliminar(entidades.Libros c)
+        {
+            MLibros.Eliminar(c);
         }
     }
 }

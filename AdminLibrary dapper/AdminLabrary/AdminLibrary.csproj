@@ -215,6 +215,12 @@
     <Compile Include="formularios\insert-update\frmActualizarLectores.Designer.cs">
       <DependentUpon>frmActualizarLectores.cs</DependentUpon>
     </Compile>
+    <Compile Include="formularios\insert-update\frmActualizarLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\insert-update\frmActualizarLibros.Designer.cs">
+      <DependentUpon>frmActualizarLibros.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\insert-update\frmInsertarAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -346,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\insert-update\frmActualizarLectores.resx">
       <DependentUpon>frmActualizarLectores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\insert-update\frmActualizarLibros.resx">
+      <DependentUpon>frmActualizarLibros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\insert-update\frmInsertarAdministrador.resx">
       <DependentUpon>frmInsertarAdministrador.cs</DependentUpon>

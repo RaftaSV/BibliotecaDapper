@@ -59,6 +59,14 @@ namespace AdminLabrary.formularios.frmBuscar
                 frmPrincipal.libros.nuevoL.txtEditorial.Text = nombre;
                 frmPrincipal.libros.nuevoL.id_Ed= id;
             }
+            else
+            {
+                string id = dtgEditoriales.CurrentRow.Cells[0].Value.ToString();
+                string nombre = dtgEditoriales.CurrentRow.Cells[1].Value.ToString();
+                frmPrincipal.libros.nuevoLi.id_EditorialTextBox.Text = id;
+                frmPrincipal.libros.nuevoLi.txtEditorial.Text = nombre;
+                frmPrincipal.libros.nuevoLi.id_Ed = id;
+            }
             this.Close();
         }
 
