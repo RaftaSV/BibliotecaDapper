@@ -46,13 +46,22 @@ namespace AdminLabrary.formularios.frmBuscar
                 frmPrincipal.alquiler.id_LectorTextBox.Text = id;
                 this.Close();
             }
+            else if(enviar == 2)
+            {
+                string Lector = dgvLectores.CurrentRow.Cells[1].Value.ToString();
+                string id = dgvLectores.CurrentRow.Cells[0].Value.ToString();
+                frmAdministradores.admin.id_LectorTextBox.Text = id;
+                frmAdministradores.admin.txtLecNombre.Text = Lector;
+                frmAdministradores.admin.Id = id;
+                this.Close();
+
+            }
             else
             {
                 string Lector = dgvLectores.CurrentRow.Cells[1].Value.ToString();
                 string id = dgvLectores.CurrentRow.Cells[0].Value.ToString();
-                frmAdministradores.admin.txtLecID.Text = id;
-                frmAdministradores.admin.txtLecNombre.Text = Lector;
-                this.Close();
+                //frmPrincipal.admi.admi.txtLecID.Text = id;
+                //frmPrincipal.admi.admi.txtLecNombre.Text = Lector;
 
             }
             lector.Clear();

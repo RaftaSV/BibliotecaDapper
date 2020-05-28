@@ -35,12 +35,38 @@ namespace AdminLabrary.formularios.principales
             f.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void btnEditar_Click(object sender, EventArgs e)
         {
-            entidades.Lectores lectores = new entidades.Lectores();
-            lectores = (entidades.Lectores)lectoresBindingSource.Current;
-            frmActualizarLectores llector = new frmActualizarLectores(lectores);
+            entidades.Lectores lec = new entidades.Lectores();
+            lec = (entidades.Lectores)lectoresBindingSource.Current;
+            frmActualizarLectores llector = new frmActualizarLectores(lec);
+            llector.btnEditar.Enabled = true;
+            llector.btnEliminar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
             llector.ShowDialog();
+
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            entidades.Lectores lec = new entidades.Lectores();
+            lec = (entidades.Lectores)lectoresBindingSource.Current;
+            frmActualizarLectores llector = new frmActualizarLectores(lec);
+            llector.btnEditar.Enabled = false;
+            llector.btnEliminar.Enabled = true;
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
+            llector.ShowDialog();
+        }
+
+        private void lectoresDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnEditar.Enabled = true;
+            btnEliminar.Enabled = true;
+
         }
     }
 }

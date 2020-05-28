@@ -161,6 +161,12 @@
     <Compile Include="entidades\Editoriales.cs" />
     <Compile Include="entidades\Lectores.cs" />
     <Compile Include="entidades\Libros.cs" />
+    <Compile Include="formularios\frmBuscar\frmBuscarAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frmBuscar\frmBuscarAutor.Designer.cs">
+      <DependentUpon>frmBuscarAutor.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\frmBuscar\frmBuscarLector.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,18 @@
     </Compile>
     <Compile Include="formularios\frmBuscar\frmBuscarlibro.Designer.cs">
       <DependentUpon>frmBuscarlibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\frmBuscar\frmBuscarEditorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frmBuscar\frmBuscarEditorial.Designer.cs">
+      <DependentUpon>frmBuscarEditorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\insert-update\frmActualizarAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\insert-update\frmActualizarAdmin.Designer.cs">
+      <DependentUpon>frmActualizarAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="formularios\insert-update\frmActualizarAutores.cs">
       <SubType>Form</SubType>
@@ -196,6 +214,12 @@
     </Compile>
     <Compile Include="formularios\insert-update\frmActualizarLectores.Designer.cs">
       <DependentUpon>frmActualizarLectores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\insert-update\frmActualizarLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\insert-update\frmActualizarLibros.Designer.cs">
+      <DependentUpon>frmActualizarLibros.cs</DependentUpon>
     </Compile>
     <Compile Include="formularios\insert-update\frmInsertarAdministrador.cs">
       <SubType>Form</SubType>
@@ -302,11 +326,20 @@
     <Compile Include="modelos\MLibros.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="formularios\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formularios\frmBuscar\frmBuscarAutor.resx">
+      <DependentUpon>frmBuscarAutor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\frmBuscar\frmBuscarLector.resx">
       <DependentUpon>frmBuscarLector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\frmBuscar\frmBuscarlibro.resx">
       <DependentUpon>frmBuscarlibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\frmBuscar\frmBuscarEditorial.resx">
+      <DependentUpon>frmBuscarEditorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\insert-update\frmActualizarAdmin.resx">
+      <DependentUpon>frmActualizarAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\insert-update\frmActualizarAutores.resx">
       <DependentUpon>frmActualizarAutores.cs</DependentUpon>
@@ -319,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\insert-update\frmActualizarLectores.resx">
       <DependentUpon>frmActualizarLectores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\insert-update\frmActualizarLibros.resx">
+      <DependentUpon>frmActualizarLibros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\insert-update\frmInsertarAdministrador.resx">
       <DependentUpon>frmInsertarAdministrador.cs</DependentUpon>

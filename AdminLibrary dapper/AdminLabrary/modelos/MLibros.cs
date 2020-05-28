@@ -10,7 +10,7 @@ using System.Linq;
 
 namespace AdminLabrary.modelos
 {
-    class MLibros
+    public class MLibros
     {
         public List<entidades.Libros> Listado()
         {
@@ -22,7 +22,7 @@ namespace AdminLabrary.modelos
             con.Close();
             return listado;
         }
-        internal void guardar(entidades.Libros c)
+        public void guardar(entidades.Libros c)
         {
             IDbConnection con = Conexion.Conectar();
             String consulta = "sp_InsertarLibros";
@@ -38,6 +38,32 @@ namespace AdminLabrary.modelos
             con.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             con.Close();
         }
+        public void Actualizar(entidades.Libros c)
+        {
+            IDbConnection con = Conexion.Conectar();
+            String consulta = "sp_ActualizarLibros";
+            DynamicParameters parametros = new DynamicParameters();
+            parametros.Add("@id", c.Id_libro, DbType.Int32);
+            parametros.Add("@Nombre", c.Nombre, DbType.String);
+            parametros.Add("@Cantidad", c.cantidad, DbType.Int32);
+            parametros.Add("@Año", c.Año, DbType.Date);
+            parametros.Add("@NumerodeEdicion", c.Numero_edicion, DbType.Int32);
+            parametros.Add("@Idautor", c.Id_autor, DbType.Int32);
+            parametros.Add("@IdEditorial", c.Id_Editorial, DbType.Int32);
+            parametros.Add("@IdCategoria", c.Id_categoria, DbType.Int32);
+            con.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
+            con.Close();
+        }
+        public void Eliminar(entidades.Libros c)
+        {
+            IDbConnection con = Conexion.Conectar();
+            String consulta = "sp_EliminarLibros";
+            DynamicParameters parametros = new DynamicParameters();
+            parametros.Add("@id", c.Id_libro, DbType.Int32);
+            con.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
+            con.Close();
+        }
+
 
     }
 }

@@ -1,4 +1,4 @@
-﻿using AdminLabrary.conexion;
+﻿    using AdminLabrary.conexion;
 using AdminLabrary.controladores;
 using AdminLabrary.entidades;
 using Dapper;
@@ -50,6 +50,15 @@ namespace AdminLabrary.modelos
             parametros.Add("@id", c.Id_Lector, DbType.Int32);
             parametros.Add("@Nombre", c.Nombres, DbType.String);
             parametros.Add("@Apellido", c.Apellidos, DbType.String);
+            con.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
+            con.Close();
+        }
+        public void Eliminar(entidades.Lectores c)
+        {
+            IDbConnection con = Conexion.Conectar();
+            String consulta = "sp_EliminarLector";
+            DynamicParameters parametros = new DynamicParameters();
+            parametros.Add("@id", c.Id_Lector, DbType.Int32);
             con.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             con.Close();
         }
