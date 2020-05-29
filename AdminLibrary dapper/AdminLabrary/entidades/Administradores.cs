@@ -14,5 +14,6 @@ namespace AdminLabrary.entidades
         public string Contraseña { get; set; }
 
         public int Id_Lector { get; set; }
+        public int estado { get; set; }
     }
 }

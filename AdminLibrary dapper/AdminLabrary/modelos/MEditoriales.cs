@@ -14,10 +14,10 @@ namespace AdminLabrary.modelos
         public List<entidades.Editoriales> Listado()
         {
             IDbConnection con = Conexion.Conectar();
-            String consulta = "Select * from Editoriales";
+            String consulta = "sp_MostrarEditoriales";
             List<entidades.Editoriales> listado = new List<entidades.Editoriales>();
             con.Open();
-            listado = con.Query<entidades.Editoriales>(consulta).ToList();
+            listado = con.Query<entidades.Editoriales>(consulta, commandType: CommandType.StoredProcedure).ToList();
             con.Close();
             return listado;
         }

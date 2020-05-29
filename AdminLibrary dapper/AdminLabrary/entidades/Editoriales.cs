@@ -12,5 +12,6 @@ namespace AdminLabrary.entidades
         public string Editorial { get; set; }
         public  DateTime Fundada { get; set; }
         public string Direccion { get; set; }
+        public int estado { get; set; }
     }
 }

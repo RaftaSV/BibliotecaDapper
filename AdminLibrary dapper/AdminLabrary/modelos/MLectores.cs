@@ -15,10 +15,10 @@ namespace AdminLabrary.modelos
         public List<entidades.Lectores> Listado()
         {
             IDbConnection con = Conexion.Conectar();
-            String consulta = "Select * from Lectores";
+            String consulta = "sp_MostrarLectores";
             List<entidades.Lectores> listado = new List<entidades.Lectores>();
             con.Open();
-            listado = con.Query<entidades.Lectores>(consulta).ToList();
+            listado = con.Query<entidades.Lectores>(consulta, commandType: CommandType.StoredProcedure).ToList();
             con.Close();
             return listado;
         }

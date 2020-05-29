@@ -16,6 +16,7 @@ namespace AdminLabrary.entidades
         public int Id_autor { get; set; }
         public int Id_Editorial { get; set; }
         public int Id_categoria { get; set; }
+        public int estado { get; set; }
 
 
 

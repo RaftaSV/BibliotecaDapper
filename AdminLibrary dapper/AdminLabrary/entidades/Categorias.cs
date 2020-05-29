@@ -12,5 +12,7 @@ namespace AdminLabrary.entidades
      
         public int Id_categoria { get; set; }
         public string Categoria { get; set; }
+
+        public int estado { get; set; }
     }
 }

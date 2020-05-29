@@ -15,7 +15,7 @@ namespace AdminLabrary.modelos
         public List<entidades.Administradores> Listado()
         {
             IDbConnection con = Conexion.Conectar();
-            String consulta = "Select * from Administradores";
+            String consulta = "Select * from Administradores a where a.estado =0";
             List<entidades.Administradores> listado = new List<entidades.Administradores>();
             con.Open();
             listado = con.Query<entidades.Administradores>(consulta).ToList();

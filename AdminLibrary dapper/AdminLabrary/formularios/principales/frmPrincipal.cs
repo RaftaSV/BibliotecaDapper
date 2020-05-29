@@ -18,14 +18,14 @@ using AdminLabrary.formularios.frmBuscar;
 
 namespace AdminLabrary.formularios.principales
 {
-   
+
     public partial class frmPrincipal : Form
     {
         public static string Id;
         public frmPrincipal()
         {
             InitializeComponent();
-            
+
 
 
         }
@@ -42,17 +42,17 @@ namespace AdminLabrary.formularios.principales
         public void MostrarPanel(Form Panel)
         {
             if (activeForm != null)
-            
+
                 activeForm = Panel;
-                Panel.TopLevel = false;
-                Panel.FormBorderStyle = FormBorderStyle.None;
-                Panel.Dock = DockStyle.Fill;
-                pPrincipal.Controls.Add(Panel);
-                pPrincipal.Tag = Panel;
-                Panel.BringToFront();
-                mostrarmenu();
-                Panel.Show();
-            
+            Panel.TopLevel = false;
+            Panel.FormBorderStyle = FormBorderStyle.None;
+            Panel.Dock = DockStyle.Fill;
+            pPrincipal.Controls.Add(Panel);
+            pPrincipal.Tag = Panel;
+            Panel.BringToFront();
+            mostrarmenu();
+            Panel.Show();
+
         }
 
 
@@ -118,16 +118,16 @@ namespace AdminLabrary.formularios.principales
         public static frmLectores lector = new frmLectores();
         private void btnLectores_Click(object sender, EventArgs e)
         {
-            
+
 
             MostrarPanel(lector);
-            
+
         }
 
         public static frmCategoria Categoria = new frmCategoria();
         private void btnCategoria_Click(object sender, EventArgs e)
         {
-              MostrarPanel(Categoria);
+            MostrarPanel(Categoria);
         }
         public static frmLibros libros = new frmLibros();
         private void btnLibros_Click(object sender, EventArgs e)
@@ -135,7 +135,7 @@ namespace AdminLabrary.formularios.principales
             MostrarPanel(libros);
         }
 
-    
+
         public static frmAutor autor = new frmAutor();
         private void btnAutor_Click(object sender, EventArgs e)
         {
@@ -144,10 +144,10 @@ namespace AdminLabrary.formularios.principales
         public static frmAdministradores admi = new frmAdministradores();
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            MostrarPanel(admi);           
+            MostrarPanel(admi);
         }
         public static frmAlquileres alquileres = new frmAlquileres();
-        
+
         private void btnPrestamos_Click(object sender, EventArgs e)
         {
             MostrarPanel(alquileres);
@@ -156,7 +156,7 @@ namespace AdminLabrary.formularios.principales
         int botonO = 0;
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            mostrarmenu();  
+            mostrarmenu();
         }
         void mostrarmenu()
         {
@@ -176,19 +176,8 @@ namespace AdminLabrary.formularios.principales
             }
 
         }
-       public static frmInsertarAlquiler alquiler = new frmInsertarAlquiler();
-        
+        public static frmInsertarAlquiler alquiler = new frmInsertarAlquiler();
 
-    
-        private void PanelBarraTitulo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void LogoGrande_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 
 }

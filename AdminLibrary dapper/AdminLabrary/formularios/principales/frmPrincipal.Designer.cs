@@ -324,7 +324,7 @@
             this.PanelBarraTitulo.Name = "PanelBarraTitulo";
             this.PanelBarraTitulo.Size = new System.Drawing.Size(1182, 40);
             this.PanelBarraTitulo.TabIndex = 3;
-            this.PanelBarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelBarraTitulo_Paint);
+
             this.PanelBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelBarraTitulo_MouseDown);
             // 
             // btnMinimizar
@@ -430,7 +430,7 @@
             this.LogoGrande.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LogoGrande.TabIndex = 24;
             this.LogoGrande.TabStop = false;
-            this.LogoGrande.Click += new System.EventHandler(this.LogoGrande_Click);
+         
             // 
             // lblID
             // 

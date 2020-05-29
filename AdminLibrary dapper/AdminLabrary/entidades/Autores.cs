@@ -14,6 +14,8 @@ namespace AdminLabrary.entidades
 
         public string Nacionalidad { get; set; }
 
+        public int estado { get; set; }
+
 
     }
 }
