@@ -35,7 +35,7 @@ namespace AdminLabrary.modelos
         public List<entidades.Lectores> Listadoparaadmi()
         {
             IDbConnection con = Conexion.Conectar();
-            String consulta = "Select * from Lectores a where a.Id_Lector not in (select b.Id_Lector from Administradores b)";
+            String consulta = "Select * from Lectores a where a.Id_Lector not in (select b.Id_Lector from Administradores b) and a.estado =0 ";
             List<entidades.Lectores> listado = new List<entidades.Lectores>();
             con.Open();
             listado = con.Query<entidades.Lectores>(consulta).ToList();

@@ -132,6 +132,7 @@ namespace AdminLabrary.formularios.principales
         public static frmLibros libros = new frmLibros();
         private void btnLibros_Click(object sender, EventArgs e)
         {
+            libros.CargarDatos();
             MostrarPanel(libros);
         }
 

@@ -40,7 +40,7 @@ namespace AdminLabrary.modelos
         public List<entidades.AlquileresPendientes> ListadoP()
         {
             IDbConnection con = Conexion.Conectar();
-            String consulta = "sp_MostrarLibrosconentregaproxima";
+            String consulta = "sp_MostrarLibrosconentregaproxima1";
             List<entidades.AlquileresPendientes> listadop = new List<entidades.AlquileresPendientes>();
             con.Open();
             listadop = con.Query<entidades.AlquileresPendientes >(consulta, commandType: CommandType.StoredProcedure).ToList();
