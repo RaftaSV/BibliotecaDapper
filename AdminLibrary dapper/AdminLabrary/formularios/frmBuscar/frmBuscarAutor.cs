@@ -15,7 +15,7 @@ namespace AdminLabrary.formularios.frmBuscar
 {
     public partial class frmBuscarAutor : Form
     {
-        List<entidades.Autores> autor = new List<entidades.Autores>();
+       public List<entidades.Autores> autor = new List<entidades.Autores>();
         public int Enviar;
         public frmBuscarAutor()
         {

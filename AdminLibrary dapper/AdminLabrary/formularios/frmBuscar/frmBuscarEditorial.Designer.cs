@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dtgEditoriales = new System.Windows.Forms.DataGridView();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.idEditorialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editorialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fundadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editorialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEditoriales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editorialesBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -60,15 +60,6 @@
             this.dtgEditoriales.TabIndex = 7;
             this.dtgEditoriales.DoubleClick += new System.EventHandler(this.dtgEditoriales_DoubleClick);
             this.dtgEditoriales.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgEditoriales_KeyDown);
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.txtBuscar.Location = new System.Drawing.Point(606, 74);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(213, 20);
-            this.txtBuscar.TabIndex = 6;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // idEditorialDataGridViewTextBoxColumn
             // 
@@ -102,6 +93,15 @@
             // 
             this.editorialesBindingSource.DataSource = typeof(AdminLabrary.entidades.Editoriales);
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.txtBuscar.Location = new System.Drawing.Point(606, 74);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(213, 20);
+            this.txtBuscar.TabIndex = 6;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
             // frmBuscarEditorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -110,7 +110,7 @@
             this.ClientSize = new System.Drawing.Size(831, 459);
             this.Controls.Add(this.dtgEditoriales);
             this.Controls.Add(this.txtBuscar);
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "frmBuscarEditorial";
             this.Text = "frmEditorial";
             this.Load += new System.EventHandler(this.frmBuscarEditorial_Load);

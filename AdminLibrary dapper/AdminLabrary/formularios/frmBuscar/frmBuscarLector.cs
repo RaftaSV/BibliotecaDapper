@@ -15,7 +15,10 @@ namespace AdminLabrary.formularios.frmBuscar
 {
     public partial class frmBuscarLector : Form
     {
-        List<entidades.Lectores> lector = new List<entidades.Lectores>();
+        
+        public List<entidades.Lectores> lector = new List<entidades.Lectores>();
+       public List<entidades.Lectores> lector1 = new List<entidades.Lectores>();
+        public List<entidades.Alquileres> lista = new List<entidades.Alquileres>();
         public int enviar;
         public frmBuscarLector()
         {
@@ -64,18 +67,63 @@ namespace AdminLabrary.formularios.frmBuscar
                 //frmPrincipal.admi.admi.txtLecNombre.Text = Lector;
 
             }
-            lector.Clear();
+            
         }
         void CargarLista()
         {
-            CLectores lec = new CLectores();
-            lectoresBindingSource.DataSource = lec.ListadoparaAdmi();
-            int Id;
-            foreach (DataGridViewRow i in dgvLectores.Rows)
+            if (enviar == 1)
             {
-                Id = int.Parse(i.Cells[0].Value.ToString());
-                lector.Add(new entidades.Lectores { Id_Lector = Id, Nombres = i.Cells[1].Value.ToString(), Apellidos = i.Cells[2].Value.ToString() });
+                CLectores lec = new CLectores();
+                lectoresBindingSource.DataSource = lec.Listado();
+                int Id;
+                foreach (DataGridViewRow i in dgvLectores.Rows)
+                {
+                    Id = int.Parse(i.Cells[0].Value.ToString());
+                    lector1.Add(new entidades.Lectores { Id_Lector = Id, Nombres = i.Cells[1].Value.ToString(), Apellidos = i.Cells[2].Value.ToString() });
+                }
+
+               
+                var listalec = from lect in lector1
+                               select new
+                               {
+
+                                   idlec = lect.Id_Lector,
+                                   NOMBRES = lect.Nombres,
+                                   APELLIDOS = lect.Apellidos
+                                   
+                               };
+                foreach(var i in listalec)
+                {
+                   
+                            var listaalq = from li in lista
+                                           where li.Id_Lector == i.idlec
+                               select new
+                               {
+                                   idlector = li.Id_Lector
+                               };
+
+                    if (listaalq.Count() <1)
+                    {
+                        lector.Add(new entidades.Lectores { Id_Lector = i.idlec, Nombres = i.NOMBRES, Apellidos = i.APELLIDOS });
+                    }
+
+
+                }
+                
+
             }
+            else
+            {
+                CLectores lec = new CLectores();
+                lectoresBindingSource.DataSource = lec.ListadoparaAdmi();
+                int Id;
+                foreach (DataGridViewRow i in dgvLectores.Rows)
+                {
+                    Id = int.Parse(i.Cells[0].Value.ToString());
+                    lector.Add(new entidades.Lectores { Id_Lector = Id, Nombres = i.Cells[1].Value.ToString(), Apellidos = i.Cells[2].Value.ToString() });
+                }
+            }
+            
         }
 
 

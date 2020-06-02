@@ -15,7 +15,7 @@ namespace AdminLabrary.formularios.frmBuscar
     public partial class frmBuscarEditorial : Form
     {
         public int enviar;
-        List<entidades.Editoriales> edi = new List<entidades.Editoriales>();
+       public List<entidades.Editoriales> edi = new List<entidades.Editoriales>();
         public frmBuscarEditorial()
         {
             InitializeComponent();

@@ -20,7 +20,7 @@ namespace AdminLabrary.formularios.frmBuscar
             InitializeComponent();
         }
 
-        List<entidades.Libros> Libros = new List<entidades.Libros>();
+         public  List<entidades.Libros> Libros = new List<entidades.Libros>();
         private void frmBuscarlibro_Load(object sender, EventArgs e)
         {
 

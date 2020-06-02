@@ -441,6 +441,7 @@
             this.LogoGrande.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LogoGrande.TabIndex = 24;
             this.LogoGrande.TabStop = false;
+            this.LogoGrande.Click += new System.EventHandler(this.LogoGrande_Click);
             // 
             // frmPrincipal
             // 

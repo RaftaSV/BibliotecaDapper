@@ -15,7 +15,7 @@ namespace AdminLabrary.formularios.principales
 {
     public partial class frmInsertarAlquiler : Form
     {
-        
+        public int id;
         public frmInsertarAlquiler()
         {
             InitializeComponent();
@@ -26,14 +26,15 @@ namespace AdminLabrary.formularios.principales
         {
            
          
-            CargarID();
+           
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (txtLector.Text != "" && txtLibro.Text != "" && txtUsuario.Text != "")
             {
-                
+
+                    entregadoTextBox.Text = id.ToString();
                     alquileresBindingSource.EndEdit();
                     entidades.Alquileres alq = new entidades.Alquileres();
                     alq = (entidades.Alquileres)alquileresBindingSource.Current;
@@ -54,21 +55,10 @@ namespace AdminLabrary.formularios.principales
 
         private void btnSelecLIbro_Click(object sender, EventArgs e)
         {
-            CargarID();
+            buscarlibro.Libros.Clear();
             buscarlibro.ShowDialog();
         }
-        public void CargarID()
-        {
-            
-            using (BibliotecaEntities1 db = new BibliotecaEntities1())
-            {
-                Administradores admi = new Administradores();
-                admi = db.Administradores.Where(busca => busca.Usuario == txtUsuario.Text).First();
-
-                entregadoTextBox.Text = admi.Id_Admin.ToString();
-                
-            }
-        }
+       
         public void limpiarbinding()
         {
             alquileresBindingSource.MoveLast();
@@ -78,8 +68,9 @@ namespace AdminLabrary.formularios.principales
         public frmBuscarLector lector = new frmBuscarLector();
         private void btnSelecLec_Click(object sender, EventArgs e)
         {
+            lector.lector.Clear();
+            lector.lector1.Clear();
             limpiarbinding();
-            CargarID();
             lector.enviar = 1;
             lector.ShowDialog();
             

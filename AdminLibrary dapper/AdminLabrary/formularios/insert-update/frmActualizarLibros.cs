@@ -34,6 +34,7 @@ namespace AdminLabrary.formularios.insert_update
         private void btnAutor_Click(object sender, EventArgs e)
         {
             frmBuscarAutor f = new frmBuscarAutor();
+            f.autor.Clear();
             f.Enviar = 2;
             id_EditorialTextBox.Text = id_Ed;
             f.ShowDialog();
@@ -42,6 +43,7 @@ namespace AdminLabrary.formularios.insert_update
         private void btnEditorial_Click(object sender, EventArgs e)
         {
             frmBuscarEditorial f = new frmBuscarEditorial();
+            f.edi.Clear();
             id_autorTextBox.Text = id_A;
             f.enviar = 2 ;
             f.ShowDialog();

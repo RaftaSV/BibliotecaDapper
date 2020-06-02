@@ -217,7 +217,7 @@
             this.ClientSize = new System.Drawing.Size(952, 551);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.alquileresDataGridView);
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "frmAlquileres";
             this.Text = "Alquileres";
             this.Load += new System.EventHandler(this.frmAlquileres_Load);

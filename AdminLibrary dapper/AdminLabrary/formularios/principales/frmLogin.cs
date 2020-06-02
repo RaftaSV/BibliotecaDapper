@@ -37,6 +37,10 @@ namespace AdminLabrary.formularios.principales
                 
                 if (lista.Count() > 0)
                 {
+                    foreach(var i in lista)
+                    {
+                        frmPrincipal.alquiler.id = i.Id_Admin;
+                    }
                     frmPrincipal f = new frmPrincipal();
                     string usu = txtUsuario.Text;
                     f.lblUsuario.Text = usu;
