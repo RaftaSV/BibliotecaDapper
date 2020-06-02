@@ -24,9 +24,9 @@ namespace AdminLabrary.formularios.principales
 
         private void frmInsertarAlquiler_Load(object sender, EventArgs e)
         {
-           
-         
-           
+            limpiarbinding();
+
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -34,27 +34,32 @@ namespace AdminLabrary.formularios.principales
             if (txtLector.Text != "" && txtLibro.Text != "" && txtUsuario.Text != "")
             {
 
-                    entregadoTextBox.Text = id.ToString();
-                    alquileresBindingSource.EndEdit();
-                    entidades.Alquileres alq = new entidades.Alquileres();
-                    alq = (entidades.Alquileres)alquileresBindingSource.Current;
-                    CAlquileres cAlq = new CAlquileres();
-                    cAlq.Guardar(alq);
-                    alquileresBindingSource.Clear();
-                    txtLector.Text = "";
-                    txtLibro.Text = "";
-                    frmPrincipal.alquileres.CargarDatos();
-                
-            
-              
-            
+                entregadoTextBox.Text = id.ToString();
+                alquileresBindingSource.EndEdit();
+                entidades.Alquileres alq = new entidades.Alquileres();
+                alq = (entidades.Alquileres)alquileresBindingSource.Current;
+                CAlquileres cAlq = new CAlquileres();
+                cAlq.Guardar(alq);
+                alquileresBindingSource.Clear();
+                txtLector.Text = "";
+                txtLibro.Text = "";
+                frmPrincipal.alquileres.CargarDatos();
+                this.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("Todos los campos son obligatorios");
+            }
         }
-}
+
      
-        public  frmBuscarlibro buscarlibro = new frmBuscarlibro();
+      
 
         private void btnSelecLIbro_Click(object sender, EventArgs e)
         {
+            frmBuscarlibro buscarlibro = new frmBuscarlibro();
+            buscarlibro.cargar();
             buscarlibro.Libros.Clear();
             buscarlibro.ShowDialog();
         }
@@ -70,7 +75,7 @@ namespace AdminLabrary.formularios.principales
         {
             lector.lector.Clear();
             lector.lector1.Clear();
-            limpiarbinding();
+           
             lector.enviar = 1;
             lector.ShowDialog();
             

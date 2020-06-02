@@ -112,6 +112,7 @@
             this.Controls.Add(this.txtBuscar);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "frmBuscarEditorial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditorial";
             this.Load += new System.EventHandler(this.frmBuscarEditorial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgEditoriales)).EndInit();

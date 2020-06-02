@@ -188,6 +188,7 @@
             this.Controls.Add(usuarioLabel);
             this.Controls.Add(this.usuarioTextBox);
             this.Name = "frmActualizarAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmActualizarAdmin";
             this.Load += new System.EventHandler(this.frmActualizarAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.administradoresBindingSource)).EndInit();

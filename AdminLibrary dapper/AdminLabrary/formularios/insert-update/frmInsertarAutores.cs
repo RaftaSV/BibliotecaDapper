@@ -26,14 +26,28 @@ namespace AdminLabrary.formularios.insert_update
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Autores Autor = new Autores();
-            CAutores autor = new CAutores();
-            autoresBindingSource.EndEdit();
-            Autor = (Autores)autoresBindingSource.Current;
-            autor.guardar(Autor);
-            autoresBindingSource.Clear();
-            frmPrincipal.autor.CargarDatos();
-   
+            if(nombreTextBox.Text!=""&&nacionalidadTextBox.Text!="")
+            {
+                Autores Autor = new Autores();
+                CAutores autor = new CAutores();
+                autoresBindingSource.EndEdit();
+                Autor = (Autores)autoresBindingSource.Current;
+                autor.guardar(Autor);
+                autoresBindingSource.Clear();
+                frmPrincipal.autor.CargarDatos();
+                this.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("Todos los campos son obligatorios");
+            }
+
+        }
+
+        private void frmInsertarAutores_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -33,6 +33,7 @@
             System.Windows.Forms.Label id_LectorLabel;
             System.Windows.Forms.Label id_libroLabel;
             this.entregadoTextBox = new System.Windows.Forms.TextBox();
+            this.alquileresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.id_LectorTextBox = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtLector = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.id_libroTextBox = new System.Windows.Forms.TextBox();
             this.txtLibro = new System.Windows.Forms.TextBox();
-            this.alquileresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             entregadoLabel = new System.Windows.Forms.Label();
             id_LectorLabel = new System.Windows.Forms.Label();
             id_libroLabel = new System.Windows.Forms.Label();
@@ -87,6 +87,10 @@
             this.entregadoTextBox.Name = "entregadoTextBox";
             this.entregadoTextBox.Size = new System.Drawing.Size(67, 24);
             this.entregadoTextBox.TabIndex = 2;
+            // 
+            // alquileresBindingSource
+            // 
+            this.alquileresBindingSource.DataSource = typeof(AdminLabrary.entidades.Alquileres);
             // 
             // id_LectorTextBox
             // 
@@ -186,10 +190,6 @@
             this.txtLibro.Size = new System.Drawing.Size(191, 24);
             this.txtLibro.TabIndex = 16;
             // 
-            // alquileresBindingSource
-            // 
-            this.alquileresBindingSource.DataSource = typeof(AdminLabrary.entidades.Alquileres);
-            // 
             // frmInsertarAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,6 +209,7 @@
             this.Controls.Add(this.id_LectorTextBox);
             this.Controls.Add(id_libroLabel);
             this.Name = "frmInsertarAlquiler";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmInsertarAlquiler";
             this.Load += new System.EventHandler(this.frmInsertarAlquiler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.alquileresBindingSource)).EndInit();

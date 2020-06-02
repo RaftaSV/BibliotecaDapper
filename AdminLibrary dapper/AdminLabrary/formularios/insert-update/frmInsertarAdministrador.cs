@@ -39,6 +39,7 @@ namespace AdminLabrary.formularios.insert_update
                 cadmin.guardar(admi);
                 administradoresBindingSource.Clear();
                 frmPrincipal.admi.CargarDatos();
+                this.Close();
             
         }
 

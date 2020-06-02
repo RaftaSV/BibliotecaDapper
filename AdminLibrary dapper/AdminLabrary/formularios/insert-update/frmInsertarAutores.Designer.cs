@@ -33,10 +33,10 @@
             System.Windows.Forms.Label fecha_nacimientoLabel;
             System.Windows.Forms.Label nacionalidadLabel;
             this.nombreTextBox = new System.Windows.Forms.TextBox();
+            this.autoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fecha_nacimientoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.nacionalidadTextBox = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.autoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             nombreLabel = new System.Windows.Forms.Label();
             fecha_nacimientoLabel = new System.Windows.Forms.Label();
             nacionalidadLabel = new System.Windows.Forms.Label();
@@ -85,6 +85,10 @@
             this.nombreTextBox.Size = new System.Drawing.Size(200, 26);
             this.nombreTextBox.TabIndex = 0;
             // 
+            // autoresBindingSource
+            // 
+            this.autoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Autores);
+            // 
             // fecha_nacimientoDateTimePicker
             // 
             this.fecha_nacimientoDateTimePicker.CustomFormat = "yyyy - MM - dd";
@@ -124,10 +128,6 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // autoresBindingSource
-            // 
-            this.autoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Autores);
-            // 
             // frmInsertarAutores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,7 +144,9 @@
             this.Controls.Add(this.nombreTextBox);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "frmInsertarAutores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NUEVO AUTOR";
+            this.Load += new System.EventHandler(this.frmInsertarAutores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.autoresBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

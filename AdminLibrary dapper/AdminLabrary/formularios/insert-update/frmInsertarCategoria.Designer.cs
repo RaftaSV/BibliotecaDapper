@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label categoriaLabel;
             this.categoriaTextBox = new System.Windows.Forms.TextBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnGuardar = new System.Windows.Forms.Button();
             categoriaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +56,10 @@
             this.categoriaTextBox.Size = new System.Drawing.Size(182, 26);
             this.categoriaTextBox.TabIndex = 2;
             // 
+            // categoriasBindingSource
+            // 
+            this.categoriasBindingSource.DataSource = typeof(AdminLabrary.entidades.Categorias);
+            // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.Teal;
@@ -74,10 +78,6 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // categoriasBindingSource
-            // 
-            this.categoriasBindingSource.DataSource = typeof(AdminLabrary.entidades.Categorias);
-            // 
             // frmInsertarCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -89,6 +89,7 @@
             this.Controls.Add(this.categoriaTextBox);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "frmInsertarCategoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NUEVA CATEGORIA";
             this.Load += new System.EventHandler(this.frmInsertarCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();

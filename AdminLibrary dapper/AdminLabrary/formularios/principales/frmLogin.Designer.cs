@@ -97,12 +97,13 @@
             // 
             this.lblCerrar.AutoSize = true;
             this.lblCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.lblCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblCerrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCerrar.Font = new System.Drawing.Font("Arial Narrow", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCerrar.ForeColor = System.Drawing.Color.DarkRed;
             this.lblCerrar.Location = new System.Drawing.Point(847, 0);
             this.lblCerrar.Name = "lblCerrar";
-            this.lblCerrar.Size = new System.Drawing.Size(31, 33);
+            this.lblCerrar.Size = new System.Drawing.Size(33, 35);
             this.lblCerrar.TabIndex = 22;
             this.lblCerrar.Text = "X";
             this.lblCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

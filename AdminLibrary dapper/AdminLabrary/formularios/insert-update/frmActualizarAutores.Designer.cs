@@ -35,9 +35,9 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.nacionalidadTextBox = new System.Windows.Forms.TextBox();
+            this.autoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fecha_nacimientoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
-            this.autoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             nacionalidadLabel = new System.Windows.Forms.Label();
             fecha_nacimientoLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
@@ -124,6 +124,10 @@
             this.nacionalidadTextBox.Size = new System.Drawing.Size(200, 26);
             this.nacionalidadTextBox.TabIndex = 12;
             // 
+            // autoresBindingSource
+            // 
+            this.autoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Autores);
+            // 
             // fecha_nacimientoDateTimePicker
             // 
             this.fecha_nacimientoDateTimePicker.CustomFormat = "yyyy - MM - dd";
@@ -144,10 +148,6 @@
             this.nombreTextBox.Size = new System.Drawing.Size(200, 26);
             this.nombreTextBox.TabIndex = 10;
             // 
-            // autoresBindingSource
-            // 
-            this.autoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Autores);
-            // 
             // frmActualizarAutores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,6 +163,7 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Name = "frmActualizarAutores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmActualizarAutores";
             this.Load += new System.EventHandler(this.frmActualizarAutores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.autoresBindingSource)).EndInit();

@@ -33,7 +33,7 @@ namespace AdminLabrary.formularios.insert_update
 
         private void btnGuardar_Click(object sender, EventArgs e )
         {
-            if (int.Parse(cantidadTextBox.Text)>0 && añoDateTimePicker != null)
+            if (txtAutor.Text!=""&& txtEditorial.Text!=""&& id_autorTextBox.Text!=""&&   int.Parse(cantidadTextBox.Text)>0 && añoDateTimePicker != null)
             {
                 id_autorTextBox.Text = id_A;
                 id_EditorialTextBox.Text = id_Ed;
@@ -49,8 +49,9 @@ namespace AdminLabrary.formularios.insert_update
                 id_A = "";
                 id_Ed = "";
                 frmPrincipal.libros.CargarDatos();
-               
-            
+
+                this.Close();
+
             }
             else
             {

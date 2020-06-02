@@ -102,6 +102,7 @@
             this.Controls.Add(this.dgvLectores);
             this.Controls.Add(this.txtBuscar);
             this.Name = "frmBuscarLector";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBuscarLector";
             this.Load += new System.EventHandler(this.frmBuscarLector_Load);
             this.DoubleClick += new System.EventHandler(this.frmBuscarLector_DoubleClick);

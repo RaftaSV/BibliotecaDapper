@@ -314,6 +314,7 @@
             this.Controls.Add(this.txtEditorial);
             this.Controls.Add(this.txtAutor);
             this.Name = "frmActualizarLibros";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmActualizarLibros";
             this.Load += new System.EventHandler(this.frmActualizarLibros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.librosBindingSource)).EndInit();

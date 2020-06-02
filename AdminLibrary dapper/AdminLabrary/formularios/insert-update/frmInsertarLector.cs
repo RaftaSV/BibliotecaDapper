@@ -33,6 +33,7 @@ namespace AdminLabrary.formularios.insert_update
                 lec.guardar(lectores);
                 lectoresBindingSource.Clear();
                 frmPrincipal.lector.CargarDatos();
+                this.Close();
             }
             else
             {

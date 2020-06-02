@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dtgAutores = new System.Windows.Forms.DataGridView();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.idautorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechanacimientoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nacionalidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.autoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAutores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.autoresBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -60,16 +60,6 @@
             this.dtgAutores.TabIndex = 5;
             this.dtgAutores.DoubleClick += new System.EventHandler(this.dtgAutores_DoubleClick);
             this.dtgAutores.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgAutores_KeyDown);
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.txtBuscar.ForeColor = System.Drawing.Color.Black;
-            this.txtBuscar.Location = new System.Drawing.Point(566, 110);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(253, 20);
-            this.txtBuscar.TabIndex = 4;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // idautorDataGridViewTextBoxColumn
             // 
@@ -103,6 +93,16 @@
             // 
             this.autoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Autores);
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.txtBuscar.ForeColor = System.Drawing.Color.Black;
+            this.txtBuscar.Location = new System.Drawing.Point(566, 110);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(253, 20);
+            this.txtBuscar.TabIndex = 4;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
             // frmBuscarAutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,6 +112,7 @@
             this.Controls.Add(this.dtgAutores);
             this.Controls.Add(this.txtBuscar);
             this.Name = "frmBuscarAutor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBuscarAutor";
             this.Load += new System.EventHandler(this.frmBuscarAutor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgAutores)).EndInit();

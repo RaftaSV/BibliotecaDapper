@@ -102,7 +102,7 @@ namespace AdminLabrary.formularios.frmBuscar
                                    idlector = li.Id_Lector
                                };
 
-                    if (listaalq.Count() <1)
+                    if (listaalq.Count() <3)
                     {
                         lector.Add(new entidades.Lectores { Id_Lector = i.idlec, Nombres = i.NOMBRES, Apellidos = i.APELLIDOS });
                     }

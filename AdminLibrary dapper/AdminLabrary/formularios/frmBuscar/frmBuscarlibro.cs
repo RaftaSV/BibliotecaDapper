@@ -18,27 +18,30 @@ namespace AdminLabrary.formularios.frmBuscar
         public frmBuscarlibro()
         {
             InitializeComponent();
+            
         }
 
          public  List<entidades.Libros> Libros = new List<entidades.Libros>();
         private void frmBuscarlibro_Load(object sender, EventArgs e)
         {
+            
 
-            cargarLista();
+            cargar();
             filtro();
         }
 
-        void cargarLista()
+       
+       public void cargar()
         {
             CLibros cLibros = new CLibros();
             librosBindingSource.DataSource = cLibros.Listado();
+
             foreach (DataGridViewRow i in dgvLibros.Rows)
             {
                 int id = int.Parse(i.Cells[0].Value.ToString());
-                int cantidad = int.Parse(i.Cells[2].Value.ToString());
-                Libros.Add(new entidades.Libros { Id_libro = id, Nombre = i.Cells[1].Value.ToString(), cantidad = cantidad });
+                
+                Libros.Add(new entidades.Libros { Id_libro = id, Nombre = i.Cells[1].Value.ToString(), cantidad = int.Parse(i.Cells[2].Value.ToString()) });
             }
-
         }
         public void filtro()
         {
@@ -67,7 +70,9 @@ namespace AdminLabrary.formularios.frmBuscar
         }
         void seleccionar()
         {
+            
             Libros.Clear();
+            
             string libro = dgvLibros.CurrentRow.Cells[1].Value.ToString();
             string id = dgvLibros.CurrentRow.Cells[0].Value.ToString();
             frmPrincipal.alquiler.txtLibro.Text = libro;

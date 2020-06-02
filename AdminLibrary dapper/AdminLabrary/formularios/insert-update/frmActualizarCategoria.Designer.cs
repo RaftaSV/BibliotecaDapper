@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label categoriaLabel;
             this.categoriaTextBox = new System.Windows.Forms.TextBox();
+            this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             categoriaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +54,10 @@
             this.categoriaTextBox.Name = "categoriaTextBox";
             this.categoriaTextBox.Size = new System.Drawing.Size(293, 26);
             this.categoriaTextBox.TabIndex = 2;
+            // 
+            // categoriasBindingSource
+            // 
+            this.categoriasBindingSource.DataSource = typeof(AdminLabrary.entidades.Categorias);
             // 
             // btnActualizar
             // 
@@ -91,10 +95,6 @@
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // categoriasBindingSource
-            // 
-            this.categoriasBindingSource.DataSource = typeof(AdminLabrary.entidades.Categorias);
-            // 
             // frmActualizarCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -108,6 +108,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmActualizarCategoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmActualizarCategoria";
             this.Load += new System.EventHandler(this.frmActualizarCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();

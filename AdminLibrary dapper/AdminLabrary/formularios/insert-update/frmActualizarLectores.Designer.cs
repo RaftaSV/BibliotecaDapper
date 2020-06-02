@@ -33,9 +33,9 @@
             System.Windows.Forms.Label nombresLabel;
             this.btnEditar = new System.Windows.Forms.Button();
             this.apellidosTextBox = new System.Windows.Forms.TextBox();
+            this.lectoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nombresTextBox = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.lectoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             apellidosLabel = new System.Windows.Forms.Label();
             nombresLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).BeginInit();
@@ -88,6 +88,10 @@
             this.apellidosTextBox.Size = new System.Drawing.Size(220, 26);
             this.apellidosTextBox.TabIndex = 8;
             // 
+            // lectoresBindingSource
+            // 
+            this.lectoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Lectores);
+            // 
             // nombresTextBox
             // 
             this.nombresTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lectoresBindingSource, "Nombres", true));
@@ -115,10 +119,6 @@
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // lectoresBindingSource
-            // 
-            this.lectoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Lectores);
-            // 
             // frmActualizarLectores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -134,6 +134,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmActualizarLectores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmActualizarLectores";
             this.Load += new System.EventHandler(this.frmActualizarLectores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).EndInit();

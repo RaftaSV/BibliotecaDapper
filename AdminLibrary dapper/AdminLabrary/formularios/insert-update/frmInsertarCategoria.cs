@@ -28,13 +28,20 @@ namespace AdminLabrary.formularios.insert_update
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Categorias categorias = new Categorias();
-            CCategorias cCategorias = new CCategorias();
-            categoriasBindingSource.EndEdit();
-            categorias = (Categorias)categoriasBindingSource.Current;
-            cCategorias.guardar(categorias);
-            categoriasBindingSource.Clear();
-            frmPrincipal.Categoria.CargarDatos();
+            if (categoriaTextBox.Text!="") {
+                Categorias categorias = new Categorias();
+                CCategorias cCategorias = new CCategorias();
+                categoriasBindingSource.EndEdit();
+                categorias = (Categorias)categoriasBindingSource.Current;
+                cCategorias.guardar(categorias);
+                categoriasBindingSource.Clear();
+                frmPrincipal.Categoria.CargarDatos();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Todos los campos son obligatorios");
+            }
         }
     }
 }

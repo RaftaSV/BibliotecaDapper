@@ -28,13 +28,20 @@ namespace AdminLabrary.formularios.insert_update
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Editoriales edi = new Editoriales();
-            CEditoriales edit = new CEditoriales();
-            editorialesBindingSource.EndEdit();
-            edi = (Editoriales)editorialesBindingSource.Current;
-            edit.guardar(edi);
-            editorialesBindingSource.Clear();
-            frmPrincipal.editoriales.CargarDatos();     
+            if (editorialTextBox.Text!=""&&direccionTextBox.Text!="") {
+                Editoriales edi = new Editoriales();
+                CEditoriales edit = new CEditoriales();
+                editorialesBindingSource.EndEdit();
+                edi = (Editoriales)editorialesBindingSource.Current;
+                edit.guardar(edi);
+                editorialesBindingSource.Clear();
+                frmPrincipal.editoriales.CargarDatos();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Todos los campos son obligatorios");
+            }
         }
     }
 }

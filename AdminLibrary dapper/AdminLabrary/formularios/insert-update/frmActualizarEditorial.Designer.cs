@@ -34,10 +34,10 @@
             System.Windows.Forms.Label fundadaLabel;
             this.btnActualizareditorial = new System.Windows.Forms.Button();
             this.direccionTextBox = new System.Windows.Forms.TextBox();
+            this.editorialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.editorialTextBox = new System.Windows.Forms.TextBox();
             this.fundadaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.editorialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             direccionLabel = new System.Windows.Forms.Label();
             editorialLabel = new System.Windows.Forms.Label();
             fundadaLabel = new System.Windows.Forms.Label();
@@ -101,6 +101,10 @@
             this.direccionTextBox.Size = new System.Drawing.Size(200, 26);
             this.direccionTextBox.TabIndex = 10;
             // 
+            // editorialesBindingSource
+            // 
+            this.editorialesBindingSource.DataSource = typeof(AdminLabrary.entidades.Editoriales);
+            // 
             // editorialTextBox
             // 
             this.editorialTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editorialesBindingSource, "Editorial", true));
@@ -139,10 +143,6 @@
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // editorialesBindingSource
-            // 
-            this.editorialesBindingSource.DataSource = typeof(AdminLabrary.entidades.Editoriales);
-            // 
             // frmActualizarEditorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,6 +158,7 @@
             this.Controls.Add(this.fundadaDateTimePicker);
             this.Controls.Add(this.btnActualizareditorial);
             this.Name = "frmActualizarEditorial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmActualizarEditorial";
             this.Load += new System.EventHandler(this.FrmActualizarEditorial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.editorialesBindingSource)).EndInit();
