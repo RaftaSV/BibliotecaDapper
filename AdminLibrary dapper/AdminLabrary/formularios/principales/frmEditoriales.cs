@@ -72,6 +72,11 @@ namespace AdminLabrary.formularios.principales
             edi.btnEliminar.Enabled = true;
             edi.ShowDialog();
         }
+
+        private void editorialesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
  

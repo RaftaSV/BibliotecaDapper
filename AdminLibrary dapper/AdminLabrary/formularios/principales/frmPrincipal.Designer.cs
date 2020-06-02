@@ -52,10 +52,10 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnMenu2 = new System.Windows.Forms.PictureBox();
             this.pbtnMenu = new System.Windows.Forms.Panel();
+            this.lblID = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pPrincipal = new System.Windows.Forms.Panel();
             this.LogoGrande = new System.Windows.Forms.PictureBox();
-            this.lblID = new System.Windows.Forms.Label();
             this.PanelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
@@ -324,7 +324,6 @@
             this.PanelBarraTitulo.Name = "PanelBarraTitulo";
             this.PanelBarraTitulo.Size = new System.Drawing.Size(1182, 40);
             this.PanelBarraTitulo.TabIndex = 3;
-
             this.PanelBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelBarraTitulo_MouseDown);
             // 
             // btnMinimizar
@@ -390,15 +389,26 @@
             // 
             // pbtnMenu
             // 
-            this.pbtnMenu.BackColor = System.Drawing.Color.Silver;
+            this.pbtnMenu.BackColor = System.Drawing.Color.CadetBlue;
             this.pbtnMenu.Controls.Add(this.lblID);
             this.pbtnMenu.Controls.Add(this.lblUsuario);
             this.pbtnMenu.Controls.Add(this.btnMenu2);
             this.pbtnMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pbtnMenu.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pbtnMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pbtnMenu.Location = new System.Drawing.Point(226, 40);
             this.pbtnMenu.Name = "pbtnMenu";
-            this.pbtnMenu.Size = new System.Drawing.Size(956, 32);
+            this.pbtnMenu.Size = new System.Drawing.Size(956, 38);
             this.pbtnMenu.TabIndex = 5;
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(419, 6);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(0, 12);
+            this.lblID.TabIndex = 29;
+            this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblUsuario
             // 
@@ -408,15 +418,16 @@
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(0, 20);
             this.lblUsuario.TabIndex = 28;
+            this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pPrincipal
             // 
             this.pPrincipal.BackColor = System.Drawing.Color.Silver;
             this.pPrincipal.Controls.Add(this.LogoGrande);
             this.pPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pPrincipal.Location = new System.Drawing.Point(226, 72);
+            this.pPrincipal.Location = new System.Drawing.Point(226, 78);
             this.pPrincipal.Name = "pPrincipal";
-            this.pPrincipal.Size = new System.Drawing.Size(956, 584);
+            this.pPrincipal.Size = new System.Drawing.Size(956, 578);
             this.pPrincipal.TabIndex = 17;
             // 
             // LogoGrande
@@ -426,19 +437,10 @@
             this.LogoGrande.Image = ((System.Drawing.Image)(resources.GetObject("LogoGrande.Image")));
             this.LogoGrande.Location = new System.Drawing.Point(0, 0);
             this.LogoGrande.Name = "LogoGrande";
-            this.LogoGrande.Size = new System.Drawing.Size(956, 584);
+            this.LogoGrande.Size = new System.Drawing.Size(956, 578);
             this.LogoGrande.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LogoGrande.TabIndex = 24;
             this.LogoGrande.TabStop = false;
-         
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(419, 6);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(0, 13);
-            this.lblID.TabIndex = 29;
             // 
             // frmPrincipal
             // 

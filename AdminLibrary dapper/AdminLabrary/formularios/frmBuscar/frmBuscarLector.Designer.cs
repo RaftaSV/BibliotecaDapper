@@ -31,19 +31,20 @@
             this.components = new System.ComponentModel.Container();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dgvLectores = new System.Windows.Forms.DataGridView();
-            this.lectoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idLectorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lectoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLectores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(3, 74);
+            this.txtBuscar.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.txtBuscar.Location = new System.Drawing.Point(489, 112);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(213, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(337, 20);
             this.txtBuscar.TabIndex = 2;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -59,17 +60,13 @@
             this.nombresDataGridViewTextBoxColumn,
             this.apellidosDataGridViewTextBoxColumn});
             this.dgvLectores.DataSource = this.lectoresBindingSource;
-            this.dgvLectores.Location = new System.Drawing.Point(3, 138);
+            this.dgvLectores.Location = new System.Drawing.Point(12, 138);
             this.dgvLectores.Name = "dgvLectores";
             this.dgvLectores.ReadOnly = true;
             this.dgvLectores.Size = new System.Drawing.Size(816, 222);
             this.dgvLectores.TabIndex = 3;
             this.dgvLectores.DoubleClick += new System.EventHandler(this.dgvLectores_DoubleClick);
             this.dgvLectores.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvLectores_KeyDown);
-            // 
-            // lectoresBindingSource
-            // 
-            this.lectoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Lectores);
             // 
             // idLectorDataGridViewTextBoxColumn
             // 
@@ -92,11 +89,16 @@
             this.apellidosDataGridViewTextBoxColumn.Name = "apellidosDataGridViewTextBoxColumn";
             this.apellidosDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // lectoresBindingSource
+            // 
+            this.lectoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Lectores);
+            // 
             // frmBuscarLector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(822, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(838, 450);
             this.Controls.Add(this.dgvLectores);
             this.Controls.Add(this.txtBuscar);
             this.Name = "frmBuscarLector";

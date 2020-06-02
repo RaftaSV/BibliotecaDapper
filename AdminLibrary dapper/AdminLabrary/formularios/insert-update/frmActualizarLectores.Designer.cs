@@ -31,85 +31,100 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label apellidosLabel;
             System.Windows.Forms.Label nombresLabel;
-            this.lectoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnEditar = new System.Windows.Forms.Button();
             this.apellidosTextBox = new System.Windows.Forms.TextBox();
             this.nombresTextBox = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.lectoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             apellidosLabel = new System.Windows.Forms.Label();
             nombresLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // lectoresBindingSource
-            // 
-            this.lectoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Lectores);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(55, 242);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(112, 35);
-            this.btnEditar.TabIndex = 5;
-            this.btnEditar.Text = "Actualizar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
-            // 
             // apellidosLabel
             // 
             apellidosLabel.AutoSize = true;
-            apellidosLabel.Location = new System.Drawing.Point(51, 122);
+            apellidosLabel.Location = new System.Drawing.Point(34, 197);
             apellidosLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             apellidosLabel.Name = "apellidosLabel";
             apellidosLabel.Size = new System.Drawing.Size(77, 20);
             apellidosLabel.TabIndex = 7;
             apellidosLabel.Text = "Apellidos:";
             // 
-            // apellidosTextBox
-            // 
-            this.apellidosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lectoresBindingSource, "Apellidos", true));
-            this.apellidosTextBox.Location = new System.Drawing.Point(153, 119);
-            this.apellidosTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.apellidosTextBox.Name = "apellidosTextBox";
-            this.apellidosTextBox.Size = new System.Drawing.Size(220, 26);
-            this.apellidosTextBox.TabIndex = 8;
-            // 
             // nombresLabel
             // 
             nombresLabel.AutoSize = true;
-            nombresLabel.Location = new System.Drawing.Point(51, 26);
+            nombresLabel.Location = new System.Drawing.Point(34, 161);
             nombresLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             nombresLabel.Name = "nombresLabel";
             nombresLabel.Size = new System.Drawing.Size(77, 20);
             nombresLabel.TabIndex = 9;
             nombresLabel.Text = "Nombres:";
             // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.Teal;
+            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Teal;
+            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Location = new System.Drawing.Point(38, 242);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(327, 28);
+            this.btnEditar.TabIndex = 5;
+            this.btnEditar.Text = "Actualizar";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
+            // 
+            // apellidosTextBox
+            // 
+            this.apellidosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lectoresBindingSource, "Apellidos", true));
+            this.apellidosTextBox.Location = new System.Drawing.Point(136, 194);
+            this.apellidosTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.apellidosTextBox.Name = "apellidosTextBox";
+            this.apellidosTextBox.Size = new System.Drawing.Size(220, 26);
+            this.apellidosTextBox.TabIndex = 8;
+            // 
             // nombresTextBox
             // 
             this.nombresTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lectoresBindingSource, "Nombres", true));
-            this.nombresTextBox.Location = new System.Drawing.Point(153, 24);
-            this.nombresTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.nombresTextBox.Location = new System.Drawing.Point(136, 159);
+            this.nombresTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.nombresTextBox.Name = "nombresTextBox";
             this.nombresTextBox.Size = new System.Drawing.Size(220, 26);
             this.nombresTextBox.TabIndex = 6;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(274, 242);
+            this.btnEliminar.BackColor = System.Drawing.Color.Teal;
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Teal;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(38, 274);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(112, 35);
+            this.btnEliminar.Size = new System.Drawing.Size(327, 27);
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // lectoresBindingSource
+            // 
+            this.lectoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Lectores);
             // 
             // frmActualizarLectores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(423, 325);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(422, 341);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(apellidosLabel);
             this.Controls.Add(this.apellidosTextBox);

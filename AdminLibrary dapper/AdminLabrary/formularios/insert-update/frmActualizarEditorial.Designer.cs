@@ -48,7 +48,7 @@
             // 
             direccionLabel.AutoSize = true;
             direccionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            direccionLabel.Location = new System.Drawing.Point(19, 79);
+            direccionLabel.Location = new System.Drawing.Point(19, 188);
             direccionLabel.Name = "direccionLabel";
             direccionLabel.Size = new System.Drawing.Size(79, 20);
             direccionLabel.TabIndex = 8;
@@ -58,7 +58,7 @@
             // 
             editorialLabel.AutoSize = true;
             editorialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            editorialLabel.Location = new System.Drawing.Point(19, 48);
+            editorialLabel.Location = new System.Drawing.Point(19, 157);
             editorialLabel.Name = "editorialLabel";
             editorialLabel.Size = new System.Drawing.Size(70, 20);
             editorialLabel.TabIndex = 11;
@@ -68,7 +68,7 @@
             // 
             fundadaLabel.AutoSize = true;
             fundadaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            fundadaLabel.Location = new System.Drawing.Point(19, 109);
+            fundadaLabel.Location = new System.Drawing.Point(19, 218);
             fundadaLabel.Name = "fundadaLabel";
             fundadaLabel.Size = new System.Drawing.Size(77, 20);
             fundadaLabel.TabIndex = 13;
@@ -76,19 +76,27 @@
             // 
             // btnActualizareditorial
             // 
-            this.btnActualizareditorial.Location = new System.Drawing.Point(47, 201);
+            this.btnActualizareditorial.BackColor = System.Drawing.Color.Teal;
+            this.btnActualizareditorial.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.btnActualizareditorial.FlatAppearance.BorderSize = 0;
+            this.btnActualizareditorial.FlatAppearance.CheckedBackColor = System.Drawing.Color.Teal;
+            this.btnActualizareditorial.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnActualizareditorial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnActualizareditorial.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizareditorial.ForeColor = System.Drawing.Color.White;
+            this.btnActualizareditorial.Location = new System.Drawing.Point(23, 264);
             this.btnActualizareditorial.Name = "btnActualizareditorial";
-            this.btnActualizareditorial.Size = new System.Drawing.Size(132, 30);
+            this.btnActualizareditorial.Size = new System.Drawing.Size(298, 30);
             this.btnActualizareditorial.TabIndex = 7;
             this.btnActualizareditorial.Text = "Actualizar";
-            this.btnActualizareditorial.UseVisualStyleBackColor = true;
+            this.btnActualizareditorial.UseVisualStyleBackColor = false;
             this.btnActualizareditorial.Click += new System.EventHandler(this.button1_Click);
             // 
             // direccionTextBox
             // 
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editorialesBindingSource, "Direccion", true));
             this.direccionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.direccionTextBox.Location = new System.Drawing.Point(121, 76);
+            this.direccionTextBox.Location = new System.Drawing.Point(121, 185);
             this.direccionTextBox.Name = "direccionTextBox";
             this.direccionTextBox.Size = new System.Drawing.Size(200, 26);
             this.direccionTextBox.TabIndex = 10;
@@ -97,7 +105,7 @@
             // 
             this.editorialTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editorialesBindingSource, "Editorial", true));
             this.editorialTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editorialTextBox.Location = new System.Drawing.Point(121, 42);
+            this.editorialTextBox.Location = new System.Drawing.Point(121, 151);
             this.editorialTextBox.Name = "editorialTextBox";
             this.editorialTextBox.Size = new System.Drawing.Size(200, 26);
             this.editorialTextBox.TabIndex = 9;
@@ -108,19 +116,27 @@
             this.fundadaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.editorialesBindingSource, "Fundada", true));
             this.fundadaDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fundadaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fundadaDateTimePicker.Location = new System.Drawing.Point(121, 109);
+            this.fundadaDateTimePicker.Location = new System.Drawing.Point(121, 218);
             this.fundadaDateTimePicker.Name = "fundadaDateTimePicker";
             this.fundadaDateTimePicker.Size = new System.Drawing.Size(200, 26);
             this.fundadaDateTimePicker.TabIndex = 12;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(251, 201);
+            this.btnEliminar.BackColor = System.Drawing.Color.Teal;
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Teal;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEliminar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(23, 300);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(132, 30);
+            this.btnEliminar.Size = new System.Drawing.Size(298, 30);
             this.btnEliminar.TabIndex = 14;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // editorialesBindingSource
@@ -131,7 +147,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 288);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(358, 350);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(direccionLabel);
             this.Controls.Add(this.direccionTextBox);

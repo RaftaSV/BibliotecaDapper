@@ -49,6 +49,7 @@ namespace AdminLabrary.formularios.insert_update
                 id_A = "";
                 id_Ed = "";
                 frmPrincipal.libros.CargarDatos();
+               
             
             }
             else
@@ -75,6 +76,9 @@ namespace AdminLabrary.formularios.insert_update
             f.ShowDialog();
         }
 
+        private void id_EditorialLabel_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
