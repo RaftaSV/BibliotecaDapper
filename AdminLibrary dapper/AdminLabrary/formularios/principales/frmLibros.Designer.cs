@@ -35,24 +35,24 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.librosDataGridView = new System.Windows.Forms.DataGridView();
+            this.autoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.editorialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.librosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idautorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.autoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idlibroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.añoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroedicionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idEditorialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.editorialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idcategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.librosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.librosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.librosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.idlibroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idautorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.añoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idEditorialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.idcategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.numeroedicionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.librosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.autoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editorialesBindingSource)).BeginInit();
@@ -92,15 +92,15 @@
             this.librosDataGridView.ColumnHeadersHeight = 40;
             this.librosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.librosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idlibroDataGridViewTextBoxColumn,
             this.nombreDataGridViewTextBoxColumn,
             this.idautorDataGridViewTextBoxColumn,
             this.estadoDataGridViewTextBoxColumn,
-            this.idlibroDataGridViewTextBoxColumn,
             this.cantidadDataGridViewTextBoxColumn,
             this.añoDataGridViewTextBoxColumn,
-            this.numeroedicionDataGridViewTextBoxColumn,
             this.idEditorialDataGridViewTextBoxColumn,
-            this.idcategoriaDataGridViewTextBoxColumn});
+            this.idcategoriaDataGridViewTextBoxColumn,
+            this.numeroedicionDataGridViewTextBoxColumn});
             this.librosDataGridView.DataSource = this.librosBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -132,6 +132,22 @@
             this.librosDataGridView.TabIndex = 1;
             this.librosDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.librosDataGridView_CellClick);
             this.librosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.librosDataGridView_CellContentClick);
+            // 
+            // autoresBindingSource
+            // 
+            this.autoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Autores);
+            // 
+            // editorialesBindingSource
+            // 
+            this.editorialesBindingSource.DataSource = typeof(AdminLabrary.entidades.Editoriales);
+            // 
+            // categoriasBindingSource
+            // 
+            this.categoriasBindingSource.DataSource = typeof(AdminLabrary.entidades.Categorias);
+            // 
+            // librosBindingSource
+            // 
+            this.librosBindingSource.DataSource = typeof(AdminLabrary.entidades.Libros);
             // 
             // btnNuevo
             // 
@@ -189,6 +205,21 @@
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // librosBindingSource1
+            // 
+            this.librosBindingSource1.DataSource = typeof(AdminLabrary.entidades.Libros);
+            // 
+            // librosBindingSource2
+            // 
+            this.librosBindingSource2.DataSource = typeof(AdminLabrary.entidades.Libros);
+            // 
+            // idlibroDataGridViewTextBoxColumn
+            // 
+            this.idlibroDataGridViewTextBoxColumn.DataPropertyName = "Id_libro";
+            this.idlibroDataGridViewTextBoxColumn.HeaderText = "Id_libro";
+            this.idlibroDataGridViewTextBoxColumn.Name = "idlibroDataGridViewTextBoxColumn";
+            this.idlibroDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // nombreDataGridViewTextBoxColumn
             // 
             this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
@@ -202,16 +233,12 @@
             this.idautorDataGridViewTextBoxColumn.DataSource = this.autoresBindingSource;
             this.idautorDataGridViewTextBoxColumn.DisplayMember = "Nombre";
             this.idautorDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.idautorDataGridViewTextBoxColumn.HeaderText = "Id_autor";
+            this.idautorDataGridViewTextBoxColumn.HeaderText = "Autor";
             this.idautorDataGridViewTextBoxColumn.Name = "idautorDataGridViewTextBoxColumn";
             this.idautorDataGridViewTextBoxColumn.ReadOnly = true;
             this.idautorDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.idautorDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.idautorDataGridViewTextBoxColumn.ValueMember = "Id_autor";
-            // 
-            // autoresBindingSource
-            // 
-            this.autoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Autores);
             // 
             // estadoDataGridViewTextBoxColumn
             // 
@@ -220,13 +247,6 @@
             this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
             this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
             this.estadoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // idlibroDataGridViewTextBoxColumn
-            // 
-            this.idlibroDataGridViewTextBoxColumn.DataPropertyName = "Id_libro";
-            this.idlibroDataGridViewTextBoxColumn.HeaderText = "Id_libro";
-            this.idlibroDataGridViewTextBoxColumn.Name = "idlibroDataGridViewTextBoxColumn";
-            this.idlibroDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cantidadDataGridViewTextBoxColumn
             // 
@@ -242,29 +262,18 @@
             this.añoDataGridViewTextBoxColumn.Name = "añoDataGridViewTextBoxColumn";
             this.añoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // numeroedicionDataGridViewTextBoxColumn
-            // 
-            this.numeroedicionDataGridViewTextBoxColumn.DataPropertyName = "Numero_edicion";
-            this.numeroedicionDataGridViewTextBoxColumn.HeaderText = "Numero_edicion";
-            this.numeroedicionDataGridViewTextBoxColumn.Name = "numeroedicionDataGridViewTextBoxColumn";
-            this.numeroedicionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // idEditorialDataGridViewTextBoxColumn
             // 
             this.idEditorialDataGridViewTextBoxColumn.DataPropertyName = "Id_Editorial";
             this.idEditorialDataGridViewTextBoxColumn.DataSource = this.editorialesBindingSource;
             this.idEditorialDataGridViewTextBoxColumn.DisplayMember = "Editorial";
             this.idEditorialDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.idEditorialDataGridViewTextBoxColumn.HeaderText = "Id_Editorial";
+            this.idEditorialDataGridViewTextBoxColumn.HeaderText = "Editorial";
             this.idEditorialDataGridViewTextBoxColumn.Name = "idEditorialDataGridViewTextBoxColumn";
             this.idEditorialDataGridViewTextBoxColumn.ReadOnly = true;
             this.idEditorialDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.idEditorialDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.idEditorialDataGridViewTextBoxColumn.ValueMember = "Id_Editorial";
-            // 
-            // editorialesBindingSource
-            // 
-            this.editorialesBindingSource.DataSource = typeof(AdminLabrary.entidades.Editoriales);
             // 
             // idcategoriaDataGridViewTextBoxColumn
             // 
@@ -272,28 +281,19 @@
             this.idcategoriaDataGridViewTextBoxColumn.DataSource = this.categoriasBindingSource;
             this.idcategoriaDataGridViewTextBoxColumn.DisplayMember = "Categoria";
             this.idcategoriaDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.idcategoriaDataGridViewTextBoxColumn.HeaderText = "Id_categoria";
+            this.idcategoriaDataGridViewTextBoxColumn.HeaderText = "Categoria";
             this.idcategoriaDataGridViewTextBoxColumn.Name = "idcategoriaDataGridViewTextBoxColumn";
             this.idcategoriaDataGridViewTextBoxColumn.ReadOnly = true;
             this.idcategoriaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.idcategoriaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.idcategoriaDataGridViewTextBoxColumn.ValueMember = "Id_categoria";
             // 
-            // categoriasBindingSource
+            // numeroedicionDataGridViewTextBoxColumn
             // 
-            this.categoriasBindingSource.DataSource = typeof(AdminLabrary.entidades.Categorias);
-            // 
-            // librosBindingSource
-            // 
-            this.librosBindingSource.DataSource = typeof(AdminLabrary.entidades.Libros);
-            // 
-            // librosBindingSource1
-            // 
-            this.librosBindingSource1.DataSource = typeof(AdminLabrary.entidades.Libros);
-            // 
-            // librosBindingSource2
-            // 
-            this.librosBindingSource2.DataSource = typeof(AdminLabrary.entidades.Libros);
+            this.numeroedicionDataGridViewTextBoxColumn.DataPropertyName = "Numero_edicion";
+            this.numeroedicionDataGridViewTextBoxColumn.HeaderText = "Numero_edicion";
+            this.numeroedicionDataGridViewTextBoxColumn.Name = "numeroedicionDataGridViewTextBoxColumn";
+            this.numeroedicionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // frmLibros
             // 
@@ -324,20 +324,20 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn idautorDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource autoresBindingSource;
         private System.Windows.Forms.BindingSource editorialesBindingSource;
         private System.Windows.Forms.BindingSource categoriasBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource librosBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idlibroDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn añoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numeroedicionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn idEditorialDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn idcategoriaDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource librosBindingSource1;
         private System.Windows.Forms.BindingSource librosBindingSource2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idlibroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idautorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn añoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idEditorialDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idcategoriaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeroedicionDataGridViewTextBoxColumn;
     }
 }

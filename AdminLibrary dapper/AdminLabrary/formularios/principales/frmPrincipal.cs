@@ -177,6 +177,7 @@ namespace AdminLabrary.formularios.principales
             }
 
         }
+        public static frmRecibir recibir = new frmRecibir();
         public static frmInsertarAlquiler alquiler = new frmInsertarAlquiler();
 
         private void LogoGrande_Click(object sender, EventArgs e)

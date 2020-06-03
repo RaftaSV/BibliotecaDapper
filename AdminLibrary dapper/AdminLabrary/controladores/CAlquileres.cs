@@ -24,5 +24,9 @@ namespace AdminLabrary.controladores
         {
             return a.ListadoP();
         }
+        public void Recibir(entidades.AlquileresPendientes c)
+        {
+            a.Recibir(c);
+        }
     }
 }

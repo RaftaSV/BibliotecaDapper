@@ -35,6 +35,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.alquileresDataGridView = new System.Windows.Forms.DataGridView();
+            this.btnRecibir = new System.Windows.Forms.Button();
+            this.btnHistorial = new System.Windows.Forms.Button();
             this.idalquilerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idLectorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.lectoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -54,6 +56,7 @@
             // 
             // btnNuevo
             // 
+            this.btnNuevo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnNuevo.BackColor = System.Drawing.Color.Teal;
             this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnNuevo.FlatAppearance.BorderSize = 0;
@@ -131,7 +134,47 @@
             this.alquileresDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.alquileresDataGridView.Size = new System.Drawing.Size(912, 409);
             this.alquileresDataGridView.TabIndex = 1;
+            this.alquileresDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.alquileresDataGridView_CellClick);
             this.alquileresDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.alquileresDataGridView_CellContentClick);
+            // 
+            // btnRecibir
+            // 
+            this.btnRecibir.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnRecibir.BackColor = System.Drawing.Color.Teal;
+            this.btnRecibir.Enabled = false;
+            this.btnRecibir.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.btnRecibir.FlatAppearance.BorderSize = 0;
+            this.btnRecibir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnRecibir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnRecibir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRecibir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecibir.ForeColor = System.Drawing.Color.White;
+            this.btnRecibir.Location = new System.Drawing.Point(285, 102);
+            this.btnRecibir.Name = "btnRecibir";
+            this.btnRecibir.Size = new System.Drawing.Size(110, 23);
+            this.btnRecibir.TabIndex = 3;
+            this.btnRecibir.Text = "Recibir libro";
+            this.btnRecibir.UseVisualStyleBackColor = false;
+            this.btnRecibir.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnHistorial
+            // 
+            this.btnHistorial.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnHistorial.BackColor = System.Drawing.Color.Teal;
+            this.btnHistorial.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.btnHistorial.FlatAppearance.BorderSize = 0;
+            this.btnHistorial.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnHistorial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHistorial.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorial.ForeColor = System.Drawing.Color.White;
+            this.btnHistorial.Location = new System.Drawing.Point(471, 102);
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.Size = new System.Drawing.Size(145, 23);
+            this.btnHistorial.TabIndex = 4;
+            this.btnHistorial.Text = "Alquileres finalizados";
+            this.btnHistorial.UseVisualStyleBackColor = false;
+            this.btnHistorial.Click += new System.EventHandler(this.button2_Click);
             // 
             // idalquilerDataGridViewTextBoxColumn
             // 
@@ -215,6 +258,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(952, 551);
+            this.Controls.Add(this.btnHistorial);
+            this.Controls.Add(this.btnRecibir);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.alquileresDataGridView);
             this.ForeColor = System.Drawing.Color.Black;
@@ -243,5 +288,7 @@
         private System.Windows.Forms.BindingSource administradoresBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechasalidaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaprevistadeentregaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnRecibir;
+        private System.Windows.Forms.Button btnHistorial;
     }
 }

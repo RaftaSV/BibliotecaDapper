@@ -14,5 +14,6 @@ namespace AdminLabrary.entidades
         public int Entregado { get; set; }
         public DateTime fecha_salida { get; set; }
         public DateTime fecha_prevista_de_entrega { get; set; }
+        public int Recibir { get; set; }
     }
 }

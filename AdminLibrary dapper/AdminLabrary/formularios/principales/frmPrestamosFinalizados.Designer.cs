@@ -1,6 +1,6 @@
 ﻿namespace AdminLabrary.formularios.principales
 {
-    partial class frmAdministradores
+    partial class frmPrestamosFinalizados
     {
         /// <summary>
         /// Required designer variable.
@@ -33,77 +33,25 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.administradoresDataGridView = new System.Windows.Forms.DataGridView();
             this.lectoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.librosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.administradoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idAdminDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contraseñaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alquileresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idalquilerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idLectorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idlibroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.entregadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.fechasalidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaprevistadeentregaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechadeentregaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.recibidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.administradoresDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.librosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.administradoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alquileresBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.Color.Teal;
-            this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
-            this.btnNuevo.FlatAppearance.BorderSize = 0;
-            this.btnNuevo.FlatAppearance.CheckedBackColor = System.Drawing.Color.Teal;
-            this.btnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNuevo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Location = new System.Drawing.Point(14, 88);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(120, 36);
-            this.btnNuevo.TabIndex = 3;
-            this.btnNuevo.Text = "Nuevo Admin";
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Teal;
-            this.btnEliminar.Enabled = false;
-            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Teal;
-            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(538, 88);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(130, 36);
-            this.btnEliminar.TabIndex = 9;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.Teal;
-            this.btnEditar.Enabled = false;
-            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Teal;
-            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(260, 88);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(130, 36);
-            this.btnEditar.TabIndex = 8;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // administradoresDataGridView
             // 
@@ -134,22 +82,25 @@
             this.administradoresDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.administradoresDataGridView.ColumnHeadersHeight = 40;
             this.administradoresDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idAdminDataGridViewTextBoxColumn,
-            this.usuarioDataGridViewTextBoxColumn,
-            this.contraseñaDataGridViewTextBoxColumn,
+            this.idalquilerDataGridViewTextBoxColumn,
             this.idLectorDataGridViewTextBoxColumn,
-            this.estadoDataGridViewTextBoxColumn});
-            this.administradoresDataGridView.DataSource = this.administradoresBindingSource;
+            this.idlibroDataGridViewTextBoxColumn,
+            this.entregadoDataGridViewTextBoxColumn,
+            this.fechasalidaDataGridViewTextBoxColumn,
+            this.fechaprevistadeentregaDataGridViewTextBoxColumn,
+            this.fechadeentregaDataGridViewTextBoxColumn,
+            this.recibidoDataGridViewTextBoxColumn});
+            this.administradoresDataGridView.DataSource = this.alquileresBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.PowderBlue;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.administradoresDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.administradoresDataGridView.GridColor = System.Drawing.Color.Gainsboro;
-            this.administradoresDataGridView.Location = new System.Drawing.Point(12, 140);
+            this.administradoresDataGridView.Location = new System.Drawing.Point(12, 130);
             this.administradoresDataGridView.Name = "administradoresDataGridView";
             this.administradoresDataGridView.ReadOnly = true;
             this.administradoresDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -163,39 +114,31 @@
             this.administradoresDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.administradoresDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.administradoresDataGridView.Size = new System.Drawing.Size(912, 409);
-            this.administradoresDataGridView.TabIndex = 0;
-            this.administradoresDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.administradoresDataGridView_CellClick);
-            this.administradoresDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.administradoresDataGridView_CellContentClick);
+            this.administradoresDataGridView.TabIndex = 9;
             // 
             // lectoresBindingSource
             // 
             this.lectoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Lectores);
             // 
+            // librosBindingSource
+            // 
+            this.librosBindingSource.DataSource = typeof(AdminLabrary.entidades.Libros);
+            // 
             // administradoresBindingSource
             // 
             this.administradoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Administradores);
             // 
-            // idAdminDataGridViewTextBoxColumn
+            // alquileresBindingSource
             // 
-            this.idAdminDataGridViewTextBoxColumn.DataPropertyName = "Id_Admin";
-            this.idAdminDataGridViewTextBoxColumn.HeaderText = "Id_Admin";
-            this.idAdminDataGridViewTextBoxColumn.Name = "idAdminDataGridViewTextBoxColumn";
-            this.idAdminDataGridViewTextBoxColumn.ReadOnly = true;
+            this.alquileresBindingSource.DataSource = typeof(AdminLabrary.entidades.Alquileres);
             // 
-            // usuarioDataGridViewTextBoxColumn
+            // idalquilerDataGridViewTextBoxColumn
             // 
-            this.usuarioDataGridViewTextBoxColumn.DataPropertyName = "Usuario";
-            this.usuarioDataGridViewTextBoxColumn.HeaderText = "Usuario";
-            this.usuarioDataGridViewTextBoxColumn.Name = "usuarioDataGridViewTextBoxColumn";
-            this.usuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // contraseñaDataGridViewTextBoxColumn
-            // 
-            this.contraseñaDataGridViewTextBoxColumn.DataPropertyName = "Contraseña";
-            this.contraseñaDataGridViewTextBoxColumn.HeaderText = "Contraseña";
-            this.contraseñaDataGridViewTextBoxColumn.Name = "contraseñaDataGridViewTextBoxColumn";
-            this.contraseñaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.contraseñaDataGridViewTextBoxColumn.Visible = false;
+            this.idalquilerDataGridViewTextBoxColumn.DataPropertyName = "Id_alquiler";
+            this.idalquilerDataGridViewTextBoxColumn.FillWeight = 40F;
+            this.idalquilerDataGridViewTextBoxColumn.HeaderText = "Id_alquiler";
+            this.idalquilerDataGridViewTextBoxColumn.Name = "idalquilerDataGridViewTextBoxColumn";
+            this.idalquilerDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // idLectorDataGridViewTextBoxColumn
             // 
@@ -203,6 +146,7 @@
             this.idLectorDataGridViewTextBoxColumn.DataSource = this.lectoresBindingSource;
             this.idLectorDataGridViewTextBoxColumn.DisplayMember = "Nombres";
             this.idLectorDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.idLectorDataGridViewTextBoxColumn.FillWeight = 120F;
             this.idLectorDataGridViewTextBoxColumn.HeaderText = "Lector";
             this.idLectorDataGridViewTextBoxColumn.Name = "idLectorDataGridViewTextBoxColumn";
             this.idLectorDataGridViewTextBoxColumn.ReadOnly = true;
@@ -210,45 +154,105 @@
             this.idLectorDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.idLectorDataGridViewTextBoxColumn.ValueMember = "Id_Lector";
             // 
-            // estadoDataGridViewTextBoxColumn
+            // idlibroDataGridViewTextBoxColumn
             // 
-            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "estado";
-            this.estadoDataGridViewTextBoxColumn.HeaderText = "estado";
-            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
-            this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.estadoDataGridViewTextBoxColumn.Visible = false;
+            this.idlibroDataGridViewTextBoxColumn.DataPropertyName = "Id_libro";
+            this.idlibroDataGridViewTextBoxColumn.DataSource = this.librosBindingSource;
+            this.idlibroDataGridViewTextBoxColumn.DisplayMember = "Nombre";
+            this.idlibroDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.idlibroDataGridViewTextBoxColumn.FillWeight = 120F;
+            this.idlibroDataGridViewTextBoxColumn.HeaderText = "Libro";
+            this.idlibroDataGridViewTextBoxColumn.Name = "idlibroDataGridViewTextBoxColumn";
+            this.idlibroDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idlibroDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idlibroDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idlibroDataGridViewTextBoxColumn.ValueMember = "Id_libro";
             // 
-            // frmAdministradores
+            // entregadoDataGridViewTextBoxColumn
+            // 
+            this.entregadoDataGridViewTextBoxColumn.DataPropertyName = "Entregado";
+            this.entregadoDataGridViewTextBoxColumn.DataSource = this.administradoresBindingSource;
+            this.entregadoDataGridViewTextBoxColumn.DisplayMember = "Usuario";
+            this.entregadoDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.entregadoDataGridViewTextBoxColumn.FillWeight = 50F;
+            this.entregadoDataGridViewTextBoxColumn.HeaderText = "Entregado";
+            this.entregadoDataGridViewTextBoxColumn.Name = "entregadoDataGridViewTextBoxColumn";
+            this.entregadoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.entregadoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.entregadoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.entregadoDataGridViewTextBoxColumn.ValueMember = "Id_Admin";
+            // 
+            // fechasalidaDataGridViewTextBoxColumn
+            // 
+            this.fechasalidaDataGridViewTextBoxColumn.DataPropertyName = "fecha_salida";
+            this.fechasalidaDataGridViewTextBoxColumn.FillWeight = 60F;
+            this.fechasalidaDataGridViewTextBoxColumn.HeaderText = "fecha_salida";
+            this.fechasalidaDataGridViewTextBoxColumn.Name = "fechasalidaDataGridViewTextBoxColumn";
+            this.fechasalidaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaprevistadeentregaDataGridViewTextBoxColumn
+            // 
+            this.fechaprevistadeentregaDataGridViewTextBoxColumn.DataPropertyName = "fecha_prevista_de_entrega";
+            this.fechaprevistadeentregaDataGridViewTextBoxColumn.FillWeight = 60F;
+            this.fechaprevistadeentregaDataGridViewTextBoxColumn.HeaderText = "fecha_prevista_de_entrega";
+            this.fechaprevistadeentregaDataGridViewTextBoxColumn.Name = "fechaprevistadeentregaDataGridViewTextBoxColumn";
+            this.fechaprevistadeentregaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechaprevistadeentregaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // fechadeentregaDataGridViewTextBoxColumn
+            // 
+            this.fechadeentregaDataGridViewTextBoxColumn.DataPropertyName = "fecha_de_entrega";
+            this.fechadeentregaDataGridViewTextBoxColumn.FillWeight = 60F;
+            this.fechadeentregaDataGridViewTextBoxColumn.HeaderText = "fecha_de_entrega";
+            this.fechadeentregaDataGridViewTextBoxColumn.Name = "fechadeentregaDataGridViewTextBoxColumn";
+            this.fechadeentregaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // recibidoDataGridViewTextBoxColumn
+            // 
+            this.recibidoDataGridViewTextBoxColumn.DataPropertyName = "Recibido";
+            this.recibidoDataGridViewTextBoxColumn.DataSource = this.administradoresBindingSource;
+            this.recibidoDataGridViewTextBoxColumn.DisplayMember = "Usuario";
+            this.recibidoDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.recibidoDataGridViewTextBoxColumn.FillWeight = 50F;
+            this.recibidoDataGridViewTextBoxColumn.HeaderText = "Recibido";
+            this.recibidoDataGridViewTextBoxColumn.Name = "recibidoDataGridViewTextBoxColumn";
+            this.recibidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.recibidoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.recibidoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.recibidoDataGridViewTextBoxColumn.ValueMember = "Id_Admin";
+            // 
+            // frmPrestamosFinalizados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(952, 551);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.administradoresDataGridView);
-            this.Name = "frmAdministradores";
-            this.Text = "Admin";
-            this.Load += new System.EventHandler(this.Carreras_Load);
+            this.Name = "frmPrestamosFinalizados";
+            this.Text = "frmPrestamosFinalizados";
+            this.Load += new System.EventHandler(this.frmPrestamosFinalizados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.administradoresDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.librosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.administradoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alquileresBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnEditar;
+
         private System.Windows.Forms.DataGridView administradoresDataGridView;
+        private System.Windows.Forms.BindingSource alquileresBindingSource;
         private System.Windows.Forms.BindingSource lectoresBindingSource;
+        private System.Windows.Forms.BindingSource librosBindingSource;
         private System.Windows.Forms.BindingSource administradoresBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idAdminDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usuarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contraseñaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idalquilerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn idLectorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idlibroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn entregadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechasalidaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaprevistadeentregaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechadeentregaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn recibidoDataGridViewTextBoxColumn;
     }
 }

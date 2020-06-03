@@ -19,11 +19,11 @@ namespace AdminLabrary.formularios.principales
             txtContraseña.PasswordChar = '*';
 
         }
-
+        public static frmPrincipal f = new frmPrincipal();
         public void btnIniciarsesion_Click(object sender, EventArgs e)
 
         {
-
+           
             string u = txtUsuario.Text;
 
             using (BibliotecaEntities1 db = new BibliotecaEntities1())
@@ -40,11 +40,13 @@ namespace AdminLabrary.formularios.principales
                     foreach(var i in lista)
                     {
                         frmPrincipal.alquiler.id = i.Id_Admin;
+                        frmPrincipal.recibir.id = i.Id_Admin;
                     }
-                    frmPrincipal f = new frmPrincipal();
+                    
                     string usu = txtUsuario.Text;
                     f.lblUsuario.Text = usu;
                     frmPrincipal.alquiler.txtUsuario.Text = txtUsuario.Text;
+                    frmPrincipal.recibir.txtUsuario.Text = txtUsuario.Text;
                     f.ShowDialog();
 
                     this.Hide();
