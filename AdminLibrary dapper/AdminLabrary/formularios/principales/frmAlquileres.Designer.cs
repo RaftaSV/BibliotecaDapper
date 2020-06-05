@@ -34,7 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnRecibir = new System.Windows.Forms.Button();
             this.alquileresDataGridView = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -59,24 +59,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.alquileresPendientesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnNuevo
+            // btnRecibir
             // 
-            this.btnNuevo.BackColor = System.Drawing.Color.Teal;
-            this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
-            this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
-            this.btnNuevo.FlatAppearance.BorderSize = 0;
-            this.btnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNuevo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Location = new System.Drawing.Point(761, 15);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(128, 33);
-            this.btnNuevo.TabIndex = 2;
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            this.btnRecibir.BackColor = System.Drawing.Color.Teal;
+            this.btnRecibir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRecibir.BackgroundImage")));
+            this.btnRecibir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRecibir.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.btnRecibir.FlatAppearance.BorderSize = 0;
+            this.btnRecibir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnRecibir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnRecibir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRecibir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecibir.ForeColor = System.Drawing.Color.White;
+            this.btnRecibir.Location = new System.Drawing.Point(775, 5);
+            this.btnRecibir.Name = "btnRecibir";
+            this.btnRecibir.Size = new System.Drawing.Size(128, 33);
+            this.btnRecibir.TabIndex = 2;
+            this.btnRecibir.UseVisualStyleBackColor = false;
+            this.btnRecibir.Click += new System.EventHandler(this.btnRecibir_Click);
             // 
             // alquileresDataGridView
             // 
@@ -146,7 +146,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btnNuevo);
+            this.panel1.Controls.Add(this.btnRecibir);
             this.panel1.Location = new System.Drawing.Point(12, 7);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(906, 127);
@@ -273,7 +273,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnRecibir;
         private System.Windows.Forms.DataGridView alquileresDataGridView;
         private System.Windows.Forms.BindingSource alquileresPendientesBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idalquilerDataGridViewTextBoxColumn;
