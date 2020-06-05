@@ -36,11 +36,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditoriales));
             this.editorialesDataGridView = new System.Windows.Forms.DataGridView();
-            this.idEditorialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editorialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fundadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editorialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -48,6 +43,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.idEditorialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editorialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fundadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.editorialesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editorialesBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
@@ -121,41 +121,6 @@
             this.editorialesDataGridView.TabIndex = 1;
             this.editorialesDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.editorialesDataGridView_CellClick);
             this.editorialesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.editorialesDataGridView_CellContentClick);
-            // 
-            // idEditorialDataGridViewTextBoxColumn
-            // 
-            this.idEditorialDataGridViewTextBoxColumn.DataPropertyName = "Id_Editorial";
-            this.idEditorialDataGridViewTextBoxColumn.HeaderText = "Id_Editorial";
-            this.idEditorialDataGridViewTextBoxColumn.Name = "idEditorialDataGridViewTextBoxColumn";
-            this.idEditorialDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // editorialDataGridViewTextBoxColumn
-            // 
-            this.editorialDataGridViewTextBoxColumn.DataPropertyName = "Editorial";
-            this.editorialDataGridViewTextBoxColumn.HeaderText = "Editorial";
-            this.editorialDataGridViewTextBoxColumn.Name = "editorialDataGridViewTextBoxColumn";
-            this.editorialDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fundadaDataGridViewTextBoxColumn
-            // 
-            this.fundadaDataGridViewTextBoxColumn.DataPropertyName = "Fundada";
-            this.fundadaDataGridViewTextBoxColumn.HeaderText = "Fundada";
-            this.fundadaDataGridViewTextBoxColumn.Name = "fundadaDataGridViewTextBoxColumn";
-            this.fundadaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // direccionDataGridViewTextBoxColumn
-            // 
-            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion";
-            this.direccionDataGridViewTextBoxColumn.HeaderText = "Direccion";
-            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
-            this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // estadoDataGridViewTextBoxColumn
-            // 
-            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "estado";
-            this.estadoDataGridViewTextBoxColumn.HeaderText = "estado";
-            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
-            this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // editorialesBindingSource
             // 
@@ -252,6 +217,42 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // idEditorialDataGridViewTextBoxColumn
+            // 
+            this.idEditorialDataGridViewTextBoxColumn.DataPropertyName = "Id_Editorial";
+            this.idEditorialDataGridViewTextBoxColumn.HeaderText = "Id_Editorial";
+            this.idEditorialDataGridViewTextBoxColumn.Name = "idEditorialDataGridViewTextBoxColumn";
+            this.idEditorialDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // editorialDataGridViewTextBoxColumn
+            // 
+            this.editorialDataGridViewTextBoxColumn.DataPropertyName = "Editorial";
+            this.editorialDataGridViewTextBoxColumn.HeaderText = "Editorial";
+            this.editorialDataGridViewTextBoxColumn.Name = "editorialDataGridViewTextBoxColumn";
+            this.editorialDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fundadaDataGridViewTextBoxColumn
+            // 
+            this.fundadaDataGridViewTextBoxColumn.DataPropertyName = "Fundada";
+            this.fundadaDataGridViewTextBoxColumn.HeaderText = "Fundada";
+            this.fundadaDataGridViewTextBoxColumn.Name = "fundadaDataGridViewTextBoxColumn";
+            this.fundadaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // direccionDataGridViewTextBoxColumn
+            // 
+            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion";
+            this.direccionDataGridViewTextBoxColumn.HeaderText = "Direccion";
+            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // estadoDataGridViewTextBoxColumn
+            // 
+            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "estado";
+            this.estadoDataGridViewTextBoxColumn.HeaderText = "estado";
+            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
+            this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.estadoDataGridViewTextBoxColumn.Visible = false;
+            // 
             // frmEditoriales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,13 +280,13 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idEditorialDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn editorialDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fundadaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
