@@ -305,7 +305,7 @@
             // PictureBox5
             // 
             this.PictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox5.Image")));
-            this.PictureBox5.Location = new System.Drawing.Point(12, 6);
+            this.PictureBox5.Location = new System.Drawing.Point(3, 0);
             this.PictureBox5.Name = "PictureBox5";
             this.PictureBox5.Size = new System.Drawing.Size(214, 195);
             this.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -398,13 +398,14 @@
             this.pbtnMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pbtnMenu.Location = new System.Drawing.Point(226, 40);
             this.pbtnMenu.Name = "pbtnMenu";
-            this.pbtnMenu.Size = new System.Drawing.Size(956, 38);
+            this.pbtnMenu.Size = new System.Drawing.Size(956, 29);
             this.pbtnMenu.TabIndex = 5;
+            this.pbtnMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.pbtnMenu_Paint);
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(419, 6);
+            this.lblID.Location = new System.Drawing.Point(461, 3);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(0, 12);
             this.lblID.TabIndex = 29;
@@ -414,7 +415,7 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(413, 6);
+            this.lblUsuario.Location = new System.Drawing.Point(455, 3);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(0, 20);
             this.lblUsuario.TabIndex = 28;
@@ -422,22 +423,21 @@
             // 
             // pPrincipal
             // 
-            this.pPrincipal.BackColor = System.Drawing.Color.Silver;
+            this.pPrincipal.BackColor = System.Drawing.Color.White;
             this.pPrincipal.Controls.Add(this.LogoGrande);
             this.pPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pPrincipal.Location = new System.Drawing.Point(226, 78);
+            this.pPrincipal.Location = new System.Drawing.Point(226, 69);
             this.pPrincipal.Name = "pPrincipal";
-            this.pPrincipal.Size = new System.Drawing.Size(956, 578);
+            this.pPrincipal.Size = new System.Drawing.Size(956, 587);
             this.pPrincipal.TabIndex = 17;
             // 
             // LogoGrande
             // 
             this.LogoGrande.BackColor = System.Drawing.Color.White;
-            this.LogoGrande.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LogoGrande.Image = ((System.Drawing.Image)(resources.GetObject("LogoGrande.Image")));
-            this.LogoGrande.Location = new System.Drawing.Point(0, 0);
+            this.LogoGrande.Location = new System.Drawing.Point(186, 85);
             this.LogoGrande.Name = "LogoGrande";
-            this.LogoGrande.Size = new System.Drawing.Size(956, 578);
+            this.LogoGrande.Size = new System.Drawing.Size(673, 451);
             this.LogoGrande.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LogoGrande.TabIndex = 24;
             this.LogoGrande.TabStop = false;
@@ -454,6 +454,7 @@
             this.Controls.Add(this.PanelMenu);
             this.Controls.Add(this.PanelBarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
