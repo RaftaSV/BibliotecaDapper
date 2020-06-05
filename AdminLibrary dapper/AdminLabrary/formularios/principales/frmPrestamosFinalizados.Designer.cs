@@ -34,18 +34,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.administradoresDataGridView = new System.Windows.Forms.DataGridView();
-            this.lectoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.librosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.administradoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.alquileresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idalquilerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idLectorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.lectoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idlibroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.librosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.entregadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.administradoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fechasalidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaprevistadeentregaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechadeentregaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.recibidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.alquileresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.administradoresDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.librosBindingSource)).BeginInit();
@@ -113,24 +113,8 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.administradoresDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.administradoresDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.administradoresDataGridView.Size = new System.Drawing.Size(912, 409);
+            this.administradoresDataGridView.Size = new System.Drawing.Size(912, 415);
             this.administradoresDataGridView.TabIndex = 9;
-            // 
-            // lectoresBindingSource
-            // 
-            this.lectoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Lectores);
-            // 
-            // librosBindingSource
-            // 
-            this.librosBindingSource.DataSource = typeof(AdminLabrary.entidades.Libros);
-            // 
-            // administradoresBindingSource
-            // 
-            this.administradoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Administradores);
-            // 
-            // alquileresBindingSource
-            // 
-            this.alquileresBindingSource.DataSource = typeof(AdminLabrary.entidades.Alquileres);
             // 
             // idalquilerDataGridViewTextBoxColumn
             // 
@@ -154,6 +138,10 @@
             this.idLectorDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.idLectorDataGridViewTextBoxColumn.ValueMember = "Id_Lector";
             // 
+            // lectoresBindingSource
+            // 
+            this.lectoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Lectores);
+            // 
             // idlibroDataGridViewTextBoxColumn
             // 
             this.idlibroDataGridViewTextBoxColumn.DataPropertyName = "Id_libro";
@@ -168,6 +156,10 @@
             this.idlibroDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.idlibroDataGridViewTextBoxColumn.ValueMember = "Id_libro";
             // 
+            // librosBindingSource
+            // 
+            this.librosBindingSource.DataSource = typeof(AdminLabrary.entidades.Libros);
+            // 
             // entregadoDataGridViewTextBoxColumn
             // 
             this.entregadoDataGridViewTextBoxColumn.DataPropertyName = "Entregado";
@@ -181,6 +173,10 @@
             this.entregadoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.entregadoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.entregadoDataGridViewTextBoxColumn.ValueMember = "Id_Admin";
+            // 
+            // administradoresBindingSource
+            // 
+            this.administradoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Administradores);
             // 
             // fechasalidaDataGridViewTextBoxColumn
             // 
@@ -221,11 +217,16 @@
             this.recibidoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.recibidoDataGridViewTextBoxColumn.ValueMember = "Id_Admin";
             // 
+            // alquileresBindingSource
+            // 
+            this.alquileresBindingSource.DataSource = typeof(AdminLabrary.entidades.Alquileres);
+            // 
             // frmPrestamosFinalizados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 551);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(952, 557);
             this.Controls.Add(this.administradoresDataGridView);
             this.Name = "frmPrestamosFinalizados";
             this.Text = "frmPrestamosFinalizados";

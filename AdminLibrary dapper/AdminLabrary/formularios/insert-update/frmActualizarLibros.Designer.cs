@@ -36,6 +36,7 @@
             System.Windows.Forms.Label numero_edicionLabel;
             System.Windows.Forms.Label añoLabel;
             System.Windows.Forms.Label nombreLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmActualizarLibros));
             this.btnEditorial = new System.Windows.Forms.Button();
             this.btnAutor = new System.Windows.Forms.Button();
             this.txtEditorial = new System.Windows.Forms.TextBox();
@@ -128,6 +129,8 @@
             // btnEditorial
             // 
             this.btnEditorial.BackColor = System.Drawing.Color.Teal;
+            this.btnEditorial.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditorial.BackgroundImage")));
+            this.btnEditorial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditorial.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnEditorial.FlatAppearance.BorderSize = 0;
             this.btnEditorial.FlatAppearance.CheckedBackColor = System.Drawing.Color.Teal;
@@ -139,13 +142,14 @@
             this.btnEditorial.Name = "btnEditorial";
             this.btnEditorial.Size = new System.Drawing.Size(75, 24);
             this.btnEditorial.TabIndex = 39;
-            this.btnEditorial.Text = "Elegir";
             this.btnEditorial.UseVisualStyleBackColor = false;
             this.btnEditorial.Click += new System.EventHandler(this.btnEditorial_Click);
             // 
             // btnAutor
             // 
             this.btnAutor.BackColor = System.Drawing.Color.Teal;
+            this.btnAutor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAutor.BackgroundImage")));
+            this.btnAutor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAutor.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnAutor.FlatAppearance.BorderSize = 0;
             this.btnAutor.FlatAppearance.CheckedBackColor = System.Drawing.Color.Teal;
@@ -157,7 +161,6 @@
             this.btnAutor.Name = "btnAutor";
             this.btnAutor.Size = new System.Drawing.Size(75, 24);
             this.btnAutor.TabIndex = 37;
-            this.btnAutor.Text = "Elegir";
             this.btnAutor.UseVisualStyleBackColor = false;
             this.btnAutor.Click += new System.EventHandler(this.btnAutor_Click);
             // 
@@ -180,6 +183,8 @@
             // btnActualizar
             // 
             this.btnActualizar.BackColor = System.Drawing.Color.Teal;
+            this.btnActualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnActualizar.BackgroundImage")));
+            this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnActualizar.FlatAppearance.BorderSize = 0;
             this.btnActualizar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Teal;
@@ -191,7 +196,6 @@
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(172, 23);
             this.btnActualizar.TabIndex = 52;
-            this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
@@ -272,6 +276,8 @@
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.Teal;
+            this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Teal;
@@ -283,7 +289,6 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(172, 23);
             this.btnEliminar.TabIndex = 68;
-            this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 

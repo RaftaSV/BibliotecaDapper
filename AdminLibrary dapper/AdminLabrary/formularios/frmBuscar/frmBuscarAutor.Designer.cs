@@ -187,9 +187,10 @@
             this.ClientSize = new System.Drawing.Size(878, 520);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtgAutores);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBuscarAutor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmBuscarAutor";
+            this.Text = "SELECCION AUTOR";
             this.Load += new System.EventHandler(this.frmBuscarAutor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgAutores)).EndInit();
             this.panel1.ResumeLayout(false);

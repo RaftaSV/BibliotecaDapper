@@ -32,16 +32,19 @@
             System.Windows.Forms.Label nacionalidadLabel;
             System.Windows.Forms.Label fecha_nacimientoLabel;
             System.Windows.Forms.Label nombreLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmActualizarAutores));
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.nacionalidadTextBox = new System.Windows.Forms.TextBox();
             this.autoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fecha_nacimientoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             nacionalidadLabel = new System.Windows.Forms.Label();
             fecha_nacimientoLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.autoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // nacionalidadLabel
@@ -80,6 +83,8 @@
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.Teal;
+            this.btnEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditar.BackgroundImage")));
+            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditar.Enabled = false;
             this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnEditar.FlatAppearance.BorderSize = 0;
@@ -88,17 +93,18 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(30, 281);
+            this.btnEditar.Location = new System.Drawing.Point(30, 283);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(336, 23);
+            this.btnEditar.Size = new System.Drawing.Size(336, 28);
             this.btnEditar.TabIndex = 7;
-            this.btnEditar.Text = "Actualizar";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.Teal;
+            this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.Enabled = false;
             this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
@@ -107,11 +113,10 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(30, 310);
+            this.btnEliminar.Location = new System.Drawing.Point(30, 317);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(336, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(336, 28);
             this.btnEliminar.TabIndex = 8;
-            this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -148,12 +153,23 @@
             this.nombreTextBox.Size = new System.Drawing.Size(200, 26);
             this.nombreTextBox.TabIndex = 10;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(97, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(218, 135);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmActualizarAutores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(399, 375);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(nacionalidadLabel);
             this.Controls.Add(this.nacionalidadTextBox);
             this.Controls.Add(fecha_nacimientoLabel);
@@ -162,11 +178,13 @@
             this.Controls.Add(this.nombreTextBox);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmActualizarAutores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmActualizarAutores";
+            this.Text = "ACTUALIZAR -ELIMINAR - AUTORES";
             this.Load += new System.EventHandler(this.frmActualizarAutores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.autoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,5 +198,6 @@
         private System.Windows.Forms.TextBox nacionalidadTextBox;
         private System.Windows.Forms.DateTimePicker fecha_nacimientoDateTimePicker;
         private System.Windows.Forms.TextBox nombreTextBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

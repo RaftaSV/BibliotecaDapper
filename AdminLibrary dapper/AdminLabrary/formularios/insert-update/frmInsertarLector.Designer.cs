@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label apellidosLabel;
             System.Windows.Forms.Label nombresLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInsertarLector));
             this.apellidosTextBox = new System.Windows.Forms.TextBox();
             this.nombresTextBox = new System.Windows.Forms.TextBox();
             this.btGuardar = new System.Windows.Forms.Button();
@@ -66,7 +67,7 @@
             this.apellidosTextBox.Location = new System.Drawing.Point(159, 170);
             this.apellidosTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.apellidosTextBox.Name = "apellidosTextBox";
-            this.apellidosTextBox.Size = new System.Drawing.Size(148, 24);
+            this.apellidosTextBox.Size = new System.Drawing.Size(181, 24);
             this.apellidosTextBox.TabIndex = 1;
             // 
             // nombresTextBox
@@ -75,12 +76,14 @@
             this.nombresTextBox.Location = new System.Drawing.Point(159, 135);
             this.nombresTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nombresTextBox.Name = "nombresTextBox";
-            this.nombresTextBox.Size = new System.Drawing.Size(148, 24);
+            this.nombresTextBox.Size = new System.Drawing.Size(181, 24);
             this.nombresTextBox.TabIndex = 0;
             // 
             // btGuardar
             // 
             this.btGuardar.BackColor = System.Drawing.Color.Teal;
+            this.btGuardar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btGuardar.BackgroundImage")));
+            this.btGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btGuardar.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btGuardar.FlatAppearance.BorderSize = 0;
             this.btGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
@@ -88,9 +91,8 @@
             this.btGuardar.ForeColor = System.Drawing.Color.White;
             this.btGuardar.Location = new System.Drawing.Point(42, 218);
             this.btGuardar.Name = "btGuardar";
-            this.btGuardar.Size = new System.Drawing.Size(265, 27);
+            this.btGuardar.Size = new System.Drawing.Size(298, 27);
             this.btGuardar.TabIndex = 4;
-            this.btGuardar.Text = "Guardar";
             this.btGuardar.UseVisualStyleBackColor = false;
             this.btGuardar.Click += new System.EventHandler(this.btGuardar_Click);
             // 

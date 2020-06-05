@@ -191,9 +191,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtgEditoriales);
             this.ForeColor = System.Drawing.Color.Black;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBuscarEditorial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmEditorial";
+            this.Text = "SELECCION EDITORIAL";
             this.Load += new System.EventHandler(this.frmBuscarEditorial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgEditoriales)).EndInit();
             this.panel1.ResumeLayout(false);

@@ -31,11 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label apellidosLabel;
             System.Windows.Forms.Label nombresLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmActualizarLectores));
             this.btnEditar = new System.Windows.Forms.Button();
             this.apellidosTextBox = new System.Windows.Forms.TextBox();
-            this.lectoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nombresTextBox = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.lectoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             apellidosLabel = new System.Windows.Forms.Label();
             nombresLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).BeginInit();
@@ -64,6 +65,8 @@
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.Teal;
+            this.btnEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditar.BackgroundImage")));
+            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Teal;
@@ -75,7 +78,6 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(327, 28);
             this.btnEditar.TabIndex = 5;
-            this.btnEditar.Text = "Actualizar";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
@@ -87,10 +89,6 @@
             this.apellidosTextBox.Name = "apellidosTextBox";
             this.apellidosTextBox.Size = new System.Drawing.Size(220, 26);
             this.apellidosTextBox.TabIndex = 8;
-            // 
-            // lectoresBindingSource
-            // 
-            this.lectoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Lectores);
             // 
             // nombresTextBox
             // 
@@ -104,6 +102,8 @@
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.Teal;
+            this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Teal;
@@ -115,9 +115,12 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(327, 27);
             this.btnEliminar.TabIndex = 10;
-            this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // lectoresBindingSource
+            // 
+            this.lectoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Lectores);
             // 
             // frmActualizarLectores
             // 

@@ -32,11 +32,12 @@
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label fecha_nacimientoLabel;
             System.Windows.Forms.Label nacionalidadLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInsertarAutores));
             this.nombreTextBox = new System.Windows.Forms.TextBox();
-            this.autoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fecha_nacimientoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.nacionalidadTextBox = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.autoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             nombreLabel = new System.Windows.Forms.Label();
             fecha_nacimientoLabel = new System.Windows.Forms.Label();
             nacionalidadLabel = new System.Windows.Forms.Label();
@@ -85,10 +86,6 @@
             this.nombreTextBox.Size = new System.Drawing.Size(200, 26);
             this.nombreTextBox.TabIndex = 0;
             // 
-            // autoresBindingSource
-            // 
-            this.autoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Autores);
-            // 
             // fecha_nacimientoDateTimePicker
             // 
             this.fecha_nacimientoDateTimePicker.CustomFormat = "yyyy - MM - dd";
@@ -112,7 +109,8 @@
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.Teal;
-            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnGuardar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGuardar.BackgroundImage")));
+            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGuardar.CausesValidation = false;
             this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
@@ -124,9 +122,12 @@
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(336, 24);
             this.btnGuardar.TabIndex = 8;
-            this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // autoresBindingSource
+            // 
+            this.autoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Autores);
             // 
             // frmInsertarAutores
             // 
@@ -134,7 +135,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(426, 282);
+            this.ClientSize = new System.Drawing.Size(422, 282);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(nacionalidadLabel);
             this.Controls.Add(this.nacionalidadTextBox);

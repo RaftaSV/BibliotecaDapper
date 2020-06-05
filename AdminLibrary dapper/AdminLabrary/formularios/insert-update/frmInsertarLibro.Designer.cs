@@ -36,6 +36,7 @@
             System.Windows.Forms.Label id_EditorialLabel;
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label numero_edicionLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInsertarLibro));
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtAutor = new System.Windows.Forms.TextBox();
             this.txtEditorial = new System.Windows.Forms.TextBox();
@@ -128,6 +129,8 @@
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.Teal;
+            this.btnGuardar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGuardar.BackgroundImage")));
+            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Teal;
@@ -138,9 +141,8 @@
             this.btnGuardar.Location = new System.Drawing.Point(30, 359);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(485, 30);
+            this.btnGuardar.Size = new System.Drawing.Size(521, 30);
             this.btnGuardar.TabIndex = 14;
-            this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -163,6 +165,8 @@
             // btnAutor
             // 
             this.btnAutor.BackColor = System.Drawing.Color.Teal;
+            this.btnAutor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAutor.BackgroundImage")));
+            this.btnAutor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAutor.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnAutor.FlatAppearance.BorderSize = 0;
             this.btnAutor.FlatAppearance.CheckedBackColor = System.Drawing.Color.Teal;
@@ -172,15 +176,16 @@
             this.btnAutor.ForeColor = System.Drawing.Color.White;
             this.btnAutor.Location = new System.Drawing.Point(427, 204);
             this.btnAutor.Name = "btnAutor";
-            this.btnAutor.Size = new System.Drawing.Size(75, 24);
+            this.btnAutor.Size = new System.Drawing.Size(124, 23);
             this.btnAutor.TabIndex = 4;
-            this.btnAutor.Text = "Elegir";
             this.btnAutor.UseVisualStyleBackColor = false;
             this.btnAutor.Click += new System.EventHandler(this.btnAutor_Click);
             // 
             // btnEditorial
             // 
             this.btnEditorial.BackColor = System.Drawing.Color.Teal;
+            this.btnEditorial.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditorial.BackgroundImage")));
+            this.btnEditorial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditorial.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnEditorial.FlatAppearance.BorderSize = 0;
             this.btnEditorial.FlatAppearance.CheckedBackColor = System.Drawing.Color.Teal;
@@ -188,11 +193,10 @@
             this.btnEditorial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditorial.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditorial.ForeColor = System.Drawing.Color.White;
-            this.btnEditorial.Location = new System.Drawing.Point(427, 283);
+            this.btnEditorial.Location = new System.Drawing.Point(427, 285);
             this.btnEditorial.Name = "btnEditorial";
-            this.btnEditorial.Size = new System.Drawing.Size(75, 24);
+            this.btnEditorial.Size = new System.Drawing.Size(124, 23);
             this.btnEditorial.TabIndex = 6;
-            this.btnEditorial.Text = "Elegir";
             this.btnEditorial.UseVisualStyleBackColor = false;
             this.btnEditorial.Click += new System.EventHandler(this.btnEditorial_Click);
             // 
@@ -275,7 +279,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(536, 402);
+            this.ClientSize = new System.Drawing.Size(581, 410);
             this.Controls.Add(añoLabel);
             this.Controls.Add(this.añoDateTimePicker);
             this.Controls.Add(cantidadLabel);

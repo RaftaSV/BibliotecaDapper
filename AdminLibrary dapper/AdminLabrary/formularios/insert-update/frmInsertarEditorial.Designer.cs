@@ -32,11 +32,12 @@
             System.Windows.Forms.Label direccionLabel;
             System.Windows.Forms.Label editorialLabel;
             System.Windows.Forms.Label fundadaLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInsertarEditorial));
             this.direccionTextBox = new System.Windows.Forms.TextBox();
-            this.editorialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.editorialTextBox = new System.Windows.Forms.TextBox();
             this.fundadaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.editorialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             direccionLabel = new System.Windows.Forms.Label();
             editorialLabel = new System.Windows.Forms.Label();
             fundadaLabel = new System.Windows.Forms.Label();
@@ -82,10 +83,6 @@
             this.direccionTextBox.Size = new System.Drawing.Size(200, 26);
             this.direccionTextBox.TabIndex = 2;
             // 
-            // editorialesBindingSource
-            // 
-            this.editorialesBindingSource.DataSource = typeof(AdminLabrary.entidades.Editoriales);
-            // 
             // editorialTextBox
             // 
             this.editorialTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editorialesBindingSource, "Editorial", true));
@@ -109,6 +106,8 @@
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.Teal;
+            this.btnGuardar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGuardar.BackgroundImage")));
+            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
@@ -120,9 +119,12 @@
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(307, 27);
             this.btnGuardar.TabIndex = 6;
-            this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // editorialesBindingSource
+            // 
+            this.editorialesBindingSource.DataSource = typeof(AdminLabrary.entidades.Editoriales);
             // 
             // frmInsertarEditorial
             // 

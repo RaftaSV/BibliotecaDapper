@@ -32,12 +32,13 @@
             System.Windows.Forms.Label direccionLabel;
             System.Windows.Forms.Label editorialLabel;
             System.Windows.Forms.Label fundadaLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmActualizarEditorial));
             this.btnActualizareditorial = new System.Windows.Forms.Button();
             this.direccionTextBox = new System.Windows.Forms.TextBox();
-            this.editorialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.editorialTextBox = new System.Windows.Forms.TextBox();
             this.fundadaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.editorialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             direccionLabel = new System.Windows.Forms.Label();
             editorialLabel = new System.Windows.Forms.Label();
             fundadaLabel = new System.Windows.Forms.Label();
@@ -77,6 +78,8 @@
             // btnActualizareditorial
             // 
             this.btnActualizareditorial.BackColor = System.Drawing.Color.Teal;
+            this.btnActualizareditorial.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnActualizareditorial.BackgroundImage")));
+            this.btnActualizareditorial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnActualizareditorial.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnActualizareditorial.FlatAppearance.BorderSize = 0;
             this.btnActualizareditorial.FlatAppearance.CheckedBackColor = System.Drawing.Color.Teal;
@@ -88,7 +91,6 @@
             this.btnActualizareditorial.Name = "btnActualizareditorial";
             this.btnActualizareditorial.Size = new System.Drawing.Size(298, 30);
             this.btnActualizareditorial.TabIndex = 7;
-            this.btnActualizareditorial.Text = "Actualizar";
             this.btnActualizareditorial.UseVisualStyleBackColor = false;
             this.btnActualizareditorial.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -100,10 +102,6 @@
             this.direccionTextBox.Name = "direccionTextBox";
             this.direccionTextBox.Size = new System.Drawing.Size(200, 26);
             this.direccionTextBox.TabIndex = 10;
-            // 
-            // editorialesBindingSource
-            // 
-            this.editorialesBindingSource.DataSource = typeof(AdminLabrary.entidades.Editoriales);
             // 
             // editorialTextBox
             // 
@@ -128,6 +126,8 @@
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.Teal;
+            this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Teal;
@@ -139,9 +139,12 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(298, 30);
             this.btnEliminar.TabIndex = 14;
-            this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // editorialesBindingSource
+            // 
+            this.editorialesBindingSource.DataSource = typeof(AdminLabrary.entidades.Editoriales);
             // 
             // frmActualizarEditorial
             // 

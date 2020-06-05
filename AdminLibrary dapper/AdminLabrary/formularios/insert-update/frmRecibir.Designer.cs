@@ -32,6 +32,7 @@
             System.Windows.Forms.Label id_LectorLabel;
             System.Windows.Forms.Label id_libroLabel;
             System.Windows.Forms.Label recibidoLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRecibir));
             this.txtLibro = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtLector = new System.Windows.Forms.TextBox();
@@ -86,6 +87,8 @@
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.Teal;
+            this.btnGuardar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGuardar.BackgroundImage")));
+            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Teal;
@@ -94,9 +97,8 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Location = new System.Drawing.Point(28, 275);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(492, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(492, 31);
             this.btnGuardar.TabIndex = 22;
-            this.btnGuardar.Text = "Recibir";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 

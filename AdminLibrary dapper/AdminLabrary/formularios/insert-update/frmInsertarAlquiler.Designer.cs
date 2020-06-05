@@ -32,8 +32,8 @@
             System.Windows.Forms.Label entregadoLabel;
             System.Windows.Forms.Label id_LectorLabel;
             System.Windows.Forms.Label id_libroLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInsertarAlquiler));
             this.entregadoTextBox = new System.Windows.Forms.TextBox();
-            this.alquileresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.id_LectorTextBox = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtLector = new System.Windows.Forms.TextBox();
@@ -42,6 +42,7 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.id_libroTextBox = new System.Windows.Forms.TextBox();
             this.txtLibro = new System.Windows.Forms.TextBox();
+            this.alquileresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             entregadoLabel = new System.Windows.Forms.Label();
             id_LectorLabel = new System.Windows.Forms.Label();
             id_libroLabel = new System.Windows.Forms.Label();
@@ -88,10 +89,6 @@
             this.entregadoTextBox.Size = new System.Drawing.Size(67, 24);
             this.entregadoTextBox.TabIndex = 2;
             // 
-            // alquileresBindingSource
-            // 
-            this.alquileresBindingSource.DataSource = typeof(AdminLabrary.entidades.Alquileres);
-            // 
             // id_LectorTextBox
             // 
             this.id_LectorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alquileresBindingSource, "Id_Lector", true));
@@ -123,6 +120,8 @@
             // btnSelecLec
             // 
             this.btnSelecLec.BackColor = System.Drawing.Color.Teal;
+            this.btnSelecLec.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSelecLec.BackgroundImage")));
+            this.btnSelecLec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSelecLec.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnSelecLec.FlatAppearance.BorderSize = 0;
             this.btnSelecLec.FlatAppearance.CheckedBackColor = System.Drawing.Color.Teal;
@@ -131,15 +130,16 @@
             this.btnSelecLec.ForeColor = System.Drawing.Color.White;
             this.btnSelecLec.Location = new System.Drawing.Point(444, 149);
             this.btnSelecLec.Name = "btnSelecLec";
-            this.btnSelecLec.Size = new System.Drawing.Size(75, 23);
+            this.btnSelecLec.Size = new System.Drawing.Size(115, 23);
             this.btnSelecLec.TabIndex = 12;
-            this.btnSelecLec.Text = "Seleccionar";
             this.btnSelecLec.UseVisualStyleBackColor = false;
             this.btnSelecLec.Click += new System.EventHandler(this.btnSelecLec_Click);
             // 
             // btnSelecLIbro
             // 
             this.btnSelecLIbro.BackColor = System.Drawing.Color.Teal;
+            this.btnSelecLIbro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSelecLIbro.BackgroundImage")));
+            this.btnSelecLIbro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSelecLIbro.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnSelecLIbro.FlatAppearance.BorderSize = 0;
             this.btnSelecLIbro.FlatAppearance.CheckedBackColor = System.Drawing.Color.Teal;
@@ -148,15 +148,16 @@
             this.btnSelecLIbro.ForeColor = System.Drawing.Color.White;
             this.btnSelecLIbro.Location = new System.Drawing.Point(444, 193);
             this.btnSelecLIbro.Name = "btnSelecLIbro";
-            this.btnSelecLIbro.Size = new System.Drawing.Size(75, 23);
+            this.btnSelecLIbro.Size = new System.Drawing.Size(115, 23);
             this.btnSelecLIbro.TabIndex = 13;
-            this.btnSelecLIbro.Text = "Seleccionar";
             this.btnSelecLIbro.UseVisualStyleBackColor = false;
             this.btnSelecLIbro.Click += new System.EventHandler(this.btnSelecLIbro_Click);
             // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.Teal;
+            this.btnGuardar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGuardar.BackgroundImage")));
+            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Teal;
@@ -165,9 +166,8 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Location = new System.Drawing.Point(27, 272);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(492, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(532, 39);
             this.btnGuardar.TabIndex = 14;
-            this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -190,12 +190,16 @@
             this.txtLibro.Size = new System.Drawing.Size(191, 24);
             this.txtLibro.TabIndex = 16;
             // 
+            // alquileresBindingSource
+            // 
+            this.alquileresBindingSource.DataSource = typeof(AdminLabrary.entidades.Alquileres);
+            // 
             // frmInsertarAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(543, 307);
+            this.ClientSize = new System.Drawing.Size(599, 328);
             this.Controls.Add(this.txtLibro);
             this.Controls.Add(this.id_libroTextBox);
             this.Controls.Add(this.btnGuardar);
