@@ -43,12 +43,34 @@ namespace AdminLabrary.formularios
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            btnRecibir.Enabled = false;
             frmPrincipal.alquiler.lector.lista.Clear();
             foreach (DataGridViewRow i in alquileresDataGridView.Rows)
             {
                 frmPrincipal.alquiler.lector.lista.Add(new entidades.Alquileres {Id_Lector = int.Parse(i.Cells[1].Value.ToString())});
             }
             frmPrincipal.alquiler.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmPrincipal.recibir.a =(entidades.AlquileresPendientes)alquileresPendientesBindingSource.Current;
+            frmPrincipal.recibir.txtLibro.Text = alquileresDataGridView.CurrentRow.Cells[2].FormattedValue.ToString();
+            frmPrincipal.recibir.txtLector.Text = alquileresDataGridView.CurrentRow.Cells[1].FormattedValue.ToString();
+            frmPrincipal.recibir.ShowDialog();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            btnRecibir.Enabled = false;
+            frmPrestamosFinalizados prestamos = new frmPrestamosFinalizados();
+            frmLogin.f.MostrarPanel(prestamos);
+        }
+
+        private void alquileresDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnRecibir.Enabled = true;
         }
     }
 }
