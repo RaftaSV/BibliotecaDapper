@@ -21,14 +21,14 @@ namespace AdminLabrary.formularios
 
         private void frmAlquileres_Load(object sender, EventArgs e)
         {
-            CargarDatos();         
+            CargarDatos();
         }
 
         private void alquileresDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-        public void CargarDatos() 
+        public void CargarDatos()
         {
             CAlquileres f = new CAlquileres();
             alquileresPendientesBindingSource.DataSource = f.Listadop();
@@ -37,8 +37,8 @@ namespace AdminLabrary.formularios
             CAdministradores admin = new CAdministradores();
             librosBindingSource.DataSource = libros.Listado();
             lectoresBindingSource.DataSource = lec.Listado();
-            administradoresBindingSource.DataSource = admin.Listado();  
-           
+            administradoresBindingSource.DataSource = admin.Listado();
+
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -47,14 +47,14 @@ namespace AdminLabrary.formularios
             frmPrincipal.alquiler.lector.lista.Clear();
             foreach (DataGridViewRow i in alquileresDataGridView.Rows)
             {
-                frmPrincipal.alquiler.lector.lista.Add(new entidades.Alquileres {Id_Lector = int.Parse(i.Cells[1].Value.ToString())});
+                frmPrincipal.alquiler.lector.lista.Add(new entidades.Alquileres { Id_Lector = int.Parse(i.Cells[1].Value.ToString()) });
             }
             frmPrincipal.alquiler.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmPrincipal.recibir.a =(entidades.AlquileresPendientes)alquileresPendientesBindingSource.Current;
+            frmPrincipal.recibir.a = (entidades.AlquileresPendientes)alquileresPendientesBindingSource.Current;
             frmPrincipal.recibir.txtLibro.Text = alquileresDataGridView.CurrentRow.Cells[2].FormattedValue.ToString();
             frmPrincipal.recibir.txtLector.Text = alquileresDataGridView.CurrentRow.Cells[1].FormattedValue.ToString();
             frmPrincipal.recibir.ShowDialog();
