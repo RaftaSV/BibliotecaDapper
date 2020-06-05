@@ -184,6 +184,11 @@ namespace AdminLabrary.formularios.principales
         {
 
         }
+
+        private void pbtnMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 }
