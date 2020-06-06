@@ -52,6 +52,7 @@
             this.añoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             cantidadLabel = new System.Windows.Forms.Label();
             id_autorLabel = new System.Windows.Forms.Label();
             id_categoriaLabel = new System.Windows.Forms.Label();
@@ -61,12 +62,13 @@
             nombreLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.librosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cantidadLabel
             // 
             cantidadLabel.AutoSize = true;
-            cantidadLabel.Location = new System.Drawing.Point(44, 166);
+            cantidadLabel.Location = new System.Drawing.Point(48, 238);
             cantidadLabel.Name = "cantidadLabel";
             cantidadLabel.Size = new System.Drawing.Size(51, 13);
             cantidadLabel.TabIndex = 54;
@@ -75,7 +77,7 @@
             // id_autorLabel
             // 
             id_autorLabel.AutoSize = true;
-            id_autorLabel.Location = new System.Drawing.Point(44, 199);
+            id_autorLabel.Location = new System.Drawing.Point(48, 271);
             id_autorLabel.Name = "id_autorLabel";
             id_autorLabel.Size = new System.Drawing.Size(46, 13);
             id_autorLabel.TabIndex = 56;
@@ -84,7 +86,7 @@
             // id_categoriaLabel
             // 
             id_categoriaLabel.AutoSize = true;
-            id_categoriaLabel.Location = new System.Drawing.Point(44, 240);
+            id_categoriaLabel.Location = new System.Drawing.Point(48, 312);
             id_categoriaLabel.Name = "id_categoriaLabel";
             id_categoriaLabel.Size = new System.Drawing.Size(66, 13);
             id_categoriaLabel.TabIndex = 58;
@@ -93,7 +95,7 @@
             // id_EditorialLabel
             // 
             id_EditorialLabel.AutoSize = true;
-            id_EditorialLabel.Location = new System.Drawing.Point(44, 274);
+            id_EditorialLabel.Location = new System.Drawing.Point(48, 346);
             id_EditorialLabel.Name = "id_EditorialLabel";
             id_EditorialLabel.Size = new System.Drawing.Size(59, 13);
             id_EditorialLabel.TabIndex = 60;
@@ -102,7 +104,7 @@
             // numero_edicionLabel
             // 
             numero_edicionLabel.AutoSize = true;
-            numero_edicionLabel.Location = new System.Drawing.Point(44, 316);
+            numero_edicionLabel.Location = new System.Drawing.Point(48, 388);
             numero_edicionLabel.Name = "numero_edicionLabel";
             numero_edicionLabel.Size = new System.Drawing.Size(84, 13);
             numero_edicionLabel.TabIndex = 64;
@@ -111,7 +113,7 @@
             // añoLabel
             // 
             añoLabel.AutoSize = true;
-            añoLabel.Location = new System.Drawing.Point(44, 128);
+            añoLabel.Location = new System.Drawing.Point(46, 161);
             añoLabel.Name = "añoLabel";
             añoLabel.Size = new System.Drawing.Size(29, 13);
             añoLabel.TabIndex = 52;
@@ -120,7 +122,7 @@
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(44, 89);
+            nombreLabel.Location = new System.Drawing.Point(48, 161);
             nombreLabel.Name = "nombreLabel";
             nombreLabel.Size = new System.Drawing.Size(47, 13);
             nombreLabel.TabIndex = 66;
@@ -138,9 +140,9 @@
             this.btnEditorial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditorial.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditorial.ForeColor = System.Drawing.Color.White;
-            this.btnEditorial.Location = new System.Drawing.Point(408, 271);
+            this.btnEditorial.Location = new System.Drawing.Point(412, 346);
             this.btnEditorial.Name = "btnEditorial";
-            this.btnEditorial.Size = new System.Drawing.Size(75, 24);
+            this.btnEditorial.Size = new System.Drawing.Size(119, 20);
             this.btnEditorial.TabIndex = 39;
             this.btnEditorial.UseVisualStyleBackColor = false;
             this.btnEditorial.Click += new System.EventHandler(this.btnEditorial_Click);
@@ -157,9 +159,9 @@
             this.btnAutor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAutor.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAutor.ForeColor = System.Drawing.Color.White;
-            this.btnAutor.Location = new System.Drawing.Point(408, 197);
+            this.btnAutor.Location = new System.Drawing.Point(412, 272);
             this.btnAutor.Name = "btnAutor";
-            this.btnAutor.Size = new System.Drawing.Size(75, 24);
+            this.btnAutor.Size = new System.Drawing.Size(119, 19);
             this.btnAutor.TabIndex = 37;
             this.btnAutor.UseVisualStyleBackColor = false;
             this.btnAutor.Click += new System.EventHandler(this.btnAutor_Click);
@@ -167,7 +169,7 @@
             // txtEditorial
             // 
             this.txtEditorial.Enabled = false;
-            this.txtEditorial.Location = new System.Drawing.Point(134, 274);
+            this.txtEditorial.Location = new System.Drawing.Point(138, 346);
             this.txtEditorial.Name = "txtEditorial";
             this.txtEditorial.Size = new System.Drawing.Size(236, 20);
             this.txtEditorial.TabIndex = 42;
@@ -175,7 +177,7 @@
             // txtAutor
             // 
             this.txtAutor.Enabled = false;
-            this.txtAutor.Location = new System.Drawing.Point(134, 200);
+            this.txtAutor.Location = new System.Drawing.Point(138, 272);
             this.txtAutor.Name = "txtAutor";
             this.txtAutor.Size = new System.Drawing.Size(236, 20);
             this.txtAutor.TabIndex = 41;
@@ -192,9 +194,9 @@
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnActualizar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(569, 284);
+            this.btnActualizar.Location = new System.Drawing.Point(49, 415);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(172, 23);
+            this.btnActualizar.Size = new System.Drawing.Size(480, 37);
             this.btnActualizar.TabIndex = 52;
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
@@ -202,7 +204,7 @@
             // cantidadTextBox
             // 
             this.cantidadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.librosBindingSource, "cantidad", true));
-            this.cantidadTextBox.Location = new System.Drawing.Point(134, 163);
+            this.cantidadTextBox.Location = new System.Drawing.Point(138, 235);
             this.cantidadTextBox.Name = "cantidadTextBox";
             this.cantidadTextBox.Size = new System.Drawing.Size(236, 20);
             this.cantidadTextBox.TabIndex = 55;
@@ -215,7 +217,7 @@
             // 
             this.id_autorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.librosBindingSource, "Id_autor", true));
             this.id_autorTextBox.Enabled = false;
-            this.id_autorTextBox.Location = new System.Drawing.Point(376, 199);
+            this.id_autorTextBox.Location = new System.Drawing.Point(380, 271);
             this.id_autorTextBox.Name = "id_autorTextBox";
             this.id_autorTextBox.Size = new System.Drawing.Size(26, 20);
             this.id_autorTextBox.TabIndex = 57;
@@ -228,7 +230,7 @@
             this.id_categoriaComboBox.DisplayMember = "Categoria";
             this.id_categoriaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.id_categoriaComboBox.FormattingEnabled = true;
-            this.id_categoriaComboBox.Location = new System.Drawing.Point(134, 237);
+            this.id_categoriaComboBox.Location = new System.Drawing.Point(138, 309);
             this.id_categoriaComboBox.Name = "id_categoriaComboBox";
             this.id_categoriaComboBox.Size = new System.Drawing.Size(236, 21);
             this.id_categoriaComboBox.TabIndex = 59;
@@ -242,7 +244,7 @@
             // 
             this.id_EditorialTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.librosBindingSource, "Id_Editorial", true));
             this.id_EditorialTextBox.Enabled = false;
-            this.id_EditorialTextBox.Location = new System.Drawing.Point(376, 274);
+            this.id_EditorialTextBox.Location = new System.Drawing.Point(380, 346);
             this.id_EditorialTextBox.Name = "id_EditorialTextBox";
             this.id_EditorialTextBox.Size = new System.Drawing.Size(26, 20);
             this.id_EditorialTextBox.TabIndex = 61;
@@ -250,7 +252,7 @@
             // numero_edicionTextBox
             // 
             this.numero_edicionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.librosBindingSource, "Numero_edicion", true));
-            this.numero_edicionTextBox.Location = new System.Drawing.Point(134, 313);
+            this.numero_edicionTextBox.Location = new System.Drawing.Point(138, 385);
             this.numero_edicionTextBox.Name = "numero_edicionTextBox";
             this.numero_edicionTextBox.Size = new System.Drawing.Size(236, 20);
             this.numero_edicionTextBox.TabIndex = 65;
@@ -260,7 +262,7 @@
             this.añoDateTimePicker.CustomFormat = "yyyy - MM - dd";
             this.añoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.librosBindingSource, "Año", true));
             this.añoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.añoDateTimePicker.Location = new System.Drawing.Point(134, 124);
+            this.añoDateTimePicker.Location = new System.Drawing.Point(138, 196);
             this.añoDateTimePicker.Name = "añoDateTimePicker";
             this.añoDateTimePicker.Size = new System.Drawing.Size(236, 20);
             this.añoDateTimePicker.TabIndex = 53;
@@ -268,7 +270,7 @@
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.librosBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(134, 86);
+            this.nombreTextBox.Location = new System.Drawing.Point(138, 158);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(236, 20);
             this.nombreTextBox.TabIndex = 67;
@@ -285,19 +287,30 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(569, 313);
+            this.btnEliminar.Location = new System.Drawing.Point(49, 458);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(172, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(480, 34);
             this.btnEliminar.TabIndex = 68;
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(138, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(237, 151);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 69;
+            this.pictureBox1.TabStop = false;
             // 
             // frmActualizarLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(753, 359);
+            this.ClientSize = new System.Drawing.Size(573, 502);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(nombreLabel);
             this.Controls.Add(this.nombreTextBox);
@@ -318,12 +331,14 @@
             this.Controls.Add(this.btnAutor);
             this.Controls.Add(this.txtEditorial);
             this.Controls.Add(this.txtAutor);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmActualizarLibros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmActualizarLibros";
+            this.Text = "ACTUALIZAR - ELIMINAR - LIBRO";
             this.Load += new System.EventHandler(this.frmActualizarLibros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.librosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -345,5 +360,6 @@
         public System.Windows.Forms.Button btnEliminar;
         public System.Windows.Forms.Button btnEditorial;
         public System.Windows.Forms.Button btnAutor;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

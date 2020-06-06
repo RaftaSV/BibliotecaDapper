@@ -37,11 +37,15 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtLector = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.alquileresPendientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.recibirTextBox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.alquileresPendientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             id_LectorLabel = new System.Windows.Forms.Label();
             id_libroLabel = new System.Windows.Forms.Label();
             recibidoLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alquileresPendientesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,10 +124,6 @@
             this.txtUsuario.Size = new System.Drawing.Size(191, 24);
             this.txtUsuario.TabIndex = 20;
             // 
-            // alquileresPendientesBindingSource
-            // 
-            this.alquileresPendientesBindingSource.DataSource = typeof(AdminLabrary.entidades.AlquileresPendientes);
-            // 
             // recibirTextBox
             // 
             this.recibirTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alquileresPendientesBindingSource, "Recibir", true));
@@ -133,12 +133,38 @@
             this.recibirTextBox.Size = new System.Drawing.Size(77, 24);
             this.recibirTextBox.TabIndex = 26;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(375, 140);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(116, 78);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(28, 36);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(492, 78);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 28;
+            this.pictureBox2.TabStop = false;
+            // 
+            // alquileresPendientesBindingSource
+            // 
+            this.alquileresPendientesBindingSource.DataSource = typeof(AdminLabrary.entidades.AlquileresPendientes);
+            // 
             // frmRecibir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(580, 318);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.recibirTextBox);
             this.Controls.Add(recibidoLabel);
             this.Controls.Add(this.txtLibro);
@@ -147,9 +173,12 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(id_LectorLabel);
             this.Controls.Add(id_libroLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRecibir";
-            this.Text = "frmRecibir";
+            this.Text = "RECIBIR";
             this.Load += new System.EventHandler(this.frmRecibir_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alquileresPendientesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -164,5 +193,7 @@
         public System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.BindingSource alquileresPendientesBindingSource;
         private System.Windows.Forms.TextBox recibirTextBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

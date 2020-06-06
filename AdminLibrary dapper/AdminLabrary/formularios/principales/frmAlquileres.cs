@@ -43,7 +43,7 @@ namespace AdminLabrary.formularios
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            btnNuevo.Enabled = false;
+            
             frmPrincipal.alquiler.lector.lista.Clear();
             foreach (DataGridViewRow i in alquileresDataGridView.Rows)
             {
@@ -91,7 +91,7 @@ namespace AdminLabrary.formularios
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            btnRecibir.Enabled = false;
+           
             frmPrestamosFinalizados prestamos = new frmPrestamosFinalizados();
             frmLogin.f.MostrarPanel(prestamos);
         }

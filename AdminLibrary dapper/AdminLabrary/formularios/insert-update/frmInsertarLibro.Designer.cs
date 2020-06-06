@@ -51,6 +51,8 @@
             this.id_EditorialTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.numero_edicionTextBox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             añoLabel = new System.Windows.Forms.Label();
             cantidadLabel = new System.Windows.Forms.Label();
             id_autorLabel = new System.Windows.Forms.Label();
@@ -60,6 +62,8 @@
             numero_edicionLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.librosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // añoLabel
@@ -141,7 +145,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(30, 359);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(521, 30);
+            this.btnGuardar.Size = new System.Drawing.Size(546, 30);
             this.btnGuardar.TabIndex = 14;
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -176,7 +180,7 @@
             this.btnAutor.ForeColor = System.Drawing.Color.White;
             this.btnAutor.Location = new System.Drawing.Point(427, 204);
             this.btnAutor.Name = "btnAutor";
-            this.btnAutor.Size = new System.Drawing.Size(124, 23);
+            this.btnAutor.Size = new System.Drawing.Size(149, 23);
             this.btnAutor.TabIndex = 4;
             this.btnAutor.UseVisualStyleBackColor = false;
             this.btnAutor.Click += new System.EventHandler(this.btnAutor_Click);
@@ -195,7 +199,7 @@
             this.btnEditorial.ForeColor = System.Drawing.Color.White;
             this.btnEditorial.Location = new System.Drawing.Point(427, 285);
             this.btnEditorial.Name = "btnEditorial";
-            this.btnEditorial.Size = new System.Drawing.Size(124, 23);
+            this.btnEditorial.Size = new System.Drawing.Size(149, 23);
             this.btnEditorial.TabIndex = 6;
             this.btnEditorial.UseVisualStyleBackColor = false;
             this.btnEditorial.Click += new System.EventHandler(this.btnEditorial_Click);
@@ -274,12 +278,34 @@
             this.numero_edicionTextBox.Size = new System.Drawing.Size(236, 22);
             this.numero_edicionTextBox.TabIndex = 7;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(411, 80);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(165, 102);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 34;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(30, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(546, 62);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 35;
+            this.pictureBox2.TabStop = false;
+            // 
             // frmInsertarLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(581, 410);
+            this.ClientSize = new System.Drawing.Size(623, 414);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(añoLabel);
             this.Controls.Add(this.añoDateTimePicker);
             this.Controls.Add(cantidadLabel);
@@ -300,6 +326,7 @@
             this.Controls.Add(this.txtAutor);
             this.Controls.Add(this.btnGuardar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmInsertarLibro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -307,6 +334,8 @@
             this.Load += new System.EventHandler(this.frmInsertarLibro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.librosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,5 +356,7 @@
         public System.Windows.Forms.TextBox id_EditorialTextBox;
         private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.TextBox numero_edicionTextBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

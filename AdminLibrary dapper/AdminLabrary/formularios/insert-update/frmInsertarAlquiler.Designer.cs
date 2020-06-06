@@ -42,10 +42,14 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.id_libroTextBox = new System.Windows.Forms.TextBox();
             this.txtLibro = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.alquileresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             entregadoLabel = new System.Windows.Forms.Label();
             id_LectorLabel = new System.Windows.Forms.Label();
             id_libroLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alquileresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -190,6 +194,26 @@
             this.txtLibro.Size = new System.Drawing.Size(191, 24);
             this.txtLibro.TabIndex = 16;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(630, 132);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(258, 178);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(27, 29);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(864, 95);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 18;
+            this.pictureBox2.TabStop = false;
+            // 
             // alquileresBindingSource
             // 
             this.alquileresBindingSource.DataSource = typeof(AdminLabrary.entidades.Alquileres);
@@ -199,7 +223,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(599, 328);
+            this.ClientSize = new System.Drawing.Size(903, 328);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtLibro);
             this.Controls.Add(this.id_libroTextBox);
             this.Controls.Add(this.btnGuardar);
@@ -212,10 +238,13 @@
             this.Controls.Add(id_LectorLabel);
             this.Controls.Add(this.id_LectorTextBox);
             this.Controls.Add(id_libroLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmInsertarAlquiler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmInsertarAlquiler";
+            this.Text = "NUEVO PRESTAMO";
             this.Load += new System.EventHandler(this.frmInsertarAlquiler_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alquileresBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -234,5 +263,7 @@
         private System.Windows.Forms.Button btnGuardar;
         public System.Windows.Forms.TextBox id_libroTextBox;
         public System.Windows.Forms.TextBox txtLibro;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
