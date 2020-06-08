@@ -39,11 +39,12 @@ namespace AdminLabrary.formularios
             lectoresBindingSource.DataSource = lec.Listado();
             administradoresBindingSource.DataSource = admin.Listado();
 
+
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            
+            btnRecibir.Enabled = false;
             frmPrincipal.alquiler.lector.lista.Clear();
             foreach (DataGridViewRow i in alquileresDataGridView.Rows)
             {
@@ -81,7 +82,7 @@ namespace AdminLabrary.formularios
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            btnRecibir.Enabled = false;
             frmPrincipal.recibir.a = (entidades.AlquileresPendientes)alquileresPendientesBindingSource.Current;
             frmPrincipal.recibir.txtLibro.Text = alquileresDataGridView.CurrentRow.Cells[2].FormattedValue.ToString();
             frmPrincipal.recibir.txtLector.Text = alquileresDataGridView.CurrentRow.Cells[1].FormattedValue.ToString();
@@ -91,9 +92,14 @@ namespace AdminLabrary.formularios
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-           
+            btnRecibir.Enabled = false;
             frmPrestamosFinalizados prestamos = new frmPrestamosFinalizados();
             frmLogin.f.MostrarPanel(prestamos);
+        }
+
+        private void alquileresDataGridView_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            btnRecibir.Enabled = true;
         }
     }
 }

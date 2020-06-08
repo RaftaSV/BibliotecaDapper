@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlquileres));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnNuevo = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlquileres));
             this.alquileresDataGridView = new System.Windows.Forms.DataGridView();
             this.idalquilerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idLectorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -46,39 +45,21 @@
             this.fechasalidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaprevistadeentregaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alquileresPendientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnHistorial = new System.Windows.Forms.Button();
-            this.btnRecibir = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnRecibir = new System.Windows.Forms.Button();
+            this.btnHistorial = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.alquileresDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.librosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.administradoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alquileresPendientesBindingSource)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.Color.Teal;
-            this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
-            this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
-            this.btnNuevo.FlatAppearance.BorderSize = 0;
-            this.btnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNuevo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Location = new System.Drawing.Point(481, 8);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(128, 33);
-            this.btnNuevo.TabIndex = 2;
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // alquileresDataGridView
             // 
@@ -141,6 +122,7 @@
             this.alquileresDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.alquileresDataGridView.Size = new System.Drawing.Size(912, 367);
             this.alquileresDataGridView.TabIndex = 1;
+            this.alquileresDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.alquileresDataGridView_CellClick_1);
             this.alquileresDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.alquileresDataGridView_CellContentClick);
             // 
             // idalquilerDataGridViewTextBoxColumn
@@ -219,18 +201,64 @@
             // 
             this.alquileresPendientesBindingSource.DataSource = typeof(AdminLabrary.entidades.AlquileresPendientes);
             // 
-            // panel1
+            // btnNuevo
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.panel1.Controls.Add(this.btnHistorial);
-            this.panel1.Controls.Add(this.btnRecibir);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btnNuevo);
-            this.panel1.Location = new System.Drawing.Point(12, 7);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(906, 140);
-            this.panel1.TabIndex = 3;
+            this.btnNuevo.BackColor = System.Drawing.Color.Teal;
+            this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
+            this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNuevo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.Color.White;
+            this.btnNuevo.Location = new System.Drawing.Point(481, 8);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(128, 33);
+            this.btnNuevo.TabIndex = 2;
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(21, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(151, 143);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(213, 61);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(570, 66);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnRecibir
+            // 
+            this.btnRecibir.BackColor = System.Drawing.Color.Teal;
+            this.btnRecibir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRecibir.BackgroundImage")));
+            this.btnRecibir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRecibir.Enabled = false;
+            this.btnRecibir.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.btnRecibir.FlatAppearance.BorderSize = 0;
+            this.btnRecibir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnRecibir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnRecibir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRecibir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecibir.ForeColor = System.Drawing.Color.White;
+            this.btnRecibir.Location = new System.Drawing.Point(615, 8);
+            this.btnRecibir.Name = "btnRecibir";
+            this.btnRecibir.Size = new System.Drawing.Size(128, 33);
+            this.btnRecibir.TabIndex = 5;
+            this.btnRecibir.UseVisualStyleBackColor = false;
+            this.btnRecibir.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnHistorial
             // 
@@ -251,44 +279,18 @@
             this.btnHistorial.UseVisualStyleBackColor = false;
             this.btnHistorial.Click += new System.EventHandler(this.button1_Click_2);
             // 
-            // btnRecibir
+            // panel1
             // 
-            this.btnRecibir.BackColor = System.Drawing.Color.Teal;
-            this.btnRecibir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRecibir.BackgroundImage")));
-            this.btnRecibir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRecibir.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
-            this.btnRecibir.FlatAppearance.BorderSize = 0;
-            this.btnRecibir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnRecibir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnRecibir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRecibir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecibir.ForeColor = System.Drawing.Color.White;
-            this.btnRecibir.Location = new System.Drawing.Point(615, 8);
-            this.btnRecibir.Name = "btnRecibir";
-            this.btnRecibir.Size = new System.Drawing.Size(128, 33);
-            this.btnRecibir.TabIndex = 5;
-            this.btnRecibir.UseVisualStyleBackColor = false;
-            this.btnRecibir.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(213, 61);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(570, 66);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(21, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(151, 143);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panel1.Controls.Add(this.btnHistorial);
+            this.panel1.Controls.Add(this.btnRecibir);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.btnNuevo);
+            this.panel1.Location = new System.Drawing.Point(12, 7);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(906, 140);
+            this.panel1.TabIndex = 3;
             // 
             // frmAlquileres
             // 
@@ -307,15 +309,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.librosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.administradoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alquileresPendientesBindingSource)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.DataGridView alquileresDataGridView;
         private System.Windows.Forms.BindingSource alquileresPendientesBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idalquilerDataGridViewTextBoxColumn;
@@ -327,10 +328,11 @@
         private System.Windows.Forms.BindingSource administradoresBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechasalidaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaprevistadeentregaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnRecibir;
         private System.Windows.Forms.Button btnHistorial;
+        private System.Windows.Forms.Panel panel1;
     }
 }
