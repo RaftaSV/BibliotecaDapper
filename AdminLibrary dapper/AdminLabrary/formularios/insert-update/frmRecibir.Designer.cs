@@ -38,15 +38,15 @@
             this.txtLector = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.recibirTextBox = new System.Windows.Forms.TextBox();
+            this.alquileresPendientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.alquileresPendientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             id_LectorLabel = new System.Windows.Forms.Label();
             id_libroLabel = new System.Windows.Forms.Label();
             recibidoLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.alquileresPendientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alquileresPendientesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // id_LectorLabel
@@ -127,11 +127,16 @@
             // recibirTextBox
             // 
             this.recibirTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alquileresPendientesBindingSource, "Recibir", true));
+            this.recibirTextBox.Enabled = false;
             this.recibirTextBox.Location = new System.Drawing.Point(351, 235);
             this.recibirTextBox.Multiline = true;
             this.recibirTextBox.Name = "recibirTextBox";
             this.recibirTextBox.Size = new System.Drawing.Size(77, 24);
             this.recibirTextBox.TabIndex = 26;
+            // 
+            // alquileresPendientesBindingSource
+            // 
+            this.alquileresPendientesBindingSource.DataSource = typeof(AdminLabrary.entidades.AlquileresPendientes);
             // 
             // pictureBox1
             // 
@@ -153,10 +158,6 @@
             this.pictureBox2.TabIndex = 28;
             this.pictureBox2.TabStop = false;
             // 
-            // alquileresPendientesBindingSource
-            // 
-            this.alquileresPendientesBindingSource.DataSource = typeof(AdminLabrary.entidades.AlquileresPendientes);
-            // 
             // frmRecibir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,9 +178,9 @@
             this.Name = "frmRecibir";
             this.Text = "RECIBIR";
             this.Load += new System.EventHandler(this.frmRecibir_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.alquileresPendientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alquileresPendientesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

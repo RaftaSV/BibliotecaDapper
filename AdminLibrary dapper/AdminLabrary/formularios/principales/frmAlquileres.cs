@@ -1,5 +1,6 @@
 ﻿using AdminLabrary.controladores;
 using AdminLabrary.formularios.principales;
+using AdminLabrary.modelos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,10 +46,10 @@ namespace AdminLabrary.formularios
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             btnRecibir.Enabled = false;
-            frmPrincipal.alquiler.lector.lista.Clear();
+            frmPrincipal.buscarlector.lista.Clear();
             foreach (DataGridViewRow i in alquileresDataGridView.Rows)
             {
-                frmPrincipal.alquiler.lector.lista.Add(new entidades.Alquileres { Id_Lector = int.Parse(i.Cells[1].Value.ToString()) });
+                frmPrincipal.buscarlector.lista.Add(new entidades.Alquileres { Id_Lector = int.Parse(i.Cells[1].Value.ToString()) });
             }
             frmPrincipal.alquiler.ShowDialog();
         }
@@ -66,7 +67,7 @@ namespace AdminLabrary.formularios
         {
             btnNuevo.Enabled = false;
             frmPrestamosFinalizados prestamos = new frmPrestamosFinalizados();
-            frmLogin.f.MostrarPanel(prestamos);
+            LinqL.f.MostrarPanel(prestamos);
         }
 
         private void alquileresDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -94,7 +95,7 @@ namespace AdminLabrary.formularios
         {
             btnRecibir.Enabled = false;
             frmPrestamosFinalizados prestamos = new frmPrestamosFinalizados();
-            frmLogin.f.MostrarPanel(prestamos);
+            LinqL.f.MostrarPanel(prestamos);
         }
 
         private void alquileresDataGridView_CellClick_1(object sender, DataGridViewCellEventArgs e)

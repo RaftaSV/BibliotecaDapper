@@ -35,19 +35,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarEditorial));
             this.dtgEditoriales = new System.Windows.Forms.DataGridView();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.idEditorialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editorialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fundadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editorialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEditoriales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editorialesBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.editorialesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dtgEditoriales
@@ -108,6 +108,38 @@
             this.dtgEditoriales.DoubleClick += new System.EventHandler(this.dtgEditoriales_DoubleClick);
             this.dtgEditoriales.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgEditoriales_KeyDown);
             // 
+            // idEditorialDataGridViewTextBoxColumn
+            // 
+            this.idEditorialDataGridViewTextBoxColumn.DataPropertyName = "Id_Editorial";
+            this.idEditorialDataGridViewTextBoxColumn.HeaderText = "Id_Editorial";
+            this.idEditorialDataGridViewTextBoxColumn.Name = "idEditorialDataGridViewTextBoxColumn";
+            this.idEditorialDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // editorialDataGridViewTextBoxColumn
+            // 
+            this.editorialDataGridViewTextBoxColumn.DataPropertyName = "Editorial";
+            this.editorialDataGridViewTextBoxColumn.HeaderText = "Editorial";
+            this.editorialDataGridViewTextBoxColumn.Name = "editorialDataGridViewTextBoxColumn";
+            this.editorialDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fundadaDataGridViewTextBoxColumn
+            // 
+            this.fundadaDataGridViewTextBoxColumn.DataPropertyName = "Fundada";
+            this.fundadaDataGridViewTextBoxColumn.HeaderText = "Fundada";
+            this.fundadaDataGridViewTextBoxColumn.Name = "fundadaDataGridViewTextBoxColumn";
+            this.fundadaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // direccionDataGridViewTextBoxColumn
+            // 
+            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion";
+            this.direccionDataGridViewTextBoxColumn.HeaderText = "Direccion";
+            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // editorialesBindingSource
+            // 
+            this.editorialesBindingSource.DataSource = typeof(AdminLabrary.entidades.Editoriales);
+            // 
             // txtBuscar
             // 
             this.txtBuscar.BackColor = System.Drawing.Color.Teal;
@@ -150,38 +182,6 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "INDICACIONES: Favor ingrese nombre de la editorial o seleccione de la listado.";
             // 
-            // idEditorialDataGridViewTextBoxColumn
-            // 
-            this.idEditorialDataGridViewTextBoxColumn.DataPropertyName = "Id_Editorial";
-            this.idEditorialDataGridViewTextBoxColumn.HeaderText = "Id_Editorial";
-            this.idEditorialDataGridViewTextBoxColumn.Name = "idEditorialDataGridViewTextBoxColumn";
-            this.idEditorialDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // editorialDataGridViewTextBoxColumn
-            // 
-            this.editorialDataGridViewTextBoxColumn.DataPropertyName = "Editorial";
-            this.editorialDataGridViewTextBoxColumn.HeaderText = "Editorial";
-            this.editorialDataGridViewTextBoxColumn.Name = "editorialDataGridViewTextBoxColumn";
-            this.editorialDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fundadaDataGridViewTextBoxColumn
-            // 
-            this.fundadaDataGridViewTextBoxColumn.DataPropertyName = "Fundada";
-            this.fundadaDataGridViewTextBoxColumn.HeaderText = "Fundada";
-            this.fundadaDataGridViewTextBoxColumn.Name = "fundadaDataGridViewTextBoxColumn";
-            this.fundadaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // direccionDataGridViewTextBoxColumn
-            // 
-            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion";
-            this.direccionDataGridViewTextBoxColumn.HeaderText = "Direccion";
-            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
-            this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // editorialesBindingSource
-            // 
-            this.editorialesBindingSource.DataSource = typeof(AdminLabrary.entidades.Editoriales);
-            // 
             // frmBuscarEditorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,17 +197,15 @@
             this.Text = "SELECCION EDITORIAL";
             this.Load += new System.EventHandler(this.frmBuscarEditorial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgEditoriales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editorialesBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.editorialesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dtgEditoriales;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idEditorialDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn editorialDataGridViewTextBoxColumn;
@@ -217,5 +215,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.DataGridView dtgEditoriales;
     }
 }

@@ -329,6 +329,7 @@
     <Compile Include="formularios\insert-update\frmRecibir.Designer.cs">
       <DependentUpon>frmRecibir.cs</DependentUpon>
     </Compile>
+    <Compile Include="modelos\LinqL.cs" />
     <Compile Include="modelos\MAlquileres.cs" />
     <Compile Include="modelos\MAutores.cs" />
     <Compile Include="modelos\MAdministradores.cs" />

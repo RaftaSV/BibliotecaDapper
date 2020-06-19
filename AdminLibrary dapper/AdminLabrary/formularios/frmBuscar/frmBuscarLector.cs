@@ -15,9 +15,9 @@ namespace AdminLabrary.formularios.frmBuscar
 {
     public partial class frmBuscarLector : Form
     {
-        
+
         public List<entidades.Lectores> lector = new List<entidades.Lectores>();
-       public List<entidades.Lectores> lector1 = new List<entidades.Lectores>();
+        public List<entidades.Lectores> lector1 = new List<entidades.Lectores>();
         public List<entidades.Alquileres> lista = new List<entidades.Alquileres>();
         public int enviar;
         public frmBuscarLector()
@@ -30,18 +30,18 @@ namespace AdminLabrary.formularios.frmBuscar
             CargarLista();
             filtro();
         }
-       
+
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-           
+
             filtro();
         }
 
-        
+
         private void seleccionar()
         {
-            if(enviar == 1)
+            if (enviar == 1)
             {
                 string Lector = dgvLectores.CurrentRow.Cells[1].Value.ToString();
                 string id = dgvLectores.CurrentRow.Cells[0].Value.ToString();
@@ -49,7 +49,7 @@ namespace AdminLabrary.formularios.frmBuscar
                 frmPrincipal.alquiler.id_LectorTextBox.Text = id;
                 this.Close();
             }
-            else if(enviar == 2)
+            else if (enviar == 2)
             {
                 string Lector = dgvLectores.CurrentRow.Cells[1].Value.ToString();
                 string id = dgvLectores.CurrentRow.Cells[0].Value.ToString();
@@ -67,7 +67,7 @@ namespace AdminLabrary.formularios.frmBuscar
                 //frmPrincipal.admi.admi.txtLecNombre.Text = Lector;
 
             }
-            
+
         }
         void CargarLista()
         {
@@ -82,7 +82,7 @@ namespace AdminLabrary.formularios.frmBuscar
                     lector1.Add(new entidades.Lectores { Id_Lector = Id, Nombres = i.Cells[1].Value.ToString(), Apellidos = i.Cells[2].Value.ToString() });
                 }
 
-               
+
                 var listalec = from lect in lector1
                                select new
                                {
@@ -90,26 +90,26 @@ namespace AdminLabrary.formularios.frmBuscar
                                    idlec = lect.Id_Lector,
                                    NOMBRES = lect.Nombres,
                                    APELLIDOS = lect.Apellidos
-                                   
-                               };
-                foreach(var i in listalec)
-                {
-                   
-                            var listaalq = from li in lista
-                                           where li.Id_Lector == i.idlec
-                               select new
-                               {
-                                   idlector = li.Id_Lector
-                               };
 
-                    if (listaalq.Count() <3)
+                               };
+                foreach (var i in listalec)
+                {
+
+                    var listaalq = from li in lista
+                                   where li.Id_Lector == i.idlec
+                                   select new
+                                   {
+                                       idlector = li.Id_Lector
+                                   };
+
+                    if (listaalq.Count() < 3)
                     {
                         lector.Add(new entidades.Lectores { Id_Lector = i.idlec, Nombres = i.NOMBRES, Apellidos = i.APELLIDOS });
                     }
 
 
                 }
-                
+
 
             }
             else
@@ -123,23 +123,23 @@ namespace AdminLabrary.formularios.frmBuscar
                     lector.Add(new entidades.Lectores { Id_Lector = Id, Nombres = i.Cells[1].Value.ToString(), Apellidos = i.Cells[2].Value.ToString() });
                 }
             }
-            
+
         }
 
 
         void filtro()
         {
             string buscar = txtBuscar.Text;
-                var lista = from lec in lector
-                            where lec.Nombres.Contains(buscar)
-                            select new
-                            {
-                                Id_Lector = lec.Id_Lector,
-                                NOMBRES = lec.Nombres,
-                                APELLIDOS = lec.Apellidos
-                            };
+            var lista = from lec in lector
+                        where lec.Nombres.Contains(buscar)
+                        select new
+                        {
+                            Id_Lector = lec.Id_Lector,
+                            NOMBRES = lec.Nombres,
+                            APELLIDOS = lec.Apellidos
+                        };
 
-                dgvLectores.DataSource = lista.ToList();
+            dgvLectores.DataSource = lista.ToList();
 
         }
 
@@ -148,7 +148,7 @@ namespace AdminLabrary.formularios.frmBuscar
             seleccionar();
         }
 
-        
+
 
         private void dgvLectores_KeyDown(object sender, KeyEventArgs e)
         {

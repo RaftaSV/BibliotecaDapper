@@ -189,6 +189,13 @@ namespace AdminLabrary.formularios.principales
         {
 
         }
+
+        private void PanelBarraTitulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        public static frmBuscarLector buscarlector = new frmBuscarLector();
+        public static frmBuscarlibro buscarlibro = new frmBuscarlibro();
     }
 
 }

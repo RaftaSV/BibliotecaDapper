@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AdminLabrary.controladores;
 using AdminLabrary.formularios.insert_update;
+using AdminLabrary.modelos;
 using DnsClient.Protocol;
 
 namespace AdminLabrary.formularios.principales
@@ -43,12 +44,12 @@ namespace AdminLabrary.formularios.principales
 
         }
 
-        public frmInsertarLibro nuevoL = new frmInsertarLibro();
+       
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             btnActualizar.Enabled = false;
             btnEliminar.Enabled = false;
-            nuevoL.ShowDialog();
+            LinqL.nuevoL.ShowDialog();
         }
 
         public frmActualizarLibros nuevoLi = new frmActualizarLibros();

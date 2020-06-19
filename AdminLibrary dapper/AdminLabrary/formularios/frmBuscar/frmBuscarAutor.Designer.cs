@@ -35,19 +35,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarAutor));
             this.dtgAutores = new System.Windows.Forms.DataGridView();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.idautorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechanacimientoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nacionalidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.autoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAutores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autoresBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.autoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dtgAutores
@@ -104,6 +104,38 @@
             this.dtgAutores.DoubleClick += new System.EventHandler(this.dtgAutores_DoubleClick);
             this.dtgAutores.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgAutores_KeyDown);
             // 
+            // idautorDataGridViewTextBoxColumn
+            // 
+            this.idautorDataGridViewTextBoxColumn.DataPropertyName = "Id_autor";
+            this.idautorDataGridViewTextBoxColumn.HeaderText = "Id_autor";
+            this.idautorDataGridViewTextBoxColumn.Name = "idautorDataGridViewTextBoxColumn";
+            this.idautorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechanacimientoDataGridViewTextBoxColumn
+            // 
+            this.fechanacimientoDataGridViewTextBoxColumn.DataPropertyName = "fecha_nacimiento";
+            this.fechanacimientoDataGridViewTextBoxColumn.HeaderText = "fecha_nacimiento";
+            this.fechanacimientoDataGridViewTextBoxColumn.Name = "fechanacimientoDataGridViewTextBoxColumn";
+            this.fechanacimientoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nacionalidadDataGridViewTextBoxColumn
+            // 
+            this.nacionalidadDataGridViewTextBoxColumn.DataPropertyName = "Nacionalidad";
+            this.nacionalidadDataGridViewTextBoxColumn.HeaderText = "Nacionalidad";
+            this.nacionalidadDataGridViewTextBoxColumn.Name = "nacionalidadDataGridViewTextBoxColumn";
+            this.nacionalidadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // autoresBindingSource
+            // 
+            this.autoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Autores);
+            // 
             // txtBuscar
             // 
             this.txtBuscar.BackColor = System.Drawing.Color.Teal;
@@ -147,38 +179,6 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // idautorDataGridViewTextBoxColumn
-            // 
-            this.idautorDataGridViewTextBoxColumn.DataPropertyName = "Id_autor";
-            this.idautorDataGridViewTextBoxColumn.HeaderText = "Id_autor";
-            this.idautorDataGridViewTextBoxColumn.Name = "idautorDataGridViewTextBoxColumn";
-            this.idautorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechanacimientoDataGridViewTextBoxColumn
-            // 
-            this.fechanacimientoDataGridViewTextBoxColumn.DataPropertyName = "fecha_nacimiento";
-            this.fechanacimientoDataGridViewTextBoxColumn.HeaderText = "fecha_nacimiento";
-            this.fechanacimientoDataGridViewTextBoxColumn.Name = "fechanacimientoDataGridViewTextBoxColumn";
-            this.fechanacimientoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nacionalidadDataGridViewTextBoxColumn
-            // 
-            this.nacionalidadDataGridViewTextBoxColumn.DataPropertyName = "Nacionalidad";
-            this.nacionalidadDataGridViewTextBoxColumn.HeaderText = "Nacionalidad";
-            this.nacionalidadDataGridViewTextBoxColumn.Name = "nacionalidadDataGridViewTextBoxColumn";
-            this.nacionalidadDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // autoresBindingSource
-            // 
-            this.autoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Autores);
-            // 
             // frmBuscarAutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,10 +193,10 @@
             this.Text = "SELECCION AUTOR";
             this.Load += new System.EventHandler(this.frmBuscarAutor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgAutores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autoresBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.autoresBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -204,7 +204,6 @@
         #endregion
 
         private System.Windows.Forms.BindingSource autoresBindingSource;
-        private System.Windows.Forms.DataGridView dtgAutores;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idautorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
@@ -213,5 +212,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.DataGridView dtgAutores;
     }
 }

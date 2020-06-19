@@ -18,7 +18,9 @@ namespace AdminLabrary
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin()) ;
+            frmLogin l = new frmLogin();
+            l.Show();
+            Application.Run();
         }
     }
 }

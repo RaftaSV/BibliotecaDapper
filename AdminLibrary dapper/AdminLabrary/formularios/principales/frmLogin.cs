@@ -1,4 +1,5 @@
 ﻿using AdminLabrary.conexion;
+using AdminLabrary.modelos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,50 +20,29 @@ namespace AdminLabrary.formularios.principales
             txtContraseña.PasswordChar = '*';
 
         }
-        public static frmPrincipal f = new frmPrincipal();
-        public void btnIniciarsesion_Click(object sender, EventArgs e)
 
+        
+        public void btnIniciarsesion_Click(object sender, EventArgs e)   
         {
-           
-            string u = txtUsuario.Text;
-
-            using (BibliotecaEntities1 db = new BibliotecaEntities1())
+            LinqL.Usuario = txtUsuario.Text;
+            LinqL.Contra = txtContraseña.Text;
+            LinqL.login();
+            if (LinqL.inicio ==1)
             {
-                var lista = from admin in db.Administradores
-                            where admin.Usuario == txtUsuario.Text
-                            && admin.Contraseña == txtContraseña.Text
-                            select admin;
-              
-                   
-                
-                if (lista.Count() > 0)
-                {
-                    foreach(var i in lista)
-                    {
-                        frmPrincipal.alquiler.id = i.Id_Admin;
-                        frmPrincipal.recibir.id = i.Id_Admin;
-                    }
-                    
-                    string usu = txtUsuario.Text;
-                    f.lblUsuario.Text = usu;
-                    frmPrincipal.alquiler.txtUsuario.Text = txtUsuario.Text;
-                    frmPrincipal.recibir.txtUsuario.Text = txtUsuario.Text;
-                    f.ShowDialog();
-
-                    this.Hide();
-
-                }
-                else
-                {
-                    txtUsuario.Text = "";
-                    txtContraseña.Text = "";
-
-                    MessageBox.Show("Usuario o contraseña incorrecto", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-
-
+                MessageBox.Show("El Usuario o la Contraseña es Incorrecta");
+                txtContraseña.Text = "";
+                txtUsuario.Text = "";
+                txtUsuario.Focus();
             }
-
+            else
+            {
+                txtContraseña.Text = "";
+                txtUsuario.Text = "";
+                txtUsuario.Focus();
+                this.Hide();
+            }
+           
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
