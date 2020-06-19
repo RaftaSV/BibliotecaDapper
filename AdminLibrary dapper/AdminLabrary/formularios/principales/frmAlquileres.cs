@@ -101,5 +101,10 @@ namespace AdminLabrary.formularios
         {
             btnRecibir.Enabled = true;
         }
+
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://localhost/ReportServer/Pages/ReportViewer.aspx?%2fPENDIENTES+DE+ENTREGA%2fpendientes+de+entrega&rs:Command=Render");
+        }
     }
 }
