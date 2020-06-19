@@ -49,7 +49,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dapper.2.0.30\lib\net461\Dapper.dll</HintPath>
+      <HintPath>..\packages\Dapper.2.0.35\lib\net461\Dapper.dll</HintPath>
     </Reference>
     <Reference Include="DnsClient, Version=1.0.7.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
       <HintPath>..\packages\DnsClient.1.0.7\lib\net45\DnsClient.dll</HintPath>
@@ -444,6 +444,7 @@
     <None Include="Properties\DataSources\AdminLabrary.entidades.Editoriales.datasource" />
     <None Include="Properties\DataSources\AdminLabrary.entidades.Lectores.datasource" />
     <None Include="Properties\DataSources\AdminLabrary.entidades.Libros.datasource" />
+    <None Include="Properties\DataSources\AdminLabrary.Properties.Settings.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
