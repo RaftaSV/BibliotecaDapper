@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AdminLabrary.formularios.frmBuscar;
 using AdminLabrary.conexion;
-using AdminLabrary.modelos;
 
 namespace AdminLabrary.formularios.principales
 {
@@ -61,7 +60,7 @@ namespace AdminLabrary.formularios.principales
         {
             frmBuscarlibro buscarlibro = new frmBuscarlibro();
             buscarlibro.cargar();
-            LinqL.Libros.Clear();
+            buscarlibro.Libros.Clear();
             buscarlibro.ShowDialog();
         }
        
@@ -71,17 +70,20 @@ namespace AdminLabrary.formularios.principales
             alquileresBindingSource.AddNew();
         }
 
-        
+        public frmBuscarLector lector = new frmBuscarLector();
         private void btnSelecLec_Click(object sender, EventArgs e)
         {
-            frmPrincipal.buscarlector.lector.Clear();
-            frmPrincipal.buscarlector.lector1.Clear();
-
-            frmPrincipal.buscarlector.enviar = 1;
-            frmPrincipal.buscarlector.ShowDialog();
+            lector.lector.Clear();
+            lector.lector1.Clear();
+           
+            lector.enviar = 1;
+            lector.ShowDialog();
             
         }
 
-       
+        private void id_libroTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

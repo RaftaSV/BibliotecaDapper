@@ -1,6 +1,5 @@
 ﻿using AdminLabrary.controladores;
 using AdminLabrary.formularios.principales;
-using AdminLabrary.modelos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +15,7 @@ namespace AdminLabrary.formularios.frmBuscar
     public partial class frmBuscarEditorial : Form
     {
         public int enviar;
-      
+       public List<entidades.Editoriales> edi = new List<entidades.Editoriales>();
         public frmBuscarEditorial()
         {
             InitializeComponent();
@@ -25,8 +24,7 @@ namespace AdminLabrary.formularios.frmBuscar
         private void frmBuscarEditorial_Load(object sender, EventArgs e)
         {
             cargarLista();
-
-            LinqL.filtroEdit();
+            filtro();
 
         }
         void cargarLista()
@@ -35,9 +33,21 @@ namespace AdminLabrary.formularios.frmBuscar
             editorialesBindingSource.DataSource = c.Listado();
             foreach (DataGridViewRow i in dtgEditoriales.Rows)
             {
-                LinqL.edi.Add(new entidades.Editoriales {Id_Editorial = int.Parse(i.Cells[0].Value.ToString()), Editorial = i.Cells[1].Value.ToString(),Fundada = Convert.ToDateTime(i.Cells[2].Value.ToString()), Direccion = i.Cells[3].Value.ToString()});
+                edi.Add(new entidades.Editoriales {Id_Editorial = int.Parse(i.Cells[0].Value.ToString()), Editorial = i.Cells[1].Value.ToString(),Fundada = Convert.ToDateTime(i.Cells[2].Value.ToString()), Direccion = i.Cells[3].Value.ToString()});
             }
-             
+        }void filtro()
+        {
+            string Buscar = txtBuscar.Text;
+            var lista = from i in edi
+                        where i.Editorial.Contains(Buscar)
+                        select new 
+                        {
+                            Id_editorial = i.Id_Editorial,
+                            Editorial = i.Editorial,
+                            Fundada = i.Fundada,
+                            Direccion = i.Direccion
+                        };
+            dtgEditoriales.DataSource = lista.ToList();
         }
         void seleccionar()
         {
@@ -45,9 +55,9 @@ namespace AdminLabrary.formularios.frmBuscar
             {
                 string id = dtgEditoriales.CurrentRow.Cells[0].Value.ToString();
                 string nombre = dtgEditoriales.CurrentRow.Cells[1].Value.ToString();
-                LinqL.nuevoL.id_EditorialTextBox.Text = id;
-                LinqL.nuevoL.txtEditorial.Text = nombre;
-                LinqL.nuevoL.id_Ed= id;
+                frmPrincipal.libros.nuevoL.id_EditorialTextBox.Text = id;
+                frmPrincipal.libros.nuevoL.txtEditorial.Text = nombre;
+                frmPrincipal.libros.nuevoL.id_Ed= id;
             }
             else
             {
@@ -64,9 +74,7 @@ namespace AdminLabrary.formularios.frmBuscar
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            LinqL.Buscar = txtBuscar.Text;
-            LinqL.filtroEdit();
-
+            filtro();
         }
 
         private void dtgEditoriales_DoubleClick(object sender, EventArgs e)

@@ -1,7 +1,6 @@
 ﻿using AdminLabrary.controladores;
 using AdminLabrary.formularios.frmBuscar;
 using AdminLabrary.formularios.principales;
-using AdminLabrary.modelos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,7 +43,7 @@ namespace AdminLabrary.formularios.insert_update
         private void btnEditorial_Click(object sender, EventArgs e)
         {
             frmBuscarEditorial f = new frmBuscarEditorial();
-            LinqL.edi.Clear();
+            f.edi.Clear();
             id_autorTextBox.Text = id_A;
             f.enviar = 2 ;
             f.ShowDialog();

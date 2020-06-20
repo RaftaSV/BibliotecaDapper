@@ -35,19 +35,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInsertarAdministrador));
             this.btnGuardar = new System.Windows.Forms.Button();
             this.usuarioTextBox = new System.Windows.Forms.TextBox();
-            this.administradoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contraseñaTextBox = new System.Windows.Forms.TextBox();
             this.txtLecNombre = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.id_LectorTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.administradoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             lectorLabel = new System.Windows.Forms.Label();
             usuarioLabel = new System.Windows.Forms.Label();
             contraseñaLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.administradoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.administradoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lectorLabel
@@ -113,10 +113,6 @@
             this.usuarioTextBox.Size = new System.Drawing.Size(219, 22);
             this.usuarioTextBox.TabIndex = 16;
             // 
-            // administradoresBindingSource
-            // 
-            this.administradoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Administradores);
-            // 
             // contraseñaTextBox
             // 
             this.contraseñaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.administradoresBindingSource, "Contraseña", true));
@@ -158,7 +154,6 @@
             // id_LectorTextBox
             // 
             this.id_LectorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.administradoresBindingSource, "Id_Lector", true));
-            this.id_LectorTextBox.Enabled = false;
             this.id_LectorTextBox.Location = new System.Drawing.Point(404, 95);
             this.id_LectorTextBox.Name = "id_LectorTextBox";
             this.id_LectorTextBox.Size = new System.Drawing.Size(56, 22);
@@ -185,6 +180,10 @@
             this.pictureBox2.TabIndex = 24;
             this.pictureBox2.TabStop = false;
             // 
+            // administradoresBindingSource
+            // 
+            this.administradoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Administradores);
+            // 
             // frmInsertarAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -210,9 +209,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NUEVO ADMINISTRADOR";
             this.Load += new System.EventHandler(this.frmInsertarAdministrador_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.administradoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.administradoresBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

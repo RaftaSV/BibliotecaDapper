@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AdminLabrary.controladores;
 using AdminLabrary.formularios.principales;
-using AdminLabrary.modelos;
 
 namespace AdminLabrary.formularios.frmBuscar
 {
@@ -28,8 +27,7 @@ namespace AdminLabrary.formularios.frmBuscar
         private void frmBuscarAutor_Load(object sender, EventArgs e)
         {
             CargarLista();
-            LinqL.filtroAutores();
-           
+            filtro();
 
         }
         public void CargarLista()
@@ -44,18 +42,31 @@ namespace AdminLabrary.formularios.frmBuscar
 
             }
 
-            LinqL.autorL = autor;
         }
-        
+        public void filtro()
+        {
+
+            string buscar = txtBuscar.Text;
+            var lista = from i in autor
+                        where i.Nombre.Contains(buscar)
+                        select new
+                        {
+                            Id_autor = i.Id_autor,
+                            nombre = i.Nombre,
+                            Fecha_nacimiento = i.fecha_nacimiento,
+                            nacionalidad = i.Nacionalidad
+                        };
+            dtgAutores.DataSource = lista.ToList();
+        }
         void seleccionar()
         {
             if(Enviar == 1)
             {
                 string id = dtgAutores.CurrentRow.Cells[0].Value.ToString();
                 string Nombre = dtgAutores.CurrentRow.Cells[1].Value.ToString();
-                 LinqL.nuevoL.id_autorTextBox.Text = id;
-                LinqL.nuevoL.txtAutor.Text = Nombre;
-                LinqL.nuevoL.id_A = id;
+                frmPrincipal.libros.nuevoL.id_autorTextBox.Text = id;
+                frmPrincipal.libros.nuevoL.txtAutor.Text = Nombre;
+                frmPrincipal.libros.nuevoL.id_A = id;
 
 
             }
@@ -72,8 +83,7 @@ namespace AdminLabrary.formularios.frmBuscar
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            LinqL.Buscar = txtBuscar.Text;
-            LinqL.filtroAutores();
+            filtro();
         }
 
         private void dtgAutores_DoubleClick(object sender, EventArgs e)

@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using AdminLabrary.conexion;
 using AdminLabrary.controladores;
 using AdminLabrary.formularios.principales;
-using AdminLabrary.modelos;
 
 namespace AdminLabrary.formularios.frmBuscar
 {
@@ -22,12 +21,13 @@ namespace AdminLabrary.formularios.frmBuscar
             
         }
 
-           private void frmBuscarlibro_Load(object sender, EventArgs e)
+         public  List<entidades.Libros> Libros = new List<entidades.Libros>();
+        private void frmBuscarlibro_Load(object sender, EventArgs e)
         {
             
 
             cargar();
-         
+            filtro();
         }
 
        
@@ -40,15 +40,28 @@ namespace AdminLabrary.formularios.frmBuscar
             {
                 int id = int.Parse(i.Cells[0].Value.ToString());
                 
-                LinqL.Libros.Add(new entidades.Libros { Id_libro = id, Nombre = i.Cells[1].Value.ToString(), cantidad = int.Parse(i.Cells[2].Value.ToString()) });
+                Libros.Add(new entidades.Libros { Id_libro = id, Nombre = i.Cells[1].Value.ToString(), cantidad = int.Parse(i.Cells[2].Value.ToString()) });
             }
         }
-       
+        public void filtro()
+        {
+            string nombre = txtBuscar.Text;
+                var lista = from libros in Libros
+                           
+                            where libros.Nombre.Contains(nombre)
+                            && libros.cantidad>0
+                            select new
+                            {
+                                Id_libro = libros.Id_libro,
+                                Nombre = libros.Nombre,
+                                CANTIDAD = libros.cantidad,
+                            };
+                dgvLibros.DataSource = lista.ToList();
+        }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            LinqL.Buscar = txtBuscar.Text;
-            LinqL.filtroLibros();
+            filtro();
         }
 
         private void dgvLibros_DoubleClick(object sender, EventArgs e)
@@ -58,7 +71,7 @@ namespace AdminLabrary.formularios.frmBuscar
         void seleccionar()
         {
             
-            LinqL.Libros.Clear();
+            Libros.Clear();
             
             string libro = dgvLibros.CurrentRow.Cells[1].Value.ToString();
             string id = dgvLibros.CurrentRow.Cells[0].Value.ToString();
@@ -79,11 +92,6 @@ namespace AdminLabrary.formularios.frmBuscar
             {
                 this.Close();
             }
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -68,10 +68,5 @@ namespace AdminLabrary.formularios.principales
             btnEliminar.Enabled = true;
 
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("http://localhost/Reports/report/PENDIENTES%20DE%20ENTREGA/Report1");
-        }
     }
 }

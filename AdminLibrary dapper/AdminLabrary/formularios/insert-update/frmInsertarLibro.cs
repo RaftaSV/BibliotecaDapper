@@ -11,7 +11,6 @@ using AdminLabrary.entidades;
 using AdminLabrary.controladores;
 using AdminLabrary.formularios.principales;
 using AdminLabrary.formularios.frmBuscar;
-using AdminLabrary.modelos;
 
 namespace AdminLabrary.formularios.insert_update
 {
@@ -27,14 +26,14 @@ namespace AdminLabrary.formularios.insert_update
         {
             librosBindingSource.MoveLast();
             librosBindingSource.AddNew();
-            CCategorias categorias = new CCategorias();
+            CCategorias categorias = new CCategorias();            
             categoriasBindingSource.DataSource = categorias.Listado();
-
+          
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e )
         {
-            if (txtAutor.Text != "" && txtEditorial.Text != "" && id_autorTextBox.Text != "" && int.Parse(cantidadTextBox.Text) > 0 && añoDateTimePicker != null)
+            if (txtAutor.Text!=""&& txtEditorial.Text!=""&& id_autorTextBox.Text!=""&&   int.Parse(cantidadTextBox.Text)>0 && añoDateTimePicker != null)
             {
                 id_autorTextBox.Text = id_A;
                 id_EditorialTextBox.Text = id_Ed;
@@ -58,25 +57,24 @@ namespace AdminLabrary.formularios.insert_update
             {
                 MessageBox.Show("Todos los Campos son obligatorios");
             }
-
-
+           
+   
         }
-        public frmBuscarAutor f = new frmBuscarAutor();
+
         private void btnAutor_Click(object sender, EventArgs e)
         {
-            LinqL.autorL.Clear();
+            frmBuscarAutor f = new frmBuscarAutor();
             f.Enviar = 1;
             id_EditorialTextBox.Text = id_Ed;
             f.ShowDialog();
         }
 
-        public frmBuscarEditorial editorial = new frmBuscarEditorial();
         private void btnEditorial_Click(object sender, EventArgs e)
         {
-            LinqL.edi.Clear();
+            frmBuscarEditorial f = new frmBuscarEditorial();
             id_autorTextBox.Text = id_A;
-            editorial.enviar = 1;
-            editorial .ShowDialog();
+            f.enviar = 1;
+            f.ShowDialog();
         }
 
         private void id_EditorialLabel_Click(object sender, EventArgs e)

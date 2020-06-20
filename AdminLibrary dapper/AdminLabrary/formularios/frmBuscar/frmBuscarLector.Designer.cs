@@ -36,17 +36,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarLector));
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dgvLectores = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.idLectorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lectoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLectores)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBuscar
@@ -110,31 +110,6 @@
             this.dgvLectores.DoubleClick += new System.EventHandler(this.dgvLectores_DoubleClick);
             this.dgvLectores.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvLectores_KeyDown);
             // 
-            // idLectorDataGridViewTextBoxColumn
-            // 
-            this.idLectorDataGridViewTextBoxColumn.DataPropertyName = "Id_Lector";
-            this.idLectorDataGridViewTextBoxColumn.HeaderText = "Id_Lector";
-            this.idLectorDataGridViewTextBoxColumn.Name = "idLectorDataGridViewTextBoxColumn";
-            this.idLectorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombresDataGridViewTextBoxColumn
-            // 
-            this.nombresDataGridViewTextBoxColumn.DataPropertyName = "Nombres";
-            this.nombresDataGridViewTextBoxColumn.HeaderText = "Nombres";
-            this.nombresDataGridViewTextBoxColumn.Name = "nombresDataGridViewTextBoxColumn";
-            this.nombresDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // apellidosDataGridViewTextBoxColumn
-            // 
-            this.apellidosDataGridViewTextBoxColumn.DataPropertyName = "Apellidos";
-            this.apellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos";
-            this.apellidosDataGridViewTextBoxColumn.Name = "apellidosDataGridViewTextBoxColumn";
-            this.apellidosDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lectoresBindingSource
-            // 
-            this.lectoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Lectores);
-            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -166,6 +141,31 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "INDICACIONES: Favor ingrese nombre de  lector o seleccione de la listado.";
             // 
+            // idLectorDataGridViewTextBoxColumn
+            // 
+            this.idLectorDataGridViewTextBoxColumn.DataPropertyName = "Id_Lector";
+            this.idLectorDataGridViewTextBoxColumn.HeaderText = "Id_Lector";
+            this.idLectorDataGridViewTextBoxColumn.Name = "idLectorDataGridViewTextBoxColumn";
+            this.idLectorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombresDataGridViewTextBoxColumn
+            // 
+            this.nombresDataGridViewTextBoxColumn.DataPropertyName = "Nombres";
+            this.nombresDataGridViewTextBoxColumn.HeaderText = "Nombres";
+            this.nombresDataGridViewTextBoxColumn.Name = "nombresDataGridViewTextBoxColumn";
+            this.nombresDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // apellidosDataGridViewTextBoxColumn
+            // 
+            this.apellidosDataGridViewTextBoxColumn.DataPropertyName = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn.Name = "apellidosDataGridViewTextBoxColumn";
+            this.apellidosDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lectoresBindingSource
+            // 
+            this.lectoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Lectores);
+            // 
             // frmBuscarLector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,10 +180,10 @@
             this.Load += new System.EventHandler(this.frmBuscarLector_Load);
             this.DoubleClick += new System.EventHandler(this.frmBuscarLector_DoubleClick);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLectores)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -191,6 +191,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.DataGridView dgvLectores;
         private System.Windows.Forms.BindingSource lectoresBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idLectorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn;
@@ -198,6 +199,5 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.DataGridView dgvLectores;
     }
 }
