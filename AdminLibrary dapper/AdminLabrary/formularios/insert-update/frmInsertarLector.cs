@@ -40,5 +40,10 @@ namespace AdminLabrary.formularios.insert_update
                 MessageBox.Show("Todos los campos son obligatorios","Aviso");
             }
         }
+
+        private void frmInsertarLector_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }

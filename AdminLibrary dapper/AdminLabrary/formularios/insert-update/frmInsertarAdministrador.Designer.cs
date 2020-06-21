@@ -209,6 +209,7 @@
             this.Name = "frmInsertarAdministrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NUEVO ADMINISTRADOR";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmInsertarAdministrador_FormClosing);
             this.Load += new System.EventHandler(this.frmInsertarAdministrador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.administradoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

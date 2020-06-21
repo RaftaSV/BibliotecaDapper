@@ -238,11 +238,11 @@
             this.Controls.Add(id_LectorLabel);
             this.Controls.Add(this.id_LectorTextBox);
             this.Controls.Add(id_libroLabel);
-            this.Enabled = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmInsertarAlquiler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NUEVO PRESTAMO";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmInsertarAlquiler_FormClosing);
             this.Load += new System.EventHandler(this.frmInsertarAlquiler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.alquileresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

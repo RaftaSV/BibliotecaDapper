@@ -70,9 +70,15 @@ namespace AdminLabrary.formularios.principales
             alquileresBindingSource.AddNew();
         }
 
-        public frmBuscarLector lector = new frmBuscarLector();
+       
         private void btnSelecLec_Click(object sender, EventArgs e)
         {
+            frmBuscarLector lector = new frmBuscarLector();
+            lector.lista.Clear();
+            foreach (DataGridViewRow i in frmPrincipal.alquileres.alquileresDataGridView.Rows)
+            {
+                lector.lista.Add(new entidades.Alquileres { Id_Lector = int.Parse(i.Cells[1].Value.ToString()) });
+            }
             lector.lector.Clear();
             lector.lector1.Clear();
            
@@ -84,6 +90,12 @@ namespace AdminLabrary.formularios.principales
         private void id_libroTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmInsertarAlquiler_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            txtLector.Text = "";
+            txtLibro.Text = "";
         }
     }
 }

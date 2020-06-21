@@ -81,5 +81,13 @@ namespace AdminLabrary.formularios.insert_update
         {
 
         }
+
+        private void frmInsertarLibro_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            txtAutor.Text = "";
+            txtEditorial.Text = "";
+            id_A = "";
+            id_Ed = "";
+        }
     }
 }

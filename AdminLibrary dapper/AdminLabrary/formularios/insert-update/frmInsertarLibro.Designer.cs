@@ -325,13 +325,13 @@
             this.Controls.Add(this.txtEditorial);
             this.Controls.Add(this.txtAutor);
             this.Controls.Add(this.btnGuardar);
-            this.Enabled = false;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmInsertarLibro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NUEVO LIBRO";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmInsertarLibro_FormClosing);
             this.Load += new System.EventHandler(this.frmInsertarLibro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.librosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();

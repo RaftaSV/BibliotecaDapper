@@ -35,13 +35,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlquileres));
             this.alquileresDataGridView = new System.Windows.Forms.DataGridView();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnRecibir = new System.Windows.Forms.Button();
-            this.btnHistorial = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.idalquilerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idLectorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.lectoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -52,14 +45,21 @@
             this.fechasalidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaprevistadeentregaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alquileresPendientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnRecibir = new System.Windows.Forms.Button();
+            this.btnHistorial = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.alquileresDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.librosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.administradoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alquileresPendientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // alquileresDataGridView
@@ -125,6 +125,82 @@
             this.alquileresDataGridView.TabIndex = 1;
             this.alquileresDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.alquileresDataGridView_CellClick_1);
             this.alquileresDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.alquileresDataGridView_CellContentClick);
+            // 
+            // idalquilerDataGridViewTextBoxColumn
+            // 
+            this.idalquilerDataGridViewTextBoxColumn.DataPropertyName = "Id_alquiler";
+            this.idalquilerDataGridViewTextBoxColumn.HeaderText = "Id_alquiler";
+            this.idalquilerDataGridViewTextBoxColumn.Name = "idalquilerDataGridViewTextBoxColumn";
+            this.idalquilerDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idLectorDataGridViewTextBoxColumn
+            // 
+            this.idLectorDataGridViewTextBoxColumn.DataPropertyName = "Id_Lector";
+            this.idLectorDataGridViewTextBoxColumn.DataSource = this.lectoresBindingSource;
+            this.idLectorDataGridViewTextBoxColumn.DisplayMember = "Nombres";
+            this.idLectorDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.idLectorDataGridViewTextBoxColumn.HeaderText = "Lector";
+            this.idLectorDataGridViewTextBoxColumn.Name = "idLectorDataGridViewTextBoxColumn";
+            this.idLectorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idLectorDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idLectorDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idLectorDataGridViewTextBoxColumn.ValueMember = "Id_Lector";
+            // 
+            // lectoresBindingSource
+            // 
+            this.lectoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Lectores);
+            // 
+            // idlibroDataGridViewTextBoxColumn
+            // 
+            this.idlibroDataGridViewTextBoxColumn.DataPropertyName = "Id_libro";
+            this.idlibroDataGridViewTextBoxColumn.DataSource = this.librosBindingSource;
+            this.idlibroDataGridViewTextBoxColumn.DisplayMember = "Nombre";
+            this.idlibroDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.idlibroDataGridViewTextBoxColumn.HeaderText = "Libro";
+            this.idlibroDataGridViewTextBoxColumn.Name = "idlibroDataGridViewTextBoxColumn";
+            this.idlibroDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idlibroDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idlibroDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idlibroDataGridViewTextBoxColumn.ValueMember = "Id_libro";
+            // 
+            // librosBindingSource
+            // 
+            this.librosBindingSource.DataSource = typeof(AdminLabrary.entidades.Libros);
+            // 
+            // entregadoDataGridViewTextBoxColumn
+            // 
+            this.entregadoDataGridViewTextBoxColumn.DataPropertyName = "Entregado";
+            this.entregadoDataGridViewTextBoxColumn.DataSource = this.administradoresBindingSource;
+            this.entregadoDataGridViewTextBoxColumn.DisplayMember = "Usuario";
+            this.entregadoDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.entregadoDataGridViewTextBoxColumn.HeaderText = "Entregado";
+            this.entregadoDataGridViewTextBoxColumn.Name = "entregadoDataGridViewTextBoxColumn";
+            this.entregadoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.entregadoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.entregadoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.entregadoDataGridViewTextBoxColumn.ValueMember = "Id_Admin";
+            // 
+            // administradoresBindingSource
+            // 
+            this.administradoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Administradores);
+            // 
+            // fechasalidaDataGridViewTextBoxColumn
+            // 
+            this.fechasalidaDataGridViewTextBoxColumn.DataPropertyName = "fecha_salida";
+            this.fechasalidaDataGridViewTextBoxColumn.HeaderText = "fecha_salida";
+            this.fechasalidaDataGridViewTextBoxColumn.Name = "fechasalidaDataGridViewTextBoxColumn";
+            this.fechasalidaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaprevistadeentregaDataGridViewTextBoxColumn
+            // 
+            this.fechaprevistadeentregaDataGridViewTextBoxColumn.DataPropertyName = "fecha_prevista_de_entrega";
+            this.fechaprevistadeentregaDataGridViewTextBoxColumn.HeaderText = "fecha_prevista_de_entrega";
+            this.fechaprevistadeentregaDataGridViewTextBoxColumn.Name = "fechaprevistadeentregaDataGridViewTextBoxColumn";
+            this.fechaprevistadeentregaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // alquileresPendientesBindingSource
+            // 
+            this.alquileresPendientesBindingSource.DataSource = typeof(AdminLabrary.entidades.AlquileresPendientes);
             // 
             // btnNuevo
             // 
@@ -237,82 +313,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_3);
             // 
-            // idalquilerDataGridViewTextBoxColumn
-            // 
-            this.idalquilerDataGridViewTextBoxColumn.DataPropertyName = "Id_alquiler";
-            this.idalquilerDataGridViewTextBoxColumn.HeaderText = "Id_alquiler";
-            this.idalquilerDataGridViewTextBoxColumn.Name = "idalquilerDataGridViewTextBoxColumn";
-            this.idalquilerDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idLectorDataGridViewTextBoxColumn
-            // 
-            this.idLectorDataGridViewTextBoxColumn.DataPropertyName = "Id_Lector";
-            this.idLectorDataGridViewTextBoxColumn.DataSource = this.lectoresBindingSource;
-            this.idLectorDataGridViewTextBoxColumn.DisplayMember = "Nombres";
-            this.idLectorDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.idLectorDataGridViewTextBoxColumn.HeaderText = "Lector";
-            this.idLectorDataGridViewTextBoxColumn.Name = "idLectorDataGridViewTextBoxColumn";
-            this.idLectorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idLectorDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.idLectorDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.idLectorDataGridViewTextBoxColumn.ValueMember = "Id_Lector";
-            // 
-            // lectoresBindingSource
-            // 
-            this.lectoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Lectores);
-            // 
-            // idlibroDataGridViewTextBoxColumn
-            // 
-            this.idlibroDataGridViewTextBoxColumn.DataPropertyName = "Id_libro";
-            this.idlibroDataGridViewTextBoxColumn.DataSource = this.librosBindingSource;
-            this.idlibroDataGridViewTextBoxColumn.DisplayMember = "Nombre";
-            this.idlibroDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.idlibroDataGridViewTextBoxColumn.HeaderText = "Libro";
-            this.idlibroDataGridViewTextBoxColumn.Name = "idlibroDataGridViewTextBoxColumn";
-            this.idlibroDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idlibroDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.idlibroDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.idlibroDataGridViewTextBoxColumn.ValueMember = "Id_libro";
-            // 
-            // librosBindingSource
-            // 
-            this.librosBindingSource.DataSource = typeof(AdminLabrary.entidades.Libros);
-            // 
-            // entregadoDataGridViewTextBoxColumn
-            // 
-            this.entregadoDataGridViewTextBoxColumn.DataPropertyName = "Entregado";
-            this.entregadoDataGridViewTextBoxColumn.DataSource = this.administradoresBindingSource;
-            this.entregadoDataGridViewTextBoxColumn.DisplayMember = "Usuario";
-            this.entregadoDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.entregadoDataGridViewTextBoxColumn.HeaderText = "Entregado";
-            this.entregadoDataGridViewTextBoxColumn.Name = "entregadoDataGridViewTextBoxColumn";
-            this.entregadoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.entregadoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.entregadoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.entregadoDataGridViewTextBoxColumn.ValueMember = "Id_Admin";
-            // 
-            // administradoresBindingSource
-            // 
-            this.administradoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Administradores);
-            // 
-            // fechasalidaDataGridViewTextBoxColumn
-            // 
-            this.fechasalidaDataGridViewTextBoxColumn.DataPropertyName = "fecha_salida";
-            this.fechasalidaDataGridViewTextBoxColumn.HeaderText = "fecha_salida";
-            this.fechasalidaDataGridViewTextBoxColumn.Name = "fechasalidaDataGridViewTextBoxColumn";
-            this.fechasalidaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechaprevistadeentregaDataGridViewTextBoxColumn
-            // 
-            this.fechaprevistadeentregaDataGridViewTextBoxColumn.DataPropertyName = "fecha_prevista_de_entrega";
-            this.fechaprevistadeentregaDataGridViewTextBoxColumn.HeaderText = "fecha_prevista_de_entrega";
-            this.fechaprevistadeentregaDataGridViewTextBoxColumn.Name = "fechaprevistadeentregaDataGridViewTextBoxColumn";
-            this.fechaprevistadeentregaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // alquileresPendientesBindingSource
-            // 
-            this.alquileresPendientesBindingSource.DataSource = typeof(AdminLabrary.entidades.AlquileresPendientes);
-            // 
             // frmAlquileres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,19 +326,18 @@
             this.Text = "Alquileres";
             this.Load += new System.EventHandler(this.frmAlquileres_Load);
             ((System.ComponentModel.ISupportInitialize)(this.alquileresDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.librosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.administradoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alquileresPendientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView alquileresDataGridView;
         private System.Windows.Forms.BindingSource alquileresPendientesBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idalquilerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn idLectorDataGridViewTextBoxColumn;
@@ -356,5 +355,6 @@
         private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.DataGridView alquileresDataGridView;
     }
 }

@@ -45,11 +45,7 @@ namespace AdminLabrary.formularios
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             btnRecibir.Enabled = false;
-            frmPrincipal.alquiler.lector.lista.Clear();
-            foreach (DataGridViewRow i in alquileresDataGridView.Rows)
-            {
-                frmPrincipal.alquiler.lector.lista.Add(new entidades.Alquileres { Id_Lector = int.Parse(i.Cells[1].Value.ToString()) });
-            }
+          
             frmPrincipal.alquiler.ShowDialog();
         }
 

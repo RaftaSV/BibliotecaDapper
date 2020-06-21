@@ -33,14 +33,14 @@
             System.Windows.Forms.Label nombresLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInsertarLector));
             this.apellidosTextBox = new System.Windows.Forms.TextBox();
+            this.lectoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nombresTextBox = new System.Windows.Forms.TextBox();
             this.btGuardar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lectoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             apellidosLabel = new System.Windows.Forms.Label();
             nombresLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // apellidosLabel
@@ -71,6 +71,10 @@
             this.apellidosTextBox.Name = "apellidosTextBox";
             this.apellidosTextBox.Size = new System.Drawing.Size(205, 24);
             this.apellidosTextBox.TabIndex = 1;
+            // 
+            // lectoresBindingSource
+            // 
+            this.lectoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Lectores);
             // 
             // nombresTextBox
             // 
@@ -108,10 +112,6 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // lectoresBindingSource
-            // 
-            this.lectoresBindingSource.DataSource = typeof(AdminLabrary.entidades.Lectores);
-            // 
             // frmInsertarLector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -130,8 +130,9 @@
             this.Name = "frmInsertarLector";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NUEVO LECTOR";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmInsertarLector_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.lectoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

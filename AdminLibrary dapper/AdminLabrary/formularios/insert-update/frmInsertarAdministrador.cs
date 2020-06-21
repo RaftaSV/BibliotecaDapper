@@ -39,6 +39,8 @@ namespace AdminLabrary.formularios.insert_update
                 cadmin.guardar(admi);
                 administradoresBindingSource.Clear();
                 frmPrincipal.admi.CargarDatos();
+            txtLecNombre.Text = "";
+            id_LectorTextBox.Text = "";
                 this.Close();
             
         }
@@ -63,6 +65,12 @@ namespace AdminLabrary.formularios.insert_update
         private void id_LectorTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmInsertarAdministrador_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            txtLecNombre.Text = "";
+            id_LectorTextBox.Text = "";
         }
     }
 }
