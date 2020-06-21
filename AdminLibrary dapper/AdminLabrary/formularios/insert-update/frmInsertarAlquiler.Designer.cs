@@ -34,6 +34,7 @@
             System.Windows.Forms.Label id_libroLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInsertarAlquiler));
             this.entregadoTextBox = new System.Windows.Forms.TextBox();
+            this.alquileresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.id_LectorTextBox = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtLector = new System.Windows.Forms.TextBox();
@@ -44,13 +45,12 @@
             this.txtLibro = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.alquileresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             entregadoLabel = new System.Windows.Forms.Label();
             id_LectorLabel = new System.Windows.Forms.Label();
             id_libroLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.alquileresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alquileresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // entregadoLabel
@@ -92,6 +92,10 @@
             this.entregadoTextBox.Name = "entregadoTextBox";
             this.entregadoTextBox.Size = new System.Drawing.Size(67, 24);
             this.entregadoTextBox.TabIndex = 2;
+            // 
+            // alquileresBindingSource
+            // 
+            this.alquileresBindingSource.DataSource = typeof(AdminLabrary.entidades.Alquileres);
             // 
             // id_LectorTextBox
             // 
@@ -214,10 +218,6 @@
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
             // 
-            // alquileresBindingSource
-            // 
-            this.alquileresBindingSource.DataSource = typeof(AdminLabrary.entidades.Alquileres);
-            // 
             // frmInsertarAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,14 +238,15 @@
             this.Controls.Add(id_LectorLabel);
             this.Controls.Add(this.id_LectorTextBox);
             this.Controls.Add(id_libroLabel);
+            this.Enabled = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmInsertarAlquiler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NUEVO PRESTAMO";
             this.Load += new System.EventHandler(this.frmInsertarAlquiler_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.alquileresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alquileresBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
