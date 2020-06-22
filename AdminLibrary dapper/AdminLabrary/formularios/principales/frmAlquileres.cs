@@ -100,7 +100,12 @@ namespace AdminLabrary.formularios
 
         private void button1_Click_3(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://localhost/ReportServer/Pages/ReportViewer.aspx?%2fPENDIENTES+DE+ENTREGA%2fpendientes+de+entrega&rs:Command=Render");
+            System.Diagnostics.Process.Start("http://desktop-bgitd0d/ReportServer/Pages/ReportViewer.aspx?%2fPENDIENTES+DE+ENTREGA%2fpendientes+de+entrega&rs:Command=Render");
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://localhost/ReportServer/Pages/ReportViewer.aspx?%2fPENDIENTES+DE+ENTREGA%2ffinalizado&rs:Command=Render");
         }
     }
 }

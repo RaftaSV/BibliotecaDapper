@@ -71,7 +71,7 @@ namespace AdminLabrary.formularios.principales
 
         private void button2_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://localhost/Reports/report/PENDIENTES%20DE%20ENTREGA/Report1");
+            System.Diagnostics.Process.Start("http://desktop-bgitd0d/ReportServer/Pages/ReportViewer.aspx?%2fPENDIENTES+DE+ENTREGA%2fReport1&rs:Command=Render");
         }
     }
 }
