@@ -17,8 +17,13 @@ namespace AdminLabrary
         static void Main()
         {
             Application.EnableVisualStyles();
+            
+            
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin()) ;
+
+            frmLogin login = new frmLogin();
+            login.Show();
+            Application.Run() ;
         }
     }
 }

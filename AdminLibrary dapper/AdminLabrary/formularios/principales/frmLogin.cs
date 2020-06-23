@@ -47,7 +47,7 @@ namespace AdminLabrary.formularios.principales
                     f.lblUsuario.Text = usu;
                     frmPrincipal.alquiler.txtUsuario.Text = txtUsuario.Text;
                     frmPrincipal.recibir.txtUsuario.Text = txtUsuario.Text;
-                    f.ShowDialog();
+                    f.Show();
 
                     this.Hide();
 
@@ -56,6 +56,7 @@ namespace AdminLabrary.formularios.principales
                 {
                     txtUsuario.Text = "";
                     txtContraseña.Text = "";
+                    txtUsuario.Focus();
 
                     MessageBox.Show("Usuario o contraseña incorrecto", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }

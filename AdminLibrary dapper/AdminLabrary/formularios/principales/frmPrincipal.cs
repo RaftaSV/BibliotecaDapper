@@ -189,6 +189,19 @@ namespace AdminLabrary.formularios.principales
         {
 
         }
+
+        private void pPrincipal_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.Show();
+
+            this.Hide();
+        }
     }
 
 }
