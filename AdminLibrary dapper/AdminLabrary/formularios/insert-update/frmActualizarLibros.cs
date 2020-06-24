@@ -51,19 +51,29 @@ namespace AdminLabrary.formularios.insert_update
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+
             id_autorTextBox.Text = id_A;
             id_EditorialTextBox.Text = id_Ed;
-            librosBindingSource.EndEdit();
-            entidades.Libros libro = new entidades.Libros();
-            libro = (entidades.Libros)librosBindingSource.Current;
-            CLibros l = new CLibros();
-            l.Actualizar(libro);
-            txtAutor.Text = "";
-            txtEditorial.Text = "";
-            id_A = "";
-            id_Ed = "";
-            frmPrincipal.libros.CargarDatos();
-            this.Close();
+            if (txtAutor.Text != "" && txtEditorial.Text != "" && id_autorTextBox.Text != "" && int.Parse(cantidadTextBox.Text) > 0 && añoDateTimePicker != null)
+            {
+                librosBindingSource.EndEdit();
+                entidades.Libros libro = new entidades.Libros();
+                libro = (entidades.Libros)librosBindingSource.Current;
+                CLibros l = new CLibros();
+                l.Actualizar(libro);
+                txtAutor.Text = "";
+                txtEditorial.Text = "";
+                id_A = "";
+                id_Ed = "";
+                frmPrincipal.libros.CargarDatos();
+                this.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("Todos los Campos son obligatorios");
+            }
+           
         }
 
        

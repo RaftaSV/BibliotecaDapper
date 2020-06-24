@@ -31,14 +31,24 @@ namespace AdminLabrary.formularios.insert_update
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-           
-            administradoresBindingSource.EndEdit();
-            entidades.Administradores ad = new entidades.Administradores();
-            ad = (entidades.Administradores)administradoresBindingSource.Current;
-            CAdministradores AD = new CAdministradores();
-            AD.Actualizar(ad);
-            frmPrincipal.admi.CargarDatos();
-            this.Close();
+            if (txtLecNombre.Text != "" && usuarioTextBox.Text != "" && contraseñaTextBox.Text != "")
+            {
+                administradoresBindingSource.EndEdit();
+                entidades.Administradores ad = new entidades.Administradores();
+                ad = (entidades.Administradores)administradoresBindingSource.Current;
+                CAdministradores AD = new CAdministradores();
+                AD.Actualizar(ad);
+                frmPrincipal.admi.CargarDatos();
+                this.Close();
+
+
+            }
+            else
+            {
+                MessageBox.Show("Todos los campos son obliagatorios");
+            }
+
+         
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -50,13 +60,25 @@ namespace AdminLabrary.formularios.insert_update
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            administradoresBindingSource.EndEdit();
-            entidades.Administradores ad = new entidades.Administradores();
-            ad = (entidades.Administradores)administradoresBindingSource.Current;
-            CAdministradores AD = new CAdministradores();
-            AD.Eliminar(ad);
-            frmPrincipal.admi.CargarDatos();
-            this.Close();
+
+            if (txtLecNombre.Text != "" && usuarioTextBox.Text != "" && contraseñaTextBox.Text != "")
+            {
+                administradoresBindingSource.EndEdit();
+                entidades.Administradores ad = new entidades.Administradores();
+                ad = (entidades.Administradores)administradoresBindingSource.Current;
+                CAdministradores AD = new CAdministradores();
+                AD.Eliminar(ad);
+                frmPrincipal.admi.CargarDatos();
+                this.Close();
+
+
+            }
+            else
+            {
+                MessageBox.Show("Todos los campos son obliagatorios");
+            }
+
+           
 
         }
     }
