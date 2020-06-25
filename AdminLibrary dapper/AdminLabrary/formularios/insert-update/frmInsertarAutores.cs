@@ -21,7 +21,7 @@ namespace AdminLabrary.formularios.insert_update
             InitializeComponent();
             autoresBindingSource.MoveLast();
             autoresBindingSource.AddNew();
-            
+            fecha_nacimientoDateTimePicker.Text = DateTime.Now.ToString("yyyy - MM - dd");
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

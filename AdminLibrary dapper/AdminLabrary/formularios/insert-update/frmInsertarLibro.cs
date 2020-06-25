@@ -26,6 +26,7 @@ namespace AdminLabrary.formularios.insert_update
         {
             librosBindingSource.MoveLast();
             librosBindingSource.AddNew();
+            añoDateTimePicker.Text = DateTime.Now.ToString("yyyy - MM - dd");
             CCategorias categorias = new CCategorias();            
             categoriasBindingSource.DataSource = categorias.Listado();
           
