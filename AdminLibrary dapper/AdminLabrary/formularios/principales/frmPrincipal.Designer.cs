@@ -74,11 +74,11 @@
             // 
             this.PanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.PanelMenu.Controls.Add(this.pictureBox1);
+            this.PanelMenu.Controls.Add(this.btnLectores);
             this.PanelMenu.Controls.Add(this.btnPrestamos);
             this.PanelMenu.Controls.Add(this.panel6);
             this.PanelMenu.Controls.Add(this.btnAutor);
             this.PanelMenu.Controls.Add(this.Panel4);
-            this.PanelMenu.Controls.Add(this.btnLectores);
             this.PanelMenu.Controls.Add(this.panel1);
             this.PanelMenu.Controls.Add(this.btnLibros);
             this.PanelMenu.Controls.Add(this.btnMenu);
@@ -180,7 +180,7 @@
             this.btnLectores.ForeColor = System.Drawing.Color.White;
             this.btnLectores.Image = ((System.Drawing.Image)(resources.GetObject("btnLectores.Image")));
             this.btnLectores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLectores.Location = new System.Drawing.Point(22, 477);
+            this.btnLectores.Location = new System.Drawing.Point(21, 359);
             this.btnLectores.Name = "btnLectores";
             this.btnLectores.Size = new System.Drawing.Size(216, 50);
             this.btnLectores.TabIndex = 6;
@@ -209,7 +209,7 @@
             this.btnLibros.ForeColor = System.Drawing.Color.White;
             this.btnLibros.Image = ((System.Drawing.Image)(resources.GetObject("btnLibros.Image")));
             this.btnLibros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLibros.Location = new System.Drawing.Point(20, 359);
+            this.btnLibros.Location = new System.Drawing.Point(21, 236);
             this.btnLibros.Name = "btnLibros";
             this.btnLibros.Size = new System.Drawing.Size(220, 56);
             this.btnLibros.TabIndex = 14;
@@ -251,7 +251,7 @@
             this.btnAdmin.ForeColor = System.Drawing.Color.White;
             this.btnAdmin.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmin.Image")));
             this.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmin.Location = new System.Drawing.Point(18, 421);
+            this.btnAdmin.Location = new System.Drawing.Point(20, 292);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(220, 50);
             this.btnAdmin.TabIndex = 8;
@@ -280,7 +280,7 @@
             this.btnCategoria.ForeColor = System.Drawing.Color.White;
             this.btnCategoria.Image = ((System.Drawing.Image)(resources.GetObject("btnCategoria.Image")));
             this.btnCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategoria.Location = new System.Drawing.Point(20, 292);
+            this.btnCategoria.Location = new System.Drawing.Point(17, 477);
             this.btnCategoria.Name = "btnCategoria";
             this.btnCategoria.Size = new System.Drawing.Size(220, 50);
             this.btnCategoria.TabIndex = 4;
@@ -309,7 +309,7 @@
             this.btnProductos.ForeColor = System.Drawing.Color.White;
             this.btnProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnProductos.Image")));
             this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProductos.Location = new System.Drawing.Point(20, 236);
+            this.btnProductos.Location = new System.Drawing.Point(17, 421);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(220, 50);
             this.btnProductos.TabIndex = 2;
