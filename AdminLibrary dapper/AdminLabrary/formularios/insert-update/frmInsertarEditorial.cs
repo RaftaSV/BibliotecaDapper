@@ -23,7 +23,12 @@ namespace AdminLabrary.formularios.insert_update
         private void frmInsertarEditorial_Load(object sender, EventArgs e)
         {
             editorialesBindingSource.MoveLast();
+
             editorialesBindingSource.AddNew();
+            fundadaDateTimePicker.Text = DateTime.Now.ToString("yyyy - MM - dd");
+
+                
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -42,6 +47,11 @@ namespace AdminLabrary.formularios.insert_update
             {
                 MessageBox.Show("Todos los campos son obligatorios");
             }
+        }
+
+        private void fundadaDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

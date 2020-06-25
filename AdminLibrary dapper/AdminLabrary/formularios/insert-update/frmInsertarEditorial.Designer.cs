@@ -34,16 +34,16 @@
             System.Windows.Forms.Label fundadaLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInsertarEditorial));
             this.direccionTextBox = new System.Windows.Forms.TextBox();
+            this.editorialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.editorialTextBox = new System.Windows.Forms.TextBox();
             this.fundadaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.editorialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             direccionLabel = new System.Windows.Forms.Label();
             editorialLabel = new System.Windows.Forms.Label();
             fundadaLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editorialesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // direccionLabel
@@ -85,6 +85,10 @@
             this.direccionTextBox.Size = new System.Drawing.Size(280, 26);
             this.direccionTextBox.TabIndex = 2;
             // 
+            // editorialesBindingSource
+            // 
+            this.editorialesBindingSource.DataSource = typeof(AdminLabrary.entidades.Editoriales);
+            // 
             // editorialTextBox
             // 
             this.editorialTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editorialesBindingSource, "Editorial", true));
@@ -104,6 +108,7 @@
             this.fundadaDateTimePicker.Name = "fundadaDateTimePicker";
             this.fundadaDateTimePicker.Size = new System.Drawing.Size(280, 26);
             this.fundadaDateTimePicker.TabIndex = 3;
+            this.fundadaDateTimePicker.ValueChanged += new System.EventHandler(this.fundadaDateTimePicker_ValueChanged);
             // 
             // btnGuardar
             // 
@@ -134,10 +139,6 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // editorialesBindingSource
-            // 
-            this.editorialesBindingSource.DataSource = typeof(AdminLabrary.entidades.Editoriales);
-            // 
             // frmInsertarEditorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,8 +159,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NUEVO EDITORIAL";
             this.Load += new System.EventHandler(this.frmInsertarEditorial_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.editorialesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
