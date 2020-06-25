@@ -27,24 +27,41 @@ namespace AdminLabrary.formularios.insert_update
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            entidades.Lectores lectores = new entidades.Lectores();
-            lectoresBindingSource.EndEdit();
-            lectores = (entidades.Lectores)lectoresBindingSource.Current;
-            controladores.CLectores c = new controladores.CLectores();
-            c.actualizar(lectores);
-            frmPrincipal.lector.CargarDatos();
-            this.Close();
+            if (nombresTextBox.Text != "" && apellidosTextBox.Text != "")
+            {
+                entidades.Lectores lectores = new entidades.Lectores();
+                lectoresBindingSource.EndEdit();
+                lectores = (entidades.Lectores)lectoresBindingSource.Current;
+                controladores.CLectores c = new controladores.CLectores();
+                c.actualizar(lectores);
+                frmPrincipal.lector.CargarDatos();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Todos los campos son obligatorios", "Aviso");
+            }
+           
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            entidades.Lectores lectores = new entidades.Lectores();
-            lectoresBindingSource.EndEdit();
-            lectores = (entidades.Lectores)lectoresBindingSource.Current;
-            controladores.CLectores c = new controladores.CLectores();
-            c.Eliminar(lectores);
-            frmPrincipal.lector.CargarDatos();
-            this.Close();
+            
+            if (nombresTextBox.Text != "" && apellidosTextBox.Text != "")
+            {
+                entidades.Lectores lectores = new entidades.Lectores();
+                lectoresBindingSource.EndEdit();
+                lectores = (entidades.Lectores)lectoresBindingSource.Current;
+                controladores.CLectores c = new controladores.CLectores();
+                c.Eliminar(lectores);
+                frmPrincipal.lector.CargarDatos();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Todos los campos son obligatorios", "Aviso");
+            }
+
 
         }
     }

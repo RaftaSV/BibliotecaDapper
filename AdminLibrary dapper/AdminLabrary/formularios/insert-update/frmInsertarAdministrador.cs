@@ -33,15 +33,25 @@ namespace AdminLabrary.formularios.insert_update
            
             administradoresBindingSource.EndEdit();
             
+            if(txtLecNombre.Text !="" && usuarioTextBox.Text!=""&& contraseñaTextBox.Text != "")
+            {
+
                 Administradores admi = new Administradores();
                 admi = (Administradores)administradoresBindingSource.Current;
                 CAdministradores cadmin = new CAdministradores();
                 cadmin.guardar(admi);
                 administradoresBindingSource.Clear();
                 frmPrincipal.admi.CargarDatos();
-            txtLecNombre.Text = "";
-            id_LectorTextBox.Text = "";
+                txtLecNombre.Text = "";
+                id_LectorTextBox.Text = "";
                 this.Close();
+
+
+            }
+            else
+            {
+                MessageBox.Show("Todos los campos son obliagatorios");
+            }
             
         }
 

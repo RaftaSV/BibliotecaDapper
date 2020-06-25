@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.PanelMenu = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnPrestamos = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnAutor = new System.Windows.Forms.Button();
@@ -56,8 +57,8 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pPrincipal = new System.Windows.Forms.Panel();
             this.LogoGrande = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
             this.PanelBarraTitulo.SuspendLayout();
@@ -67,7 +68,6 @@
             this.pbtnMenu.SuspendLayout();
             this.pPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoGrande)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelMenu
@@ -96,8 +96,24 @@
             this.PanelMenu.Size = new System.Drawing.Size(226, 616);
             this.PanelMenu.TabIndex = 4;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor;
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(191, 580);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(26, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // btnPrestamos
             // 
+            this.btnPrestamos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrestamos.FlatAppearance.BorderSize = 0;
             this.btnPrestamos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.btnPrestamos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
@@ -126,6 +142,7 @@
             // 
             // btnAutor
             // 
+            this.btnAutor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAutor.FlatAppearance.BorderSize = 0;
             this.btnAutor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.btnAutor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
@@ -154,6 +171,7 @@
             // 
             // btnLectores
             // 
+            this.btnLectores.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLectores.FlatAppearance.BorderSize = 0;
             this.btnLectores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.btnLectores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
@@ -182,6 +200,7 @@
             // 
             // btnLibros
             // 
+            this.btnLibros.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLibros.FlatAppearance.BorderSize = 0;
             this.btnLibros.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.btnLibros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
@@ -223,6 +242,7 @@
             // 
             // btnAdmin
             // 
+            this.btnAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdmin.FlatAppearance.BorderSize = 0;
             this.btnAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.btnAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
@@ -251,6 +271,7 @@
             // 
             // btnCategoria
             // 
+            this.btnCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCategoria.FlatAppearance.BorderSize = 0;
             this.btnCategoria.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.btnCategoria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
@@ -279,6 +300,7 @@
             // 
             // btnProductos
             // 
+            this.btnProductos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProductos.FlatAppearance.BorderSize = 0;
             this.btnProductos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.btnProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
@@ -397,7 +419,7 @@
             this.pbtnMenu.Controls.Add(this.lblUsuario);
             this.pbtnMenu.Controls.Add(this.btnMenu2);
             this.pbtnMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pbtnMenu.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pbtnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pbtnMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pbtnMenu.Location = new System.Drawing.Point(226, 40);
             this.pbtnMenu.Name = "pbtnMenu";
@@ -410,7 +432,7 @@
             this.lblID.AutoSize = true;
             this.lblID.Location = new System.Drawing.Point(461, 3);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(0, 12);
+            this.lblID.Size = new System.Drawing.Size(0, 13);
             this.lblID.TabIndex = 29;
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -447,21 +469,6 @@
             this.LogoGrande.TabStop = false;
             this.LogoGrande.Click += new System.EventHandler(this.LogoGrande_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor;
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(191, 580);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -472,6 +479,7 @@
             this.Controls.Add(this.pbtnMenu);
             this.Controls.Add(this.PanelMenu);
             this.Controls.Add(this.PanelBarraTitulo);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
@@ -479,6 +487,7 @@
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.PanelMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).EndInit();
             this.PanelBarraTitulo.ResumeLayout(false);
@@ -489,7 +498,6 @@
             this.pbtnMenu.PerformLayout();
             this.pPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LogoGrande)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

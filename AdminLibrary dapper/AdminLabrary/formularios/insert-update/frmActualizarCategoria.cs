@@ -30,24 +30,42 @@ namespace AdminLabrary.formularios.insert_update
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            entidades.Categorias categoria = new entidades.Categorias();
-            categoriasBindingSource.EndEdit();
-            categoria = (entidades.Categorias)categoriasBindingSource.Current;
-            CCategorias C = new CCategorias();
-            C.Actualizar(categoria);
-            frmPrincipal.Categoria.CargarDatos();
-            this.Close();
+            if (categoriaTextBox.Text != "")
+            {
+                entidades.Categorias categoria = new entidades.Categorias();
+                categoriasBindingSource.EndEdit();
+                categoria = (entidades.Categorias)categoriasBindingSource.Current;
+                CCategorias C = new CCategorias();
+                C.Actualizar(categoria);
+                frmPrincipal.Categoria.CargarDatos();
+                this.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("Todos los campos son obligatorios");
+            }
+           
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            categoriasBindingSource.EndEdit();
-            entidades.Categorias cate = new entidades.Categorias();
-            cate = (entidades.Categorias)categoriasBindingSource.Current;
-            CCategorias C = new CCategorias();
-            C.Eliminar(cate);
-            frmPrincipal.Categoria.CargarDatos();
-            this.Close();
+            
+            if (categoriaTextBox.Text != "")
+            {
+                categoriasBindingSource.EndEdit();
+                entidades.Categorias cate = new entidades.Categorias();
+                cate = (entidades.Categorias)categoriasBindingSource.Current;
+                CCategorias C = new CCategorias();
+                C.Eliminar(cate);
+                frmPrincipal.Categoria.CargarDatos();
+                this.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("Todos los campos son obligatorios");
+            }
 
         }
     }
